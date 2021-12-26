@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>部分题思路 | cfdtlee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="10 Regular Expression Match Back Tracking boundary condition: sLen &#x3D;&#x3D; 0 || pLen &#x3D;&#x3D; 0 then deal with  p.charAt(1) &#x3D;&#x3D; &#39;*&#39; and other     12345678if(pLen &#x3D;&#x3D; 0) return sLen &#x3D;&#x3D; 0; &#x2F;&#x2F; pLen &#x3D; a*? ;if(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部分题思路">
+<meta property="og:url" content="http://www.cfdtlee.com/2015/10/21/LC-fb/index.html">
+<meta property="og:site_name" content="cfdtlee">
+<meta property="og:description" content="10 Regular Expression Match Back Tracking boundary condition: sLen &#x3D;&#x3D; 0 || pLen &#x3D;&#x3D; 0 then deal with  p.charAt(1) &#x3D;&#x3D; &#39;*&#39; and other     12345678if(pLen &#x3D;&#x3D; 0) return sLen &#x3D;&#x3D; 0; &#x2F;&#x2F; pLen &#x3D; a*? ;if(">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-10-20T22:56:28.000Z">
+<meta property="article:modified_time" content="2015-11-14T17:48:22.000Z">
+<meta property="article:author" content="Shuang Li">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cfdtlee</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">We do what we have to do, so we can do what we want to do</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.cfdtlee.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-LC-fb" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2015/10/21/LC-fb/" class="article-date">
+  <time class="dt-published" datetime="2015-10-20T22:56:28.000Z" itemprop="datePublished">2015-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      部分题思路
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="10-Regular-Expression-Match"><a href="#10-Regular-Expression-Match" class="headerlink" title="10 Regular Expression Match"></a>10 Regular Expression Match</h2><ul>
+<li>Back Tracking<ul>
+<li>boundary condition: sLen == 0 || pLen == 0</li>
+<li>then deal with <code> p.charAt(1) == &#39;*&#39;</code> and <code>other</code> </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(pLen<span class="operator"> == </span><span class="number">0</span>) return sLen<span class="operator"> == </span><span class="number">0</span>; <span class="comment">// pLen = a*? ;</span></span><br><span class="line"><span class="keyword">if</span>(sLen<span class="operator"> == </span><span class="number">0</span>) return pLen<span class="operator"> == </span><span class="number">0</span><span class="operator"> || </span>pLen &gt; <span class="number">1</span><span class="operator"> &amp;&amp; </span>p.<span class="built_in">char</span><span class="constructor">At(1)</span><span class="operator"> == </span><span class="character">&#x27;*&#x27;</span><span class="operator"> &amp;&amp; </span>is<span class="constructor">Match(<span class="params">s</span>, <span class="params">p</span>.<span class="params">substring</span>(2)</span>);</span><br><span class="line"><span class="keyword">if</span>(pLen &gt; <span class="number">1</span><span class="operator"> &amp;&amp; </span>p.<span class="built_in">char</span><span class="constructor">At(1)</span><span class="operator"> == </span><span class="character">&#x27;*&#x27;</span>) &#123;</span><br><span class="line">	return (is<span class="constructor">Match(<span class="params">s</span>, <span class="params">p</span>.<span class="params">substring</span>(2)</span>)<span class="operator"> || </span>((sLen &gt; <span class="number">0</span><span class="operator"> &amp;&amp; </span>(s.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span>)<span class="operator"> || </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span><span class="character">&#x27;.&#x27;</span>)<span class="operator"> &amp;&amp; </span>is<span class="constructor">Match(<span class="params">s</span>.<span class="params">substring</span>(1)</span>, p))); <span class="comment">// when try to get s.charAt(0) make sure s is not empty</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">	return (sLen &gt; <span class="number">0</span><span class="operator"> &amp;&amp; </span>(s.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> || </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span><span class="character">&#x27;.&#x27;</span>)<span class="operator"> &amp;&amp; </span>is<span class="constructor">Match(<span class="params">s</span>.<span class="params">substring</span>(1)</span>, p.substring(<span class="number">1</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<ul>
+<li>Dynamic Programming</li>
+</ul>
+<h2 id="23-Merge-k-Sorted-Lists"><a href="#23-Merge-k-Sorted-Lists" class="headerlink" title="23 Merge k Sorted Lists"></a>23 Merge k Sorted Lists</h2><ul>
+<li>Heap​</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ListNode res = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">return</span> res.next;</span><br></pre></td></tr></table></figure>
+
+<h2 id="25-Reverse-Nodes-in-k-Group"><a href="#25-Reverse-Nodes-in-k-Group" class="headerlink" title="25 Reverse Nodes in k Group"></a>25 Reverse Nodes in k Group</h2><ul>
+<li>count and revers</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">    next = cur.next;</span><br><span class="line">    cur.next = pre;</span><br><span class="line">    pre = cur;</span><br><span class="line">    cur = next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="33-Search-in-Rotated-Array"><a href="#33-Search-in-Rotated-Array" class="headerlink" title="33 Search in Rotated Array"></a>33 Search in Rotated Array</h2><ul>
+<li>Binary Search<ul>
+<li>find the realMin</li>
+<li>to get the related position of nodes in Rotated Array by <code>realMid = (mid + realMin) % nums.length</code></li>
+<li>use mid <code>else end = mid - 1; // use mid</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(start &lt; end) &#123; <span class="comment">// get the real mid</span></span><br><span class="line">    mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(mid &gt;= <span class="number">1</span> &amp;&amp; nums[mid] &lt; nums[mid-<span class="number">1</span>]) &#123;</span><br><span class="line">        start = mid;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(nums[mid] &lt; nums[end]) end = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> start = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="43-Multiply-String"><a href="#43-Multiply-String" class="headerlink" title="43 Multiply String"></a>43 Multiply String</h2><ul>
+<li>String<ul>
+<li>use <code>int[] prod = new int[len1 + len2];</code> to store each production of every two digits</li>
+<li>two for loops to compute prod</li>
+<li>convert prod to string, from end to begin <code>// when go through from end, must use i = len-1 and i--</code></li>
+<li>remove ‘0’ at the beginning of result, but don’t remove the last ‘0’</li>
+</ul>
+</li>
+</ul>
+<h2 id="49-Group-Anagrams"><a href="#49-Group-Anagrams" class="headerlink" title="49 Group Anagrams"></a>49 Group Anagrams</h2><ul>
+<li>Question: output format</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; strs[i].length(); j++) &#123;</span><br><span class="line">	key *= PRIMES[strs[i].charAt(j) - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map.containsKey(key)) &#123;</span><br><span class="line">	lol.get(map.get(key)).add(strs[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">	List t = <span class="keyword">new</span> LinkedList&lt;String&gt;();</span><br><span class="line">	t.add(strs[i]);</span><br><span class="line">	lol.add(t);</span><br><span class="line">	map.put(key, index++);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="56-Merge-Intervals"><a href="#56-Merge-Intervals" class="headerlink" title="56 Merge Intervals"></a>56 Merge Intervals</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(intervals.get(i).start &lt;= end) &#123; <span class="comment">// &lt;=</span></span><br></pre></td></tr></table></figure>
+
+<p>##76 Minimum Window Substring</p>
+<ul>
+<li>Hash Table, use int[128] to store remaining char</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> start = <span class="number">0</span>, end = <span class="number">0</span>, min = Integer.MAX_VALUE, minStart = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(end &lt;= s.length() &amp;&amp; start &lt; s.length()) &#123; <span class="comment">// end &lt;= s.length()</span></span><br><span class="line">	<span class="keyword">if</span>(require &gt; <span class="number">0</span>) &#123; <span class="comment">// end move forward, require &gt; 0</span></span><br><span class="line">	<span class="keyword">if</span>(end == s.length()) <span class="keyword">break</span>; <span class="comment">// in case that t is longer than s</span></span><br><span class="line">     ...</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> min == Integer.MAX_VALUE ? <span class="string">&quot;&quot;</span> : s.substring(minStart, minStart+min); <span class="comment">//take care that t might be longer than s</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="117-Populating-Next-Right-Pointers-in-Each-Node-II"><a href="#117-Populating-Next-Right-Pointers-in-Each-Node-II" class="headerlink" title="117 Populating Next Right Pointers in Each Node II"></a>117 Populating Next Right Pointers in Each Node II</h2><p>-Dummy point at left of leftmost node</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(root != <span class="keyword">null</span>) &#123; <span class="comment">//</span></span><br><span class="line">    <span class="keyword">if</span>(root.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">        curNode.next = root.left;</span><br><span class="line">        curNode = curNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">        curNode.next = root.right;</span><br><span class="line">        curNode = curNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">    root = root.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="133-Clone-Graph"><a href="#133-Clone-Graph" class="headerlink" title="133 Clone Graph"></a>133 Clone Graph</h2><ul>
+<li>DFS + map</li>
+<li>use map to denote whether a node has been visited</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> map.get(node.label); <span class="comment">// must return what we added early, if we return node, would be a reference of original graph</span></span><br><span class="line">map.put(newNode.label, newNode); <span class="comment">//not map.put(node.label, node);</span></span><br><span class="line"><span class="keyword">for</span>(UndirectedGraphNode neighbor : node.neighbors) &#123;</span><br><span class="line">	newNode.neighbors.add(cloneGraph(neighbor));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="158-Read-N-Characters-Given-Read4-II-Call-multiple-times"><a href="#158-Read-N-Characters-Given-Read4-II-Call-multiple-times" class="headerlink" title="158 Read N Characters Given Read4 II - Call multiple times"></a>158 Read N Characters Given Read4 II - Call multiple times</h2><ul>
+<li>Two pointer</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bufCnt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> bufPtr = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">char</span>[] innerBuf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">int</span> ptr = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="161-One-Edit-Distance"><a href="#161-One-Edit-Distance" class="headerlink" title="161 One Edit Distance"></a>161 One Edit Distance</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> s.substring(i).equals(t.substring(j+<span class="number">1</span>)) || s.substring(i+<span class="number">1</span>).equals(t.substring(j+<span class="number">1</span>));</span><br><span class="line"><span class="keyword">return</span> j == t.length()-<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="200-Number-of-Islands"><a href="#200-Number-of-Islands" class="headerlink" title="200 Number of Islands"></a>200 Number of Islands</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一次&#x27;0&#x27;的单引号漏掉了，找了很久才发现！！！</span></span><br><span class="line"><span class="keyword">if</span>(i &lt; <span class="number">0</span> || i == grid.length || j &lt;<span class="number">0</span> || j == grid[i].length || grid[i][j] != <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="215-Kth-Largest-Element-in-an-Array"><a href="#215-Kth-Largest-Element-in-an-Array" class="headerlink" title="215 Kth Largest Element in an Array"></a>215 Kth Largest Element in an Array</h2><ul>
+<li>D ivide and Conquer</li>
+<li>每次更新begin 和 end之后要拿begin和end来做边界条件，而不是0和 nums.length - 1 来做边界，这一点在其他时候也要注意，边界条件尽量不要用硬编码</li>
+<li>don’t miss the boundary condition，if(left == right) return nums[left];</li>
+<li>Heap</li>
+<li>PriorityQueue<Integer> pq = new PriorityQueue<Integer>(k+1); // add(), poll();</li>
+</ul>
+<h2 id="221-Maximal-Square"><a href="#221-Maximal-Square" class="headerlink" title="221 Maximal Square"></a>221 Maximal Square</h2><ul>
+<li>DP</li>
+<li>有两个矩阵，一个表示路，一个用来计数，当需要判断有没有路并在计数上叠加时很容易比错矩阵</li>
+<li>优化：开一个大一层的计数矩阵来计数就可以不用初始化计数矩阵的上左两边了</li>
+</ul>
+<h2 id="253-Meeting-Rooms-II"><a href="#253-Meeting-Rooms-II" class="headerlink" title="253 Meeting Rooms II"></a>253 Meeting Rooms II</h2><ul>
+<li>Heap</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(intervals, <span class="keyword">new</span> Comparator&lt;Interval&gt;() &#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Interval a, Interval b)</span> </span>&#123; <span class="keyword">return</span> a.start - b.start; &#125;</span><br><span class="line">&#125;);</span><br><span class="line">PriorityQueue&lt;Interval&gt; pq = <span class="keyword">new</span> PriorityQueue&lt;Interval&gt;(intervals.length, <span class="keyword">new</span> Comparator&lt;Interval&gt;() &#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Interval a, Interval b)</span> </span>&#123; <span class="keyword">return</span> a.end - b.end;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="261-Graph-Valid-Tree"><a href="#261-Graph-Valid-Tree" class="headerlink" title="261 Graph Valid Tree"></a>261 Graph Valid Tree</h2><ul>
+<li>Union Find</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> n == edges.length + <span class="number">1</span>; <span class="comment">// not always rigth</span></span><br><span class="line"><span class="keyword">while</span>(sets[target] != -<span class="number">1</span>) &#123; <span class="comment">// use while not if</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>DFS &amp; BFS</li>
+</ul>
+<h2 id="265-Paint-House-II"><a href="#265-Paint-House-II" class="headerlink" title="265 Paint House II"></a>265 Paint House II</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">introduce two min: min1 min2</span><br><span class="line"><span class="comment">//current color is the same as last use min2</span></span><br><span class="line"><span class="keyword">else</span> use min1</span><br><span class="line">costs[i][j] += last2 &lt; <span class="number">0</span> ? <span class="number">0</span> : costs[i-<span class="number">1</span>][last2];  <span class="comment">// use former result&quot;i-1&quot;</span></span><br><span class="line"><span class="function">update min1 min2</span></span><br><span class="line"><span class="function"><span class="title">if</span><span class="params">(min1 &lt; <span class="number">0</span> || costs[i][j] &lt; costs[i][min1])</span> </span>&#123;</span><br><span class="line">	min2 = min1;</span><br><span class="line">	min1 = j;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(min2 &lt; <span class="number">0</span> || costs[i][j] &lt; costs[i][min2]) &#123; <span class="comment">//use else 	here to get the second min</span></span><br><span class="line">	min2 = j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="269-Alien-Dictionary"><a href="#269-Alien-Dictionary" class="headerlink" title="269 Alien Dictionary"></a>269 Alien Dictionary</h2><ul>
+<li>Topological Sort</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="keyword">int</span>[]&gt; edges = <span class="keyword">new</span> LinkedList&lt;<span class="keyword">int</span>[]&gt;();</span><br><span class="line">String str1 = <span class="string">&quot;&quot;</span>, str2 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">String res = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">int</span>[] inDegree = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// get edges(char pair)</span></span><br><span class="line"><span class="comment">// initial inDegree</span></span><br><span class="line"><span class="comment">// caculate inDegree</span></span><br><span class="line"><span class="comment">// find nodes whose inDegree == 0</span></span><br><span class="line"><span class="keyword">return</span> res.length() == num ? res : <span class="string">&quot;&quot;</span>; <span class="comment">// have to judge whether</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="149-Max-Points-on-a-Line"><a href="#149-Max-Points-on-a-Line" class="headerlink" title="149 Max Points on a Line"></a>149 Max Points on a Line</h2><ul>
+<li><code>Map&lt;x, Map&lt;y, n&gt;&gt;</code></li>
+<li><code>&lt;dx, dy&gt;</code> to identify whether on the same line, in order to deal with vertical situation</li>
+<li>overlap variable deal with overlap situation</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(x == <span class="number">0</span> &amp;&amp; y == <span class="number">0</span>) &#123; <span class="comment">//</span></span><br><span class="line">overlap++;</span><br><span class="line"><span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>res = Math.max(res, max + overlap + 1); // +1</code> count the node itself</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2015/10/21/LC-fb/" data-id="ckxmtt9bj001s5mvm03js3pwd" data-title="部分题思路" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/13/iOS-Design_Note_1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Design Note for iOS
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/03/FP-Implement%20Lisp%20Interpreter%20with%20Java,%20Part%201/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSE 6341 Implement Lisp Interpreter with Java, Part 1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Captcha/" rel="tag">Captcha</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English-EOE/" rel="tag">English EOE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GRE/" rel="tag">GRE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image-Processing/" rel="tag">Image Processing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interpreter/" rel="tag">Interpreter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JEE/" rel="tag">JEE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LISP/" rel="tag">LISP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MCM/" rel="tag">MCM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/" rel="tag">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OO-Design/" rel="tag">OO-Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Project/" rel="tag">Project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Public-Speaking/" rel="tag">Public Speaking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" rel="tag">Public-Speech 摩英</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reading/" rel="tag">Reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/University/" rel="tag">University</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unix/" rel="tag">Unix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video/" rel="tag">Video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vocabulary/" rel="tag">Vocabulary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/entrepreneurship/" rel="tag">entrepreneurship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/" rel="tag">health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inspiration/" rel="tag">inspiration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insurance/" rel="tag">insurance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/internship/" rel="tag">internship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phonetic/" rel="tag">phonetic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/retrospect/" rel="tag">retrospect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/" rel="tag">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/target/" rel="tag">target</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualenv/" rel="tag">virtualenv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vocabulary/" rel="tag">vocabulary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" rel="tag">性格色彩</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%A9%E8%8B%B1/" rel="tag">摩英</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E5%8F%98/" rel="tag">改变</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" rel="tag">欧洲史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" rel="tag">网页爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" rel="tag">装箱问题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 11.67px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 15px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Shuang Li<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

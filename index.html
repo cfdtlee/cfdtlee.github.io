@@ -75,12 +75,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-job-hunting-how-to-do-project" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/12/25/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-12-25T15:07:23.763Z" itemprop="datePublished">2021-12-25</time>
+    <a href="/2018/04/28/job-hunting-how-to-do-project/" class="article-date">
+  <time class="dt-published" datetime="2018-04-28T07:36:06.000Z" itemprop="datePublished">2018-04-28</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/job-hunting/">job-hunting</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -89,7 +93,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/12/25/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
     </h1>
   
 
@@ -97,27 +101,868 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>申请出国留学的同学不乏全能的大牛，高三围（GPA，托福，GRE），同时项目科研样样没有落下，如果你是这样的人，赶紧联系我，我要把你挖来Facebook！然而另外一些同学大一大二刷GPA，大三开始刷GT，并没有很多的项目经历，有写过数据库管理课上的图书管理系统，或者网络编程课上的TCP/IP协议，它们要么逼格不够，要么算不上很有趣，很难在申请大公司的时候让你的简历脱颖而出。今天这篇文章跟大家分享什么样的项目才能吸引recruiter的眼球，要怎么在短时间内通过自学完成这样的项目。</p>
+<h2 id="什么样的项目"><a href="#什么样的项目" class="headerlink" title="什么样的项目"></a>什么样的项目</h2><p>前一篇<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/mKuZ0VmKPdJBJaHRK0n2Mg">【找工求职】3/n 如何提升简历的逼格</a> 中提到了简历项目的逼格排序：</p>
+<blockquote>
+<p>大公司/独角兽公司实习 &gt; 编程竞赛得奖 &gt; 导师研究项目 &gt; 自己做的有趣有挑战性的Side Project &gt; hackthon &gt; 国内不知名公司实习 &gt; 课堂项目 &gt; 图书管理系统</p>
+</blockquote>
+<p>Recruiter在筛选简历的时候其中关心的一点就是你有没有做过有趣的Side Project。何为有趣，不一定要很难，但是要体现出你的动手能力。用编程来解决生活中的实际问题的项目就可以算有趣。</p>
+<p>比如我在准备托福，词汇不过关，我就把所有托福题目拿过来，</p>
+<ol>
+<li>写一段代码统计词频，然后从高到低开始学习。把已经掌握的单词都在数据库中标记，</li>
+<li>再写一段代码来实现给一篇文章，输出里面的生词，以供预习。</li>
+<li>写一个微信bot，每天定时给自己的微信发送生词复习，掌握了可以将它在数据库标记</li>
+<li>进阶：用classification算法给自己掌握的单词聚类，分析记得很慢的单词的特征，然后对症下药。</li>
+<li>部署到服务器，推荐给你的朋友使用</li>
+</ol>
+<p>那这样就是一个很有趣的项目了。涉及的技术很广，如果自己和朋友开始真的从中受益，那就是这个项目的impact。</p>
+<h2 id="怎么开始"><a href="#怎么开始" class="headerlink" title="怎么开始"></a>怎么开始</h2><p>有了idea怎么开始做项目呢？</p>
+<h3 id="选一个平台"><a href="#选一个平台" class="headerlink" title="选一个平台"></a>选一个平台</h3><p>现在光操作系统就有好多种，开发平台就更多了：Web，Mobile (iOS, Android)，基于微信可以是小程序，微信bot，公众号，Chrome 插件等等。最容易上手的就是Web App，丰富的资源，很多Web技术都是开源的；很低的门槛：前端开发也有很多库，所以对前端设计的要求很低，对设备的要求低，pc、mac、*nix都可以开发。</p>
+<p><img src="/2018/04/28/job-hunting-how-to-do-project/97477930.jpg"></p>
+<h3 id="查资料"><a href="#查资料" class="headerlink" title="查资料"></a>查资料</h3><p>假设我们想做Web App，那我们去查Web App最流行的是什么技术，可能会查到类似这样的文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24369470%EF%BC%8C%E7%84%B6%E5%90%8E%E5%A4%A7%E8%87%B4%E4%BA%86%E8%A7%A3%E5%88%B0Web%E5%BC%80%E5%8F%91%E5%88%86%E5%89%8D%E7%AB%AF%E5%90%8E%E7%AB%AF%EF%BC%8C%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%AF%94%E5%A6%82Angular">https://zhuanlan.zhihu.com/p/24369470，然后大致了解到Web开发分前端后端，前端技术比如Angular</a> 2、Vue.js、Bootstrap，</p>
+<p><img src="/2018/04/28/job-hunting-how-to-do-project/69225240.jpg"></p>
+<p>后端技术有Node.js，Python Django，Ruby ROR等等。Facebook内部广泛使用PHP/HACK开发后台，Instagram用的是Django。</p>
+<p><img src="/2018/04/28/job-hunting-how-to-do-project/53537672.jpg"></p>
+<h3 id="缩小范围"><a href="#缩小范围" class="headerlink" title="缩小范围"></a>缩小范围</h3><p>技术选择多道眼花缭乱，不要沉醉其中，决定不了可以选择Bootstrap和Python Django分别来做前端和后端。这些技术都有很好的官方文档，去到它们各自的主页<a target="_blank" rel="noopener" href="https://getbootstrap.com/%EF%BC%8Chttps://www.djangoproject.com/%EF%BC%8C%E4%BB%8EGet">https://getbootstrap.com/，https://www.djangoproject.com/，从Get</a> Start开始学习。</p>
+<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><p>一边看官方的Doc，一遍开始开发自己的项目。基本上就是在敲实例代码的时候就把对应的部分按照自己的idea编写。</p>
+<h3 id="发布-部署"><a href="#发布-部署" class="headerlink" title="发布/部署"></a>发布/部署</h3><p>当我们在Local完成开发，只有我们自己能使用。为了提升项目的影响力，可以发布到互联网上。最简单的就是push到Github上，但是如果自己的项目不想公开代码，Mobile App可以发布到对应的上的App Store，Web App可以部署到Server上。如果是第一次发布/部署，会花一点时间，但是发布成功，你可以让别人使用，那它就不只是一个项目，而是一个产品了。在简历项目描述上附上网站链接，会给那个项目增色不少。对于Web App，<a target="_blank" rel="noopener" href="https://www.heroku.com/">https://www.heroku.com/</a> 是一个很方便的server，它提供了各种主流框架的一键部署。也可以自己买云服务，搭建server。</p>
+<p><img src="/2018/04/28/job-hunting-how-to-do-project/6869563.jpg"></p>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p>加入机器学习，区块链，图像识别提升项目逼格。现在媒体啥的都得扯个人工智能，互联网加，我们的项目也不能落后。在各大公司相继开源了它们的机器学习框架之后，机器学习已经不是实验室科研的专属，个人项目可以借助这些技术来提升项目的水平。十大AI开源框架 <a target="_blank" rel="noopener" href="https://dzone.com/articles/progressive-tools10-best-frameworks-and-libraries%E3%80%82">https://dzone.com/articles/progressive-tools10-best-frameworks-and-libraries。</a> 其中最热门的要数Google的TensorFlow和Facebook的Caffe2。</p>
+<p><img src="/2018/04/28/job-hunting-how-to-do-project/6399533.jpg"></p>
+<p>它们跟Web开发框架一样，提供了很完整的官方文档，跟着Get Start做下来就能了解这些框架。如果想去到ML相关的岗位，用这些Framework做过项目会对Google的team match和Facebook的Bootcamp选组都有很大帮助。</p>
+<h2 id="早鸟项目小分队"><a href="#早鸟项目小分队" class="headerlink" title="早鸟项目小分队"></a>早鸟项目小分队</h2><p>早鸟计划里5月份开始组队刷项目，加入早鸟项目小分队的要求是Leetcode完成100题。有兴趣的在公众号里回复。</p>
+<h2 id="湾区早鸟"><a href="#湾区早鸟" class="headerlink" title="湾区早鸟"></a>湾区早鸟</h2><p>开通了微信公众号，获取最新的更新可以扫二维码关注。</p>
+<p><img src="/2018/04/28/job-hunting-how-to-do-project/61964020.jpg" alt="湾区早鸟"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.cfdtlee.com/2021/12/25/hello-world/" data-id="ckxmniyxh0000tavm55991k6o" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://www.cfdtlee.com/2018/04/28/job-hunting-how-to-do-project/" data-id="ckxmtt9ca004l5mvm77sl7yid" data-title="【找工求职】5/n 北美cs找工作怎么充实项目经历" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-job-hunting-crush-coding-interview" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/04/08/job-hunting-crush-coding-interview/" class="article-date">
+  <time class="dt-published" datetime="2018-04-08T07:36:06.000Z" itemprop="datePublished">2018-04-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/job-hunting/">job-hunting</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>假设你明天就去onsite面试了，那么这是一篇很好的佛脚文章；如果你刚开始刷题，那么这篇文章将是你刷题的指导方针。这一篇结合我自己面试以及在FB参加面试官培训的经历，聊一聊FB Coding面试时该如何表现。本文只介绍Coding Interview，system design和behaviour question不在本篇讨论范围。</p>
+<h2 id="官方视频"><a href="#官方视频" class="headerlink" title="官方视频"></a>官方视频</h2><p>首先先把下面两个视频好好看两遍（需要翻墙），再开始看文章。这两个视频是Facebook recruiting team做的非常有参考价值的视频。一个是对recruiter 对 tech interview的概述，另一个是engineer示范的面试“标准答案”。看完我们来分析面试的答题点。</p>
+<ul>
+<li><p>面试概述 <a target="_blank" rel="noopener" href="https://www.facebook.com/Engineering/videos/10152735806862200/">https://www.facebook.com/Engineering/videos/10152735806862200/</a></p>
+</li>
+<li><p>面试示范 <a target="_blank" rel="noopener" href="https://www.facebook.com/Engineering/videos/vb.9445547199/10152735777427200/">https://www.facebook.com/Engineering/videos/vb.9445547199/10152735777427200/</a></p>
+</li>
+</ul>
+<h2 id="bug-free？"><a href="#bug-free？" class="headerlink" title="bug free？"></a>bug free？</h2><p>Facebook的对外讲座上明确说过不要求bug free，思考的过程跟做出题目一样重要。所以说训练面试能力能很有效地弥补刷题上的不足，对于刷题充分的同学则是如虎添翼。我自己就在FB onsite面试中卡壳过，面试官还给了我提示，然后我通过分析体现出我对数据结构的理解，扳回了一城。</p>
+<h2 id="答题步骤"><a href="#答题步骤" class="headerlink" title="答题步骤"></a>答题步骤</h2><p>面试不是平时做leetcode那么直接，拿到题就做。面试不仅仅是做题，面试的本质是面试官对面试者对算法、数据结构的理解能力，分析能力以及表达能力的考察。如果一上来就啪啪啪把题目给做完了，反而是舍本逐末。我的一个朋友，他是ACM集训队的主力，然而他的校园面却跪了。据他自己说是刷刷刷就做完题目了，我猜测他是缺少了分析、交流这部分。不过最后他找recruiter argue拿到了onsite。所以正确的步骤是：</p>
+<ol start="0">
+<li>面试官提出问题，你要充分理解问题</li>
+<li>Ask questions to clarify problem。听完问题不要马上开始写代码！而是通过提问来明确题意<ul>
+<li>输入格式、数据结构，正负，有无重复</li>
+<li>输出格式、数据结构</li>
+<li>如何处理特殊情况</li>
+<li>是否要排序</li>
+</ul>
+</li>
+<li>Explain a high level approach。提问完不要马上开始写代码！而是思考并提出一种解法，Think out loud，讲出你的思路，分析过程跟解出题目一样重要，必要时借助白板画图写字来解释，跟面试官确认，如果他觉得可以，那就开始写，有时候他会有特殊的要求，比如时间复杂度要低于多少之类的，那得按照要求分析给出解法。当然如果时间不够，尽量快的用粗暴的方法写出一段可用的代码。</li>
+<li>Coding。从白板最上面开始写，设计code structure，尤其像递归/dfs之类的题，好的代码结构能减少bug，并且更容易理解。</li>
+<li>Test with edge cases。写好之后不要马上跟面试官说你写好了！因为一旦你说写好了，他找出的bug就算是你的失误，而如果你主动说我来代一组数据试试test一下，只要你在面试官提出来之前发现并改正bug，那就不会影响你的评价。代入edge cases测试，并且你要说出来“我代码写好了，现在准备代入一些特殊值检验”，不要默默在那代数字。检验0，特殊值，巨大值巨小值（nil）。</li>
+<li>如何fix边界条件的错误。最快的就是添加一些if-else来排除特殊的错误，但是这样往往不够优雅，最好是从code pattern中寻找错误，从根本上解决问题，给出elegant solution。</li>
+<li>分析时间空间复杂度。当你验证完了，告诉面试官，你做完了，他会仔细看你的代码，如果没bug，面试官会问，数据结构的选择，时间复杂度如何优化？很常见的优化时间复杂度比如DP，牺牲空间换取时间等等。Understand the trade off between alternate solutions，比如为什么用linked list不用array list？为什么用stack不用heap？为什么用xx而不用xx？</li>
+<li>5分钟问问题，这个环节比较轻松，可以问问关于company，culture，以及为什么你喜欢Facebook。</li>
+</ol>
+<h2 id="面试训练"><a href="#面试训练" class="headerlink" title="面试训练"></a>面试训练</h2><p><a href="http://www.cfdtlee.com/2018/03/12/job-hunting-how-to-do-leetcode/">前面一篇文章</a>提到做笔记，对好题的分析，一周最少一篇，可以按照面试步骤来写，用英文来写，从现在开始这样训练，练到面试的时候，你的面试套路已经炉火纯青了。同时跟刷题小伙伴一起mock interview的时候就可以按照本文的步骤来练习。数据结构的英文表述遇到困难的时候，记得写下来，练熟。</p>
+<h2 id="面试形式"><a href="#面试形式" class="headerlink" title="面试形式"></a>面试形式</h2><ul>
+<li>intern 2轮电面</li>
+<li>full time 1-2轮电面+on site 3轮coding + 1轮behaviour<br>根据面试表现，会有加面情况</li>
+<li>Coding面主要会问，Data structures and algorithms。</li>
+</ul>
+<h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><p>选择你最熟悉的编程语言，熟悉常用的library（排序，数组初始化等等）和数据结构，并且理解这些lib和数据结构，以便面试问到的时候能够分析出来。</p>
+<h2 id="关于内推"><a href="#关于内推" class="headerlink" title="关于内推"></a>关于内推</h2><p>New grads 和 intern最好的内推时间是89月份左右的秋招和23月份的春招。有需要内推的童鞋，刷题达到300+并且有两个以上优质项目的，欢迎发送简历到<a href="mailto:&#x63;&#102;&#x64;&#x74;&#x6c;&#101;&#x65;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x63;&#102;&#x64;&#x74;&#x6c;&#101;&#x65;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>。会针对简历和面试提供建议。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>这些材料是我收到FB面试的时候recruitor给我们发的，前面的两个视频就是我在这里发现的，现在分享给大家。</p>
+<ul>
+<li><p>Crush Your Coding Interview workshop video (<a target="_blank" rel="noopener" href="https://www.facebook.com/Engineering/posts/10152735857917200">https://www.facebook.com/Engineering/posts/10152735857917200</a>)</p>
+</li>
+<li><p>Practice Interview Questions (<a target="_blank" rel="noopener" href="http://www.glassdoor.com/Interview/software-engineer-interview-questions-SRCH_KO0,17_SDRD_IP3.htm">http://www.glassdoor.com/Interview/software-engineer-interview-questions-SRCH_KO0,17_SDRD_IP3.htm</a>) </p>
+</li>
+<li><p>How To Get That Job At Facebook (<a target="_blank" rel="noopener" href="https://www.facebook.com/notes/facebook-engineering/get-that-job-at-facebook/10150964382448920">https://www.facebook.com/notes/facebook-engineering/get-that-job-at-facebook/10150964382448920</a>) </p>
+</li>
+<li><p>Coding practice (<a target="_blank" rel="noopener" href="http://www.careercup.com/page">http://www.careercup.com/page</a>) </p>
+</li>
+<li><p>Facebook Engineering Page (<a target="_blank" rel="noopener" href="http://www.facebook.com/Engineering">http://www.facebook.com/Engineering</a>) </p>
+</li>
+<li><p>Open Source at Facebook (<a target="_blank" rel="noopener" href="https://code.facebook.com/projects">https://code.facebook.com/projects</a>) </p>
+</li>
+<li><p>Important Statistics (<a target="_blank" rel="noopener" href="https://newsroom.fb.com/company-info">https://newsroom.fb.com/company-info</a>)</p>
+</li>
+<li><p>General News (<a target="_blank" rel="noopener" href="http://techcrunch.com/tag/facebook">http://techcrunch.com/tag/facebook</a>)</p>
+</li>
+</ul>
+<h2 id="湾区早鸟"><a href="#湾区早鸟" class="headerlink" title="湾区早鸟"></a>湾区早鸟</h2><p>开通了微信公众号，获取最新的更新可以扫二维码关注。</p>
+<p><img src="/2018/04/08/job-hunting-crush-coding-interview/61964020.jpg" alt="湾区早鸟"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2018/04/08/job-hunting-crush-coding-interview/" data-id="ckxmtt9c8004e5mvm1ow2388m" data-title="【找工求职】4/n 面试时如何表现 Crush Coding Interview" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-job-hunting-how-to-write-resume" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/04/01/job-hunting-how-to-write-resume/" class="article-date">
+  <time class="dt-published" datetime="2018-04-01T07:36:06.000Z" itemprop="datePublished">2018-04-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/job-hunting/">job-hunting</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这一篇文章总结了我自己在准备简历的时候的一些经验，结合Google HR的讲座以及代表FB去学校career fair了解到招人的标准，分享如何从多个角度提升简历逼格。</p>
+<h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>标题写成SELECTED PROJECTS，给人一种篇幅有限，我就挑了重要的项目写（其实还有很多的）的感觉。学术相关可以写ACADEMIC PRACTICE。</p>
+<p>项目的重要程度大致可以这样排序，大公司/独角兽公司实习 &gt; 编程竞赛得奖 &gt; 导师研究项目 = 自己做的有趣有挑战性的Side Project = hackthon &gt; 不知名公司实习 &gt; 课堂项目 &gt; 图书管理系统</p>
+<p>这个排序仅供参考，因为有时候遇到选择到底暑假去小公司实习还是自己刷题做项目的时候，可以参考。小公司实习，大概率做一些不重要的事情，不如自己做一些有趣的项目，还可以写在简历上，上传到Github上，都能产生更大的效益。</p>
+<ul>
+<li><p>Side Project，这一部分体现了你的enthusiasm，你的passion，光在简历里说自己对cs很热爱不如说说自己业余时间做的项目有说服力。大公司喜欢招有能力+有想法的人。能看出你的动手能力的就是你有了想法并且动手实践的能力。这些项目一定要有趣，有挑战性，如果这里写上图书管理系统，教授打分系统等等那就太low了。一般人这一部分有最大的提升空间，也是短时间可以速成的部分。后面会专门针对这块写一篇文章，这里就先不展开细说。</p>
+</li>
+<li><p>hackthon，大公司都很看重创意，ideas，fb每个季度都会举办hackthon。所以你如果参加过一些hackthon，那会是一个加分项，可以按照项目描述的结构来描述你参加的hackthon。一两天时间的hackthon能在简历里占一项，并且很被看中，所以有机会可以参加试试。</p>
+</li>
+</ul>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>对项目的描述可以采用这样的结构：</p>
+<ul>
+<li>标题<ul>
+<li>项目简介一句</li>
+<li>项目难度一句</li>
+<li>你做的impact一句</li>
+</ul>
+</li>
+</ul>
+<p>举一个例子：</p>
+<blockquote>
+<h3 id="The-research-and-realization-of-CAPTCHA-recognition"><a href="#The-research-and-realization-of-CAPTCHA-recognition" class="headerlink" title="The research and realization of CAPTCHA recognition"></a>The research and realization of CAPTCHA recognition</h3></blockquote>
+<p>第一句介绍项目，罗列一些用到的技术：</p>
+<blockquote>
+<ul>
+<li>Establish a general solution of CAPTCHA recognition, realized via Gabor Filter, KNN, Image Process and Dynamic Programming</li>
+</ul>
+</blockquote>
+<p>第二句讲难度，optional，普通的项目可能不太好写出难度：</p>
+<blockquote>
+<ul>
+<li>There isn’t a general solution of CAPTCHA recognition, most of the recognitions only works on specific pattern of CAPTCHA.</li>
+</ul>
+</blockquote>
+<p>第三句写这个项目的impact，也是最重要的一点，要用具体的数字来表现你做的项目多牛逼，比如识别成功率从51%提高到了62.2%，降低了识别时间，从3.87s降到1.39s。越准确的数据，越真实，并且越能体现出你做的项目很有影响力。</p>
+<blockquote>
+<ul>
+<li>Improve success rate from 51% to 62.2% and reduce the time of per challenge from 3.87s to 1.39s</li>
+</ul>
+</blockquote>
+<h2 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h2><p>使用Latex排版。Latex被广泛应用于出版社排版，学术论文排版，用Latex排版你的简历比word排版提升好几个档次。</p>
+<p><img src="/2018/04/01/job-hunting-how-to-write-resume/65346169.jpg"></p>
+<p>Latex其实并不难，找一个模板，往里面填字就行了，比word操作还简单。推荐使用<a target="_blank" rel="noopener" href="https://www.overleaf.com/">Overleaf</a>，一个在线的Latex编辑器，提供了大量<a target="_blank" rel="noopener" href="https://www.overleaf.com/gallery/tagged/cv#.WsHADJPwaRs">模板</a>。其中我最喜欢的一个模板是<a target="_blank" rel="noopener" href="https://www.overleaf.com/latex/templates/cv-for-freshers/jkpwvnrdrxpm#.WsHAeJPwaRs">CV for freshers</a>，非常简洁。选择open as template就可以创建自己的copy，开始填你自己的信息了。如果觉得排版的字体太大，可以在Latex代码里面进行调整。</p>
+<h2 id="加分项"><a href="#加分项" class="headerlink" title="加分项"></a>加分项</h2><ul>
+<li>比较难的CS课当TA，比如算法课，机器学习课的TA等等都是很好的加分项</li>
+<li>活跃的Github，这个全球最大同性交友平台当然是作为程序员简历的重要部分，活跃的Github也体现了你对编程、技术以及“交友”的热爱。活跃度最直观的体现就是小绿点，那最好的提升活跃度的方法就是什么代码都往上交（除非老师明确规定这门课作业不能上传github），每天刷题并且传到Github，一举两得（刷了题，刷了绿点）。</li>
+<li>高GPA，如果GPA 4.0或者接近4.0可以写一下，不然就不要写了</li>
+</ul>
+<h2 id="Checklist"><a href="#Checklist" class="headerlink" title="Checklist"></a>Checklist</h2><p>最后放送福利，Udacity上招的一个resume checklist，里面讲到一些简历的书写注意事项，是本文很好的补充。完成简历之后一定要再过一遍这个checklist。其中比较有意思的一项就是：篇幅控制在一页以内，除非工作/研究十年以上</p>
+<p>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yX8Ox7Re-2M00Hh-en3ing">https://pan.baidu.com/s/1yX8Ox7Re-2M00Hh-en3ing</a> 密码: 7aw5</p>
+<h2 id="湾区早鸟"><a href="#湾区早鸟" class="headerlink" title="湾区早鸟"></a>湾区早鸟</h2><p>开通了微信公众号，获取最新的更新可以扫二维码关注。</p>
+<p><img src="/2018/04/01/job-hunting-how-to-write-resume/61964020.jpg" alt="湾区早鸟"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2018/04/01/job-hunting-how-to-write-resume/" data-id="ckxmtt9cb004p5mvmghip8g23" data-title="【找工求职】3/n 如何提升简历的逼格" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-job-hunting-how-to-act-like-a-cser" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/" class="article-date">
+  <time class="dt-published" datetime="2018-03-25T07:36:06.000Z" itemprop="datePublished">2018-03-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/job-hunting/">job-hunting</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这一篇分享如何提升CS素养，是我具体操作实践过并且觉得有用的一些习惯。</p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>为什么要写博客？刘未鹏的<a target="_blank" rel="noopener" href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/">博客</a>里给出了很好的回答，我当初也是看了他的文章才开始写博客的。</p>
+<p>一个人提升自己影响力的方法有两种，演讲和写作。它们的共同点就是实现了一次产出，无限次的被阅读。让我深有体会的就是我写这一系列【招工求职】的文章。如果我跟一个人分享我招工求职的经验，其实跟我写下来发到博客上花的时间基本上是一样的。然而后者可以让更多的人看到。</p>
+<h3 id="怎么开始写"><a href="#怎么开始写" class="headerlink" title="怎么开始写"></a>怎么开始写</h3><p>推荐使用hexo+github搭建你的第一个博客，域名可以在万网上申请。<br><img src="/2018/03/25/job-hunting-how-to-act-like-a-cser/11002334.jpg"></p>
+<p>如何搭建博客，可以参考：</p>
+<ol>
+<li>hero官网 <a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a></li>
+<li><a target="_blank" rel="noopener" href="https://madongqiang2201.github.io/2016/07/21/Mac%E4%B8%8BHexo%EF%BC%8Bgithub-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">Mac搭建Hexo博客及NexT主题配置优化</a></li>
+<li>一篇老教程，虽然hexo 3.0 跟以前的有所不一样，但是这篇很详细值得参考 <a target="_blank" rel="noopener" href="http://ibruce.info/2013/11/22/hexo-your-blog/">http://ibruce.info/2013/11/22/hexo-your-blog/</a></li>
+</ol>
+<h3 id="写什么内容"><a href="#写什么内容" class="headerlink" title="写什么内容"></a>写什么内容</h3><p>因为我们当前最重要的目的就是找工作，所以博客内容以下面这些为主，当然不限于这些。尽量用英文写专业相关的文章，一方面锻炼英文表达能力，一方面如果hr打开你的博客，也能知道写的是什么。</p>
+<ol>
+<li><p>算法分析，leetcode遇到一道好题，比如有好几种方法/数据结构的题，可以写一篇分析题目的文章，从最简单的解法写起，写下分析的过程，数据结构的比较，时间空间复杂度的分析等等。用英文写这些的另一个好处就是写完一篇就相当于模拟面试了一遍，熟悉了相关算法的英文表述。</p>
+</li>
+<li><p>学习笔记，在学校上课的笔记，以及心得都可以写成博客。这样同学如果问你要笔记，你就一个博客链接甩过去（如何正确地装逼）</p>
+</li>
+</ol>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p>对于程序员找工作，github可能比linked还要重要。丰富的github repo是hr筛选简历时的一个加分点（其他加分点详见另外一篇如何准备简历篇）。那主要传些什么上去呢？即使你是新手也没事，不用传什么高大上的开源项目。平时刷题，刷完就可以传上去；上课大作业，可以等到上完课传上去；自己课余时间做的小项目都可以传上去。我建议从现在就开始每天往github上传点东西。github会用绿点记录你每天的活跃程度。如果你从现在就开始使用github，到投简历的时候，你的github首页满屏的绿点，hr眼前一亮，第一印象感觉很牛逼。就像这样<img src="/2018/03/25/job-hunting-how-to-act-like-a-cser/48256652.jpg" alt="Ruan Yifeng: https://github.com/ruanyf"><br>如果有兴趣可以相互follow，我的github是<a target="_blank" rel="noopener" href="https://github.com/cfdtlee">https://github.com/cfdtlee</a></p>
+<h2 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h2><h3 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h3><p>专业排版工具，一般写论文和简历的时候会用到。推荐 <a target="_blank" rel="noopener" href="https://www.overleaf.com/">Overleaf</a>，一款在线的Latex编辑器，所见即所得，还有大量模板。比如一个<a target="_blank" rel="noopener" href="https://www.overleaf.com/read/kxyfzyksvtkk">简历模板</a> 用Latex写的简历，先不管内容，看起来就很专业。</p>
+<h2 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h2><p>一款轻量级排版工具，常用来写博客，写笔记，语法简单。我的博客里的文章都是用markdown写的。搭配<a target="_blank" rel="noopener" href="https://www.mathjax.org/">MathJax</a>，克服了数学公式排版的问题，能让你爱上写带有数学公式的博客，比如：</p>
+<h4 id="Maxwell’s-Equations"><a href="#Maxwell’s-Equations" class="headerlink" title="Maxwell’s Equations"></a>Maxwell’s Equations</h4><p>\[  \begin{aligned}<br>\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \<br>\nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \<br>\nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}<br>\]</p>
+<p>很多机器学习的课用这套来做笔记，写成博客，莫名的有成就感。</p>
+<h2 id="如何提问"><a href="#如何提问" class="headerlink" title="如何提问"></a>如何提问</h2><p>如何提问没法帮助你装逼，但是绝对属于CS专业素养之一。CS是一个99%知识靠自学的专业，自学的过程就会有很多的问题。如何提问也就显得很重要了。</p>
+<blockquote>
+<p>提出了问题就解决了一半了</p>
+</blockquote>
+<p>好的问题，能提示回答者给出正确的回答，所以说提出了就解决了一半。提问之前做好功课，一方面不浪费别人的时间，一方面自己锻炼了解决问题的能力。所以有问题，先问google，因为除了博士研究课题，基本上其他问题都有人遇到过。所以google一下八成能找到答案。</p>
+<ol>
+<li>问具体的问题，</li>
+<li>问小问题，</li>
+<li>问选择题，</li>
+<li>问了问题，包括自己做的调查，给出自己的理解</li>
+</ol>
+<p>举一个例子，问笼统的问题是很为难人的，比如“你对cs找工作有什么建议吗？”这个问题很难回答，因为太笼统，太宽泛了，以至于不是十分钟就能回答的，如果问这样的问题不要期待得到即可的回答（所以我写了一系列文章来回答这个问题）。同样的“刷题有什么建议？”也不是一两句能够回答的。那好的问题是怎么样的呢？</p>
+<blockquote>
+<p>“你觉得刚开始刷题应该按照什么顺序刷呢（具体的小问题），是按照顺序呢，还是按照难度呢（给出选择），我做了几道题发现按顺序来老是在难题上卡主（给出自己的理解）”</p>
+</blockquote>
+<p>那回答就很容易，比如</p>
+<blockquote>
+<p>第一遍刷，按照Acceptance刷会更合理，循序渐进。</p>
+</blockquote>
+<p>这一点在入职之后尤为重要，因为每个人的时间都很紧，如果你经常问“不好”的问题，别人开始可能出于礼貌，给了回答，但是久了别人会不耐烦。如果问“好”的问题，节省回答者的时间，有时候还能启发回答者，让他享受帮助你。</p>
+<h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p>默认大家都是用mac，如果不是应该也都能找到同类的软件</p>
+<h3 id="spectacle"><a href="#spectacle" class="headerlink" title="spectacle"></a><a target="_blank" rel="noopener" href="https://www.spectacleapp.com/">spectacle</a></h3><p>用快捷键来布局窗口的软件</p>
+<h3 id="clipmenu"><a href="#clipmenu" class="headerlink" title="clipmenu"></a><a target="_blank" rel="noopener" href="http://www.clipmenu.com/">clipmenu</a></h3><p>能存复制历史的软件，强大到mac上复制，在iphone上能直接粘贴</p>
+<h3 id="f-lux-day-light-switch"><a href="#f-lux-day-light-switch" class="headerlink" title="f.lux/day light switch"></a>f.lux/day light switch</h3><p>程序员整天对着屏幕，更需要保护研究。这款减弱蓝光的软件，蓝色波段的光对眼睛刺激最大，这个软件消除了蓝光。</p>
+<h3 id="dropbox-paper"><a href="#dropbox-paper" class="headerlink" title="dropbox/paper"></a>dropbox/<a target="_blank" rel="noopener" href="https://paper.dropbox.com/">paper</a></h3><p>重要的或者常用的文件都存在dropbox上，笔记都用paper写，因为支持markdown，简洁好看，所以它一出来我就从evernote换过来了。</p>
+<h3 id="mou"><a href="#mou" class="headerlink" title="mou"></a><a target="_blank" rel="noopener" href="http://25.io/mou/">mou</a></h3><p>本地markdown编辑器，但是mac新版好像用不了了</p>
+<h3 id="iterm-oh-my-zsh"><a href="#iterm-oh-my-zsh" class="headerlink" title="iterm + oh my zsh"></a><a target="_blank" rel="noopener" href="https://www.iterm2.com/">iterm</a> + <a href="ohmyz.sh/">oh my zsh</a></h3><p>终端配置</p>
+<h2 id="湾区早鸟"><a href="#湾区早鸟" class="headerlink" title="湾区早鸟"></a>湾区早鸟</h2><p>开通了微信公众号，获取最新的更新可以扫二维码关注。</p>
+<p><img src="/2018/03/25/job-hunting-how-to-act-like-a-cser/61964020.jpg" alt="湾区早鸟"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2018/03/25/job-hunting-how-to-act-like-a-cser/" data-id="ckxmtt9c8004g5mvm7q0q2b55" data-title="【找工求职】2/n 如何正确地装逼（如何提升CS素养）" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-job-hunting-how-to-do-leetcode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/03/12/job-hunting-how-to-do-leetcode/" class="article-date">
+  <time class="dt-published" datetime="2018-03-12T07:36:06.000Z" itemprop="datePublished">2018-03-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/job-hunting/">job-hunting</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这篇是招工求职系列文章的第一篇，前一篇是第0篇。刷题是在美国找SDE最重要也是最难最耗时的一步。就像复习托福有很多技巧一样，刷题也有很多方法和策略能让你事半功倍。这篇将从战略和战术两个方面来聊聊刷题的正确打开方式。</p>
+<h2 id="战略"><a href="#战略" class="headerlink" title="战略"></a>战略</h2><h3 id="越早开始越好"><a href="#越早开始越好" class="headerlink" title="越早开始越好"></a>越早开始越好</h3><p>不要等到说“我这门Java入门课上完再开始刷题”，因为等你上完Java课，一个月过去了，等你开始刷题的时候，Java基础语法又忘记了，还得重新查Java语法。正确的方式应该是从今天就开始刷题，同时可以在上公开课，看书等等。</p>
+<h3 id="效率最大化"><a href="#效率最大化" class="headerlink" title="效率最大化"></a>效率最大化</h3><p>做一道题不是做完，accept就完事，如果想刷完一遍对每题都印象深刻，就要做到效率最大化，一份时间当好几份用，刷一遍达到刷好几遍的效果</p>
+<ul>
+<li>x1 第一遍做</li>
+<li>x2 复习一遍用到的算法，理解题点</li>
+<li>x3 做笔记，下次复习的时候能够快速回忆起来关键点</li>
+<li>x4 分析时间复杂度，空间复杂度，从而思考如何优化</li>
+</ul>
+<h2 id="战术"><a href="#战术" class="headerlink" title="战术"></a>战术</h2><p>刷题，刚开始会很难，即使对于科班出身，也需要时间去上手。最难的是前20道题，因为这个时候，语法不熟，Leetcode系统不熟，算法不熟。但是一旦熬过20题就会感觉变轻松了，如果是按Acceptance做的话，50-70题又是一个坎，因为你会遇到很多新的数据结构，没接触的数据结构直接做会感觉很难。遇到这样的情况就硬着头皮按着战术去做就是。所以下面是战术。</p>
+<h3 id="如何刷题"><a href="#如何刷题" class="headerlink" title="如何刷题"></a>如何刷题</h3><p>第零步，选择语言，建议用Java或者C++，选择好了之后，会if else, for loop 就可以开始刷题了。大部分公司不限制面试语言，一些公司比如Amazon会在OA的时候限制只能用Java和C++；选择平台，建议用Leetcode，市面上什么lintcode之类的都是相互借鉴，做一个就好。IDE选择，直接使用Leetcode提供的界面编程。<br>第一步，按照Acceptance从高到低排序，选题号小于300的做，因为这两年从300增到700题，如果完全按照Ac来做的话前面会太简单，做了100道题可能做得都是easy的，进步太慢。按这个排序做20题，目的熟悉基础语法，熟悉leetcode，不会的就看答案，这里的答案是指Discuss里面的高票回答，看完答案再重写一遍，因为这个时候你不会，基本上是因为语法不会，Ac前20题不会出现复杂的数据结构。</p>
+<p>第二步，继续按照Acceptance排序刷接下来的20-50题，每次遇到一个新的数据结构，先查书/wiki，学习这个数据结构，然后做题，做不出来，再看答案，看完重写一遍，会了之后，选择同样数据结构的题横着刷（按Topic来刷，如图）3-4题，这样的目的在于，学习了新的数据结构，马上应用了3-4遍，学习的效率很高。然后再继续按排序做。<br><img src="/2018/03/12/job-hunting-how-to-do-leetcode/96986035.jpg"></p>
+<p>第三部，刷题顺序不变，按照Acceptance，同时夹杂着横刷，50-300，但是因为积累了一定的数据结构，所以开始加入分析数据结构，比如为什么用Linked List而不用Array List，为什么用Queue而不用Stack；分析算法复杂度，包括时间复杂度和空间复杂度；然后就是思考如何优化，时空是否存在优化，以及能否牺牲空间换取时间。<br>$$O(n^2) &gt; O(n\sqrt(n)) &gt; O(n)$$</p>
+<p>第四步，如果按照我说的笔记方法在记录的话，第二遍刷的时候可以按照题号排序来做，夹杂着横刷，这一边遇到不会的先看笔记，一般看了笔记有一点提示就很快能做出来，如果还是想不起来那可以看Discuss然后做，做完把这题作为好题分析去做笔记。</p>
+<p>第五步，一般是面试之前，边看面经边按照公司来刷，做到这一步的时候有必要买membership，这样就可以按公司查看。<br><img src="/2018/03/12/job-hunting-how-to-do-leetcode/39695632.jpg"></p>
+<p>上传github，加上一定的注释来解释你的代码，一方面为了刷github上repo和submit的数量，刷绿点；另一方面熟悉git这种collaborate的工具。像第一篇里面说到的，使用github是CS素养的第一步，后面会具体写。</p>
+<h3 id="如何看答案"><a href="#如何看答案" class="headerlink" title="如何看答案"></a>如何看答案</h3><p>点进Discuss，按照vote排序，选择靠前并且使用你用的编程语言的一条，点进去看，Solution是新加的功能，里面一般只有一个参考答案，可以参考。看了别人的答案，高票的一般都很巧妙，并且代码风格都很好，是很好的学习资源，不仅学习他的算法，思路还要学习他的分析等等。看完答案，回去自己重写一遍，重写的时候决不能看答案。</p>
+<h3 id="如何做笔记"><a href="#如何做笔记" class="headerlink" title="如何做笔记"></a>如何做笔记</h3><ul>
+<li><p>易错点记录，只要不是一次过的题，就存在易错点，比如语法错啦，边界条件少啦等等。很典型的递归错误就是忘了加退出条件。这样的错误记录了两三遍之后，就再也不会错了。</p>
+</li>
+<li><p>语法记录，很多常用的语法，比如各种数据结构的初始化比如初始化一个list of list<code>List&lt;List&lt;Integer&gt;&gt; lol = new LinkedList&lt;List&lt;Integer&gt;&gt;();</code>，再比如数组排序，以及如何使用compare函数</p>
+  <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">int</span>[] arr = &#123;<span class="number">13</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">9</span>, <span class="number">2</span>, <span class="number">100</span>&#125;;</span><br><span class="line"><span class="attribute">Arrays</span>.sort(arr, <span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line"> </span><br></pre></td></tr></table></figure></li>
+<li><p>知识点记录，给每一类题都建一个文件，推荐Dropbox的paper或者Evernote。按前面第二步的方法做的时候将题目归类并记录。记录的时候，就用一句话记录这题的题号，用的关键知识点，和关键代码，这样的好处是下次复习的时候可以快速想起，比如明天就要面试FB了，今天晚上你不可能做新题了，你就可以看你记录的这些关键点，复习效率特别高。举一个List的例子 <a target="_blank" rel="noopener" href="https://www.evernote.com/l/AKNd6Oijdz5EaK8aBHfybQGOTLWqTt2isbA">https://www.evernote.com/l/AKNd6Oijdz5EaK8aBHfybQGOTLWqTt2isbA</a></p>
+</li>
+<li><p>好题分析，上一点是每题必须做，这一点是选择性的，当你做到一道题卡了很久，或者学到很多知识点（有好几个follow up），你可以写一篇文章来分析，来记录你是如何一步一步优化做出最优解的。</p>
+</li>
+</ul>
+<h3 id="辅助材料"><a href="#辅助材料" class="headerlink" title="辅助材料"></a>辅助材料</h3><ul>
+<li>数据结构Java书，这两本书是我刷题的时候用到最多的书，遇到新的数据结构的题目，第一步就是先翻这两本书，学习一下对应的数据结构，然后回过头看题目，会感觉豁然贯通。<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1W0-6E316u_nEG3yPOv_GEw">https://pan.baidu.com/s/1W0-6E316u_nEG3yPOv_GEw</a> 密码: 86k1<br>wikipedia</li>
+<li>Google，任何问题，先问Google，碰到语法问题，程序报错等等，复制到Google里基本都能找到解决方案</li>
+</ul>
+<h2 id="湾区早鸟"><a href="#湾区早鸟" class="headerlink" title="湾区早鸟"></a>湾区早鸟</h2><p>开通了微信公众号，获取最新的更新可以扫二维码关注。</p>
+<p><img src="/2018/03/12/job-hunting-how-to-do-leetcode/61964020.jpg" alt="湾区早鸟"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2018/03/12/job-hunting-how-to-do-leetcode/" data-id="ckxmtt9c9004k5mvm90bf5hc8" data-title="【找工求职】1/n 如何开始刷题" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-job-hunting-what-to-do-after-getting-AD" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/02/27/job-hunting-what-to-do-after-getting-AD/" class="article-date">
+  <time class="dt-published" datetime="2018-02-27T08:36:06.000Z" itemprop="datePublished">2018-02-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/job-hunting/">job-hunting</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/02/27/job-hunting-what-to-do-after-getting-AD/">【找工求职】0/n 拿到CS master offer之后该做什么</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>人生有很多的经历，读书，申请学校，谈恋爱，工作等等。每段经历都有开始和结束，大学的结束是申请研究生或者开始工作；工作的结束是财务自由；谈恋爱的结束是结婚或者分手；婚姻很特别，它可能是一段没有结束的经历，那个终点叫做白头偕老。<br>恭喜你拿到了理想学校CS专业的offer，申请学校这段经历结束了，但是请记住，这不是努力的终结，而是另一段旅程的开始。</p>
+<h2 id="如何暗推"><a href="#如何暗推" class="headerlink" title="如何暗推"></a>如何<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9A%97%E6%8E%A8/7556232?fr=aladdin">暗推</a></h2><p>提前准备是最好的外挂。拿到offer的时间是2月底，入学是8月，第一次学校的Career Fair和大公司的招聘季一致，是在9月到10月。90%的新生会错过那一次机会，因为他们完全没有准备，开学一个月不到就要投简历和面试？所以如果这个时间点到来的时候，你已经刷题刷够了，简历准备好了，那你就自动超越90%的竞争者。如果你错过了第一学期的招聘季，找实习只能等到第二学期的春季招聘，一般大公司的实习大部分发给秋季招聘，剩下没招够的head count留给春招。这也就是说，对于之前没有准备好的90%的人，这次是最后的找实习的机会，他们必然会参加这次的春招，与你一起竞争这比秋招少很多的名额。既然准备面试的时间是一样多的，那把这些时间分配到入学之前，提前准备是不是就等于开了一个外挂。你觉得毕业后这么长的假期不出去旅游浪费了？其实这是一种延迟满足的做法，牺牲了这个假期，在第一学期的秋招找到实习，那么你之后获得了无拘无束的旅游的机会，感恩节，圣诞节，寒假，第二学期的春假等等所有的假期你都可以去旅游。如果没找到实习，这些假期都不得不被用来刷题。</p>
+<h2 id="上下文切换"><a href="#上下文切换" class="headerlink" title="上下文切换"></a>上下文切换</h2><p>任务切换的代价是昂贵的，长时间专注一件事效率会高很多。所以在假期利用一大片时间去准备效率是比开学后，挤课余时间，挤周末去刷题效率高很多。</p>
+<h2 id="转专业"><a href="#转专业" class="headerlink" title="转专业"></a>转专业</h2><p>作为转专业的你，想要在开学之后，不仅要跟上学习进度（很多研究生课程默认你有四年的CS基础），还要跟科班出生的人一起竞争实习，简直是痴人说梦。所以开学前的5个月对你来说至关重要，用5个月时间去追赶别人积累的四年，当然是非常难得，我会写一系列的文章教你，如何利用这5个月弯道超车追上科班出生的同学。</p>
+<h2 id="洗脑"><a href="#洗脑" class="headerlink" title="洗脑"></a>洗脑</h2><p>说了那么多，就是为了帮你洗脑，这五个月的任务就是学习学习再学习。有了这个概念之后我们开始聊如何操作。这系列文章将以找到秋季实习，拿到return offer 或者申请到full time工作作为主要目标，培养CS专业素养，培养自学能力，提升编程能力，作为具体操作的指导方向。</p>
+<h2 id="拿到offer关键因素"><a href="#拿到offer关键因素" class="headerlink" title="拿到offer关键因素"></a>拿到offer关键因素</h2><p>我们把拿到科技公司Software Engineer Offer当做游戏挑战，那么眼前有两个大关。简历关和面试关。简历关就是完成一份完美的简历，通过HR筛选，获得面试资格。简历关需要通过积累项目，书写简历，以借助一系列工具体现你的CS素养。这样通过过硬的项目支撑，有恰当优美的表述，以及CS素养透露出的逼格，一定能够征服HR姐姐。面试关也是类似，通过刷题的日积月累，保证了基础知识；面试关考察也是有“得分点”，我们通过面试现场的发挥来征服面试官哥哥。以下每一点都会写一篇博文来分析。因为刷题是一场持久战，将会从如何刷题这篇开始。</p>
+<h3 id="简历关"><a href="#简历关" class="headerlink" title="简历关"></a>简历关</h3><p>以下将会是我通过自己准备简历的心得，跟HR的交流以及参加校园招聘筛选简历的经验总结的文章</p>
+<ol>
+<li>项目经历</li>
+<li>简历书写</li>
+<li>如何运用 github，linkedin，personal blog 体现CS素养</li>
+</ol>
+<h3 id="面试关"><a href="#面试关" class="headerlink" title="面试关"></a>面试关</h3><p>以下是总结我自己当年刷题，以及在FB当面试官的经历给出的建议</p>
+<ol>
+<li>面试前如何刷题</li>
+<li>面试时如何表现</li>
+</ol>
+<h2 id="湾区早鸟"><a href="#湾区早鸟" class="headerlink" title="湾区早鸟"></a>湾区早鸟</h2><p>开通了微信公众号，获取最新的更新可以扫二维码关注。</p>
+<p><img src="/2018/02/27/job-hunting-what-to-do-after-getting-AD/61964020.jpg" alt="湾区早鸟"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2018/02/27/job-hunting-what-to-do-after-getting-AD/" data-id="ckxmtt9cb004q5mvmgt509azf" data-title="【找工求职】0/n 拿到CS master offer之后该做什么" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-OO-Design-Parking_Lot" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/10/07/OO-Design-Parking_Lot/" class="article-date">
+  <time class="dt-published" datetime="2016-10-07T01:00:06.000Z" itemprop="datePublished">2016-10-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/OO-Desing/">OO-Desing</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2016/10/07/OO-Design-Parking_Lot/">OO Design-Parking Lot</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象设计"><a href="#面向对象设计" class="headerlink" title="面向对象设计"></a>面向对象设计</h1><p>面向对象设计速成。本文将以Parking Lot为例解释OO design</p>
+<h2 id="object对象"><a href="#object对象" class="headerlink" title="object对象"></a>object对象</h2><p>名词，每个名词都是一个对象。对于停车场系统来说，涉及到的名词有：</p>
+<ul>
+<li>vehicle，包括truck, sedan, couple, etc.</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Vehicle</span> &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>slot, including regular slot, compact slot, handicapped slot(残障人士车位)</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Slot</span> &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>parking lot，整个停车场也是一个类</li>
+</ul>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">ParkingLot</span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable"></span></span><br><span class="line"><span class="template-variable">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Inheritance-isa"><a href="#Inheritance-isa" class="headerlink" title="Inheritance/isa"></a>Inheritance/isa</h2><p>继承是对象之间的关系，只要能用isa来描述的关系都能用继承来实现</p>
+<ul>
+<li>truck is a vehicle, sedan is a vehicle, so they inherit from vehicle</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// make parent <span class="keyword">class</span> an <span class="keyword">abstract</span> <span class="keyword">class</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> Vehicle &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Truck</span> <span class="keyword">extends</span> <span class="title">Vehicle</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>regular slot is a slot, compact slot, handicapped slot</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// make parent <span class="keyword">class</span> an <span class="keyword">abstract</span> <span class="keyword">class</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> Slot &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CompactSlot</span> <span class="keyword">extends</span> <span class="title">Slot</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Attribute-has"><a href="#Attribute-has" class="headerlink" title="Attribute/has"></a>Attribute/has</h2><p>“类成员”，“属性”，“字段”，“特征” 都是一个东西，就是在类中定义的变量<br>能用“is+形容词/名词，或者是has+名词”描述的都可以写在成员里。“is+形容词”表示对象的属性，通常用基本数据类型表示；“has+名词”通常表示该对象拥有的“成员”，因为出现名词，（参照对象的定义）通常用另一个类或者类的数组表示。</p>
+<ul>
+<li>For a vehicle, its size: big, regular or compact? its plate? What is its engine?</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">abstract <span class="class"><span class="keyword">class</span> <span class="title">Vehicle</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> size; <span class="comment">// 为什么用private？因为这些变量不能暴露给其他成员修改，但其他地方可能需要读取这些变量，于是我们需要写getter，就是用来读取私有变量的函数。</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">String</span> plate;</span><br><span class="line"><span class="keyword">private</span> EngineClass engine; <span class="comment">// another class</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// getter</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> size;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 同样有getter对应的setter，setter最普遍的用处就是控制输入范围，比如初始化的时候想初始化一个巨大的车，输入一个很大的size，这时候用setter就能把关</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setSize</span><span class="params">(<span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (size &gt; SIZE_MAX) &#123;</span><br><span class="line">size = SIZE_MAX;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>For a slot, what is it’s number? is occupied or not?</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Slot</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> slotNumber;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span> isOccupied;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>For a parking lot, its size? How many slot it has? How many of those slot are occupied?</li>
+</ul>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">public</span> <span class="variable">class</span> <span class="variable">ParkingLot</span> <span class="punctuation">&#123;</span></span><br><span class="line"><span class="variable">private</span> <span class="built_in">List</span><span class="operator">&lt;</span><span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">regularSlots</span><span class="operator">;</span></span><br><span class="line"><span class="variable">private</span> <span class="built_in">List</span><span class="operator">&lt;</span><span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">compactSlots</span><span class="operator">;</span></span><br><span class="line"><span class="variable">private</span> <span class="built_in">List</span><span class="operator">&lt;</span><span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">handicappedSlots</span><span class="operator">;</span></span><br><span class="line"><span class="operator">//</span> <span class="variable">use</span> <span class="built_in">Map</span><span class="operator">&lt;</span><span class="variable">car</span><span class="operator">.</span><span class="variable">plate</span><span class="operator">,</span> <span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">to</span> <span class="variable">denote</span> <span class="variable">all</span> <span class="variable">occupied</span> <span class="variable">slots</span></span><br><span class="line"><span class="variable">public</span> <span class="built_in">Map</span><span class="operator">&lt;</span><span class="built_in">String</span><span class="operator">,</span> <span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">occupiedSlot</span><span class="operator">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Method-cando"><a href="#Method-cando" class="headerlink" title="Method/cando"></a>Method/cando</h2><p>方法就是写在类里面的函数，前面的getter和setter就属于类方法。一般自然语言中的“能做什么”都能写成类方法。</p>
+<ul>
+<li>停车这个函数<br>Pause,先写到这，一会补上</li>
+</ul>
+<h2 id="Initialisation"><a href="#Initialisation" class="headerlink" title="Initialisation"></a>Initialisation</h2><p>初始化</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://coderanch.com/t/628047/patterns/Parking-Lot-Design">Parking Lot</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.codeproject.com/Articles/3121/Blackjack-a-real-world-OOD-example">Black Jack</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2016/10/07/OO-Design-Parking_Lot/" data-id="ckxmtt9bv00305mvm4zdlht5o" data-title="OO Design-Parking Lot" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OO-Design/" rel="tag">OO-Design</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Career-intern_@_facebook" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/08/11/Career-intern_@_facebook/" class="article-date">
+  <time class="dt-published" datetime="2016-08-11T02:18:16.000Z" itemprop="datePublished">2016-08-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Career/">Career</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2016/08/11/Career-intern_@_facebook/">intern @ Facebook</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>非常充实的一个假期，在Facebook实习12周，赚到第一桶金（被预支买了第一辆车），两个长周末去了Los Angeles和Yosemite，更重要的是认识了很多朋友。</p>
+<p>在硅谷最激动的事情就是很多很酷的产品发源于这里，你可以在Facebook体验Oculus，开车路过Mountain View可能会看到Google的无人车，第一条超级高铁Hyperloop以后也将在加州开通。</p>
+<h2 id="Work-Facebook"><a href="#Work-Facebook" class="headerlink" title="Work @ Facebook"></a>Work @ Facebook</h2><h3 id="公司文化"><a href="#公司文化" class="headerlink" title="公司文化"></a>公司文化</h3><p>公司就像一座校园，屋顶没有吊顶，裸露的钢架和网线，像一座工厂却又在每个角落都有壁画，设计师在这里跟程序员一样自由，每面墙都是他们的画板。<br><img src="https://c3.staticflickr.com/6/5223/29588635394_1dcd1108d7_c.jpg" alt="墙里的拉链"><br><img src="https://c3.staticflickr.com/8/7290/27561492946_b9a39fd8b2_b.jpg" alt="彩色的形状"></p>
+<p>每个房间都有很有趣的名字，Instagram所在一层的房间都是以Game of Throne里的地名命名的，有一次开会的房间叫做“DO NOT ACCESS ME OR YOU WILL BE FIRED”，吓得我都不敢进去开会了lol。<br><img src="https://c2.staticflickr.com/8/7528/27074255593_a623116b1b_b.jpg" alt="DO NOT ACCESS ME OR YOU WILL BE FIRED"></p>
+<p>被溺爱的三个月，幸福感满满，免费三餐，Main Campus里有两个比较大的食堂Epic和Living in the Dream，一家墨西哥，一家中式的Noodle Bar，一家专供蔬菜水果萨拉的Harvest，一辆提供Asian Food的餐车Hacking Dragon，一家冰淇淋甜点店Sweet Stop，一家披萨店，每天饭点用内部Menu App查好吃的再出发，口味的话好吃到秒杀学校附近的餐厅。免费洗衣，实习生的免费住房（精装修两室两卫），免费班车（车上就有公司Wi-Fi）。<br><img src="https://c4.staticflickr.com/8/7192/26665182203_3b88fcfd3a_b.jpg" alt="20号楼Full Circle的螃蟹"><br><img src="https://c2.staticflickr.com/8/7460/27274912441_0b5979aed6_b.jpg" alt="Hawker的烧鸭"><br><img src="https://c2.staticflickr.com/8/7345/27552158673_9f2c0eeabd_b.jpg" alt="Living in the dream的小麦草汁"></p>
+<p>总部就像校园一样，Main Campus由8栋楼围成一个圈，中间有很大的Hacker Square，经常在这办活动<br>office里面呢就像工厂一样简陋，每个员工配备升降桌子，每人配laptop和手机，外加任意台27寸mac显示器，可申请mac pro，自动售货机里电脑配件随便拿，小厨房里各种零食饮料。<br>没有上下班时间限制，没有工作地点限制。</p>
+<p><img src="https://c2.staticflickr.com/8/7330/27116726993_2452be0955_b.jpg" alt="Hacker Square"><br><img src="https://c5.staticflickr.com/8/7279/26985402284_89007fc099_b.jpg" alt="Office"></p>
+<h3 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h3><p>我在Instagram Search组做iOS开发同时写对应feature的backend api。选iOS是因为觉得其他组做的东西都没法提前准备，而iOS可以提前学一点iOS的开发，所以填Survey的时候明明只学过两个月iOS，却在iOS后面填了个expert。结果接触到code base之后傻眼了，随随便便一个类就一千多行，没有任何文档和代码注释，所有的view都是纯代码写的（我两个月里学的都是storyboard拖拖控件，顶多写个xib file）所以前两周基本上一行代码都没有写。</p>
+<p>实习生直接参与到产品的开发中，并且可以接触到Facebook 99% 产品的源代码（少部分保密的project除外），对于一个代码量小于十万行的菜鸟来说不知是受宠若惊呢还是惶恐不安，一方面感受到公司对你的信任一方面又怕出什么岔子break了product。这种感受一直存在，在后来每次iOS出什么bug，或者说后台break了，都会惶恐不安，想这是不是跟自己刚刚land的diff有关系！另外自己的project在每次组会上都会被PM提到，project完成差不多的时候还有UX researcher负责找人对这个feature做research，所以感到自己的project很受重视，受宠若惊。</p>
+<p>在Instagram，每两周一个版本，测试两周之后提交到App Store。后台的代码则是land之后立即release to production，所以经常是land diff之后盯着后台运行情况看一会，一有问题马上unland。</p>
+<p>公司内部非常透明，任何人都能看到其他员工的任务和提交的代码（看过一眼Mark的Task，其中一个大概是在公司选几个地方拍宣传照），一个叫team overview的工具能看到每个人在一段时间内提交的代码行数。效率高低一看就知道，所以也就不用限制什么工作时间地点。</p>
+<p>每周五有Mark的Q&amp;A，所有intern可以参加，问Mark各种问题。我虽然一次也没有去过lol，但是听说过一些有趣的问题，比如“Mark，你认为每天花多少时间在社交网络上合适？”</p>
+<p>关于<a target="_blank" rel="noopener" href="http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=146845&page=1#pid2051886">实习面试</a>，感觉没有什么经验，因为从头到尾只面试过Facebook一家公司，（命中率100%，也就这一点可以吹了），面试到实习运气都比较好，所以走到了Full-time。</p>
+<h2 id="Play-Facebook"><a href="#Play-Facebook" class="headerlink" title="Play @ Facebook"></a>Play @ Facebook</h2><p>平均每两周有一次外出的intern event，比如百老汇的show、看棒球赛、summer party、Santa Cruz等等。Summer Fest上，fb每个intern可以邀请一个在湾区实习的朋友来fb玩，也被戏称fb挖人大会。<br><img src="https://c6.staticflickr.com/9/8038/28710242301_6e7b32f78c_b.jpg" alt="SF Giant主场，AT&amp;T Park"><br><img src="https://c5.staticflickr.com/9/8816/28757817716_3cd467a0b7_b.jpg" alt="Summer Fest 我的俩逗比朋友在失重房子里玩"></p>
+<p>校园里也经常会举办活动，一次大型的summer fest，每个实习生能邀请一个其他公司的实习生来玩，另外一些活动能让员工工作之余走到HACK广场上参与放松。<br><img src="https://c2.staticflickr.com/9/8889/28172561273_d41dfda0d3_b.jpg" alt="Lazer tag"><br><img src="https://c5.staticflickr.com/8/7357/27626660612_b634156dd8_b.jpg" alt="bring kids to work day"></p>
+<h2 id="Friends-Facebook"><a href="#Friends-Facebook" class="headerlink" title="Friends @ Facebook"></a>Friends @ Facebook</h2><p>在Facebook，每个人都非常友好，每个人都有出乎你意料的一面，<br>一个同事会7种语言，有知名传媒公司签约的摄影师，还有topcoder世界第一，中国好声音美国区前20。你会发现大家都不是死读书出来的，都是很有想法的人。</p>
+<p>组里的每个人都很有爱，不知道为什么我们组妹子很多，mentor Liping就是中国妹子，比我大不了几岁，实习中帮了我很多，实习的最后一天，全组为我举办了Farewell Party，庆祝我拿到Return Offer。<br><img src="https://c7.staticflickr.com/9/8719/28766730366_3cb89256ff_b.jpg" alt="全组大合照"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2016/08/11/Career-intern_@_facebook/" data-id="ckxmtt9b000055mvmhod15whh" data-title="intern @ Facebook" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/internship/" rel="tag">internship</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Python-virtualenv" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/03/03/Python-virtualenv/" class="article-date">
+  <time class="dt-published" datetime="2016-03-02T19:56:28.000Z" itemprop="datePublished">2016-03-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2016/03/03/Python-virtualenv/">Quick note on virtualenv</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h2><h2 id="create"><a href="#create" class="headerlink" title="create"></a>create</h2><ul>
+<li>virtualenv evn_name</li>
+<li>virtualenv –system-site-packages evn_name</li>
+<li>virtualenv –no-site-packages evn_name<br>without site packages that are already installed</li>
+</ul>
+<h2 id="launch"><a href="#launch" class="headerlink" title="launch"></a>launch</h2><ul>
+<li>cd evn_name</li>
+<li>source ./bin/activate</li>
+</ul>
+<h2 id="exit"><a href="#exit" class="headerlink" title="exit"></a>exit</h2><ul>
+<li>deactivate</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2016/03/03/Python-virtualenv/" data-id="ckxmtt9bv00315mvmdhaud0wk" data-title="Quick note on virtualenv" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualenv/" rel="tag">virtualenv</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Ruby_learning_Ruby_on_Rails" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/02/23/Ruby_learning_Ruby_on_Rails/" class="article-date">
+  <time class="dt-published" datetime="2016-02-22T19:56:28.000Z" itemprop="datePublished">2016-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2016/02/23/Ruby_learning_Ruby_on_Rails/">Learning Ruby</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Resourse"><a href="#Resourse" class="headerlink" title="Resourse"></a>Resourse</h2><ul>
+<li><p>start with ruby on rails<br><a target="_blank" rel="noopener" href="http://railsapps.github.io/installrubyonrails-mac.html">http://railsapps.github.io/installrubyonrails-mac.html</a></p>
+</li>
+<li><p>change ruby version<br><a target="_blank" rel="noopener" href="https://rvm.io/rubies/default">https://rvm.io/rubies/default</a></p>
+</li>
+<li><p>tutorial: <a target="_blank" rel="noopener" href="https://www.railstutorial.org/">https://www.railstutorial.org/</a></p>
+</li>
+</ul>
+<h2 id="Command-Lines"><a href="#Command-Lines" class="headerlink" title="Command Lines"></a>Command Lines</h2><ul>
+<li>rails _4.2.2_ new sample_app</li>
+<li>bundle install</li>
+<li>bundle install –without production</li>
+<li>bundle update</li>
+<li>heroku create</li>
+<li>bundle exec rake db:migrate</li>
+<li>bundle exec rake db:rollback</li>
+<li>heroku run rake db:migrate</li>
+<li>git push heroku master</li>
+<li>rails console</li>
+<li>rails generate scaffold …</li>
+<li>rails generate model User name:string email:string</li>
+<li>rails destroy model User</li>
+<li>rails generate controller StaticPages home help</li>
+<li>rails destroy  controller StaticPages home help</li>
+<li>bundle exec rake test (3)</li>
+<li>bundle exec guard init (3.7.3)</li>
+<li>bundle exec guard</li>
+<li>ps aux | grep spring</li>
+</ul>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p>Add this into </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ENV[<span class="string">&#x27;RAILS_ENV&#x27;</span>] <span class="params">||</span>= <span class="string">&#x27;test&#x27;</span></span><br><span class="line"><span class="keyword">require</span> File.expand_path(<span class="string">&#x27;../../config/environment&#x27;</span>, <span class="keyword">__FILE__</span>)</span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;rails/test_help&#x27;</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&quot;minitest/reporters&quot;</span></span><br><span class="line">Minitest::Reporters.use!</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ActiveSupport::TestCase</span></span></span><br><span class="line">  <span class="comment"># Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical</span></span><br><span class="line">  <span class="comment"># order.</span></span><br><span class="line">  fixtures <span class="symbol">:all</span></span><br><span class="line">  <span class="comment"># Add more helper methods to be used by all tests here...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Git-related"><a href="#Git-related" class="headerlink" title="Git related"></a>Git related</h2><ul>
+<li>git checkout master</li>
+<li>git checkout -b static-pages</li>
+<li>git checkout master</li>
+<li>git merge static-pages</li>
+</ul>
+<h2 id="Shortcut-of-Commands"><a href="#Shortcut-of-Commands" class="headerlink" title="Shortcut of Commands"></a>Shortcut of Commands</h2><table>
+<thead>
+<tr>
+<th>Full command</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$ rails server</td>
+<td>$ rails s</td>
+</tr>
+<tr>
+<td>$ rails console</td>
+<td>$ rails c</td>
+</tr>
+<tr>
+<td>$ rails generate</td>
+<td>$ rails g</td>
+</tr>
+<tr>
+<td>$ bundle install</td>
+<td>$ bundle</td>
+</tr>
+<tr>
+<td>$ rake test</td>
+<td>$ rake</td>
+</tr>
+</tbody></table>
+<p>Because Ruby uses CamelCase for class names (Section 4.4), my preference is to refer to controllers using their CamelCase names, but this is a matter of taste. (Since Ruby filenames typically use snake case, the Rails generator converts CamelCase to snake case using the underscore method.)</p>
+<h2 id="ruby"><a href="#ruby" class="headerlink" title="ruby"></a>ruby</h2><ul>
+<li>Single-quoted strings are often useful because they are truly literal, and contain exactly the characters you type, like ‘\n’.</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> s = <span class="string">&quot;foobar&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> if s.nil?</span><br><span class="line">&gt;&gt;   <span class="string">&quot;The variable is nil&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> elsif s.empty?</span><br><span class="line">&gt;&gt;   <span class="string">&quot;The string is empty&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> elsif s.include?(<span class="string">&quot;foo&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>   <span class="string">&quot;The string includes &#x27;foo&#x27;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> end</span><br><span class="line">=&gt; <span class="string">&quot;The string includes &#x27;foo&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Since everything in Ruby is an object, it follows that nil is an object, so it too can respond to methods. One example is the to_s method that can convert virtually any object to a string:</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; nil.to_s.empty?      # Message chaining</span><br><span class="line">=&gt; <span class="built_in">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Blocks"><a href="#Blocks" class="headerlink" title="Blocks"></a>Blocks</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> (<span class="number">1</span>..<span class="number">5</span>).each do <span class="params">|number|</span></span><br><span class="line"><span class="meta">?&gt;</span>   puts <span class="number">2</span> * number</span><br><span class="line"><span class="meta">&gt;&gt;</span>   puts <span class="string">&#x27;--&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> end</span><br></pre></td></tr></table></figure>
+
+<p>the map method returns the result of applying the given block to each element in the array or range.</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; %w[A B C].map &#123; |<span class="built_in">char</span>| char.downcase &#125;</span><br><span class="line">=&gt; [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]</span><br><span class="line">&gt;&gt; %w[A B C].map(&amp;<span class="symbol">:do</span>wncase)</span><br><span class="line">=&gt; [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>] #shorthand</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a                     # An alphabet array</span><br><span class="line">=&gt; [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;f&quot;</span>, <span class="string">&quot;g&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;j&quot;</span>, <span class="string">&quot;k&quot;</span>, <span class="string">&quot;l&quot;</span>, <span class="string">&quot;m&quot;</span>, <span class="string">&quot;n&quot;</span>, <span class="string">&quot;o&quot;</span>,</span><br><span class="line"><span class="string">&quot;p&quot;</span>, <span class="string">&quot;q&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;s&quot;</span>, <span class="string">&quot;t&quot;</span>, <span class="string">&quot;u&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="string">&quot;x&quot;</span>, <span class="string">&quot;y&quot;</span>, <span class="string">&quot;z&quot;</span>]</span><br><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a.shuffle             # Shuffle it.</span><br><span class="line">=&gt; [<span class="string">&quot;c&quot;</span>, <span class="string">&quot;g&quot;</span>, <span class="string">&quot;l&quot;</span>, <span class="string">&quot;k&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;z&quot;</span>, <span class="string">&quot;s&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;n&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;y&quot;</span>, <span class="string">&quot;u&quot;</span>, <span class="string">&quot;t&quot;</span>, <span class="string">&quot;j&quot;</span>, <span class="string">&quot;q&quot;</span>,</span><br><span class="line"><span class="string">&quot;b&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;o&quot;</span>, <span class="string">&quot;f&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="string">&quot;m&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;x&quot;</span>, <span class="string">&quot;p&quot;</span>]</span><br><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a.shuffle[<span class="number">0</span>..<span class="number">7</span>]       # Pull out the first eight elements.</span><br><span class="line">=&gt; [<span class="string">&quot;f&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;p&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;x&quot;</span>]</span><br><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a.shuffle[<span class="number">0</span>..<span class="number">7</span>].join  # Join them together to make one string.</span><br><span class="line">=&gt; <span class="string">&quot;mznpybuj&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Array-and-Hash"><a href="#Array-and-Hash" class="headerlink" title="Array and Hash"></a>Array and Hash</h3><p>[] for Array, {} for Hash</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> a = [<span class="number">42</span>, <span class="number">8</span>, <span class="number">17</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Instead of defining hashes one item at a time using square brackets, it’s easy to use a literal representation with keys and values separated by =&gt;, called a “hashrocket”:</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; user = &#123; <span class="string">&quot;first_name&quot;</span> =&gt; <span class="string">&quot;Michael&quot;</span>, <span class="string">&quot;last_name&quot;</span> =&gt; <span class="string">&quot;Hartl&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="string">&quot;last_name&quot;</span>=&gt;<span class="string">&quot;Hartl&quot;</span>, <span class="string">&quot;first_name&quot;</span>=&gt;<span class="string">&quot;Michael&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><p>in Rails it is much more common to use symbols instead. Symbols look kind of like strings, but prefixed with a colon instead of surrounded by quotes. For example, :name is a symbol. You can think of symbols as basically strings without all the extra baggage</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; user = &#123; <span class="symbol">:na</span>me =&gt; <span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail =&gt; <span class="string">&quot;michael@example.com&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="symbol">:na</span>me=&gt;<span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail=&gt;<span class="string">&quot;michael@example.com&quot;</span>&#125;</span><br><span class="line">&gt;&gt; user[<span class="symbol">:na</span>me]              # Access the <span class="built_in">value</span> corresponding to <span class="symbol">:na</span>me.</span><br><span class="line">=&gt; <span class="string">&quot;Michael Hartl&quot;</span></span><br><span class="line">&gt;&gt; user[<span class="symbol">:pa</span>ssword]          # Access the <span class="built_in">value</span> of an undefined key.</span><br><span class="line">=&gt; nil</span><br></pre></td></tr></table></figure>
+
+<h4 id="new-syntax-for-defining-hash"><a href="#new-syntax-for-defining-hash" class="headerlink" title="new syntax for defining hash"></a>new syntax for defining hash</h4><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="symbol">h1</span> = &#123; <span class="symbol">:na</span>me =&gt; <span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail =&gt; <span class="string">&quot;michael@example.com&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="symbol">:na</span>me=&gt;<span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail=&gt;<span class="string">&quot;michael@example.com&quot;</span>&#125;</span><br><span class="line">&gt;&gt; <span class="symbol">h2</span> = &#123; <span class="built_in">na</span><span class="symbol">me:</span> <span class="string">&quot;Michael Hartl&quot;</span>, ema<span class="symbol">il:</span> <span class="string">&quot;michael@example.com&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="symbol">:na</span>me=&gt;<span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail=&gt;<span class="string">&quot;michael@example.com&quot;</span>&#125;</span><br><span class="line">&gt;&gt; <span class="symbol">h1</span> == <span class="symbol">h2</span></span><br><span class="line">=&gt; <span class="built_in">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="inspect"><a href="#inspect" class="headerlink" title="inspect"></a>inspect</h3><p>inspect returns a string with a literal representation of the object it’s called on</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> puts (<span class="number">1</span>..<span class="number">5</span>).to_a.inspect    <span class="comment"># Put a literal array.</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;</span> puts <span class="symbol">:name</span>, <span class="symbol">:name</span>.inspect</span><br><span class="line">name</span><br><span class="line"><span class="meta">&gt;&gt;</span> p <span class="symbol">:name</span>             <span class="comment"># Same output as &#x27;puts :name.inspect&#x27;</span></span><br><span class="line"><span class="symbol">:name</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; class Word &lt; String             # Word inherits from String.</span><br><span class="line">&gt;&gt;   # Returns <span class="built_in">true</span> <span class="built_in">if</span> the string is its own reverse.</span><br><span class="line">&gt;&gt;   def palindrome?</span><br><span class="line">&gt;&gt;     self == reverse        # self is the string itself. equals to self == self.reverse</span><br><span class="line">&gt;&gt;   end</span><br><span class="line">&gt;&gt; end</span><br><span class="line">=&gt; nil</span><br><span class="line">&gt;&gt; s = Word.new(<span class="string">&quot;level&quot;</span>)    # Make a new Word, initialized with <span class="string">&quot;level&quot;</span>.</span><br><span class="line">=&gt; <span class="string">&quot;level&quot;</span></span><br><span class="line">&gt;&gt; s.palindrome?            # Words have the palindrome? method.</span><br><span class="line">=&gt; <span class="built_in">true</span></span><br><span class="line">&gt;&gt; s.length                 # Words also inherit all the normal string methods.</span><br><span class="line">=&gt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Integration-Test"><a href="#Integration-Test" class="headerlink" title="Integration Test"></a>Integration Test</h2><ul>
+<li>rails generate integration_test site_layout</li>
+<li>bundle exec rake test:integration</li>
+<li>bundle exec rake test TEST=test/integration/users_login_test.rb</li>
+<li>bundle exec rake test TEST=test/integration/users_login_test.rb TESTOPTS=”–name test_login_with_valid_information”</li>
+</ul>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><ul>
+<li>rails generate model User name:string email:string</li>
+<li>rails generate migration add_remember_digest_to_users remember_digest:string</li>
+<li>rails generate migration add_admin_to_users admin:boolean</li>
+<li>bundle exec rake db:migrate</li>
+<li>rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime</li>
+<li>bundle exec rake db:rollback</li>
+<li>rails console –sandbox</li>
+<li>bundle exec rake test:models</li>
+<li>rails generate migration add_index_to_users_email<br>This uses a Rails method called add_index to add an index on the email column of the users table. The index by itself doesn’t enforce uniqueness, but the option unique: true does.</li>
+</ul>
+<h2 id="Sessions"><a href="#Sessions" class="headerlink" title="Sessions"></a>Sessions</h2><ul>
+<li>bundle exec rake routes</li>
+</ul>
+<h2 id="Avoid-hijacking-to-Cookie"><a href="#Avoid-hijacking-to-Cookie" class="headerlink" title="Avoid hijacking to Cookie"></a>Avoid hijacking to Cookie</h2><p>There are four main ways to steal cookies: </p>
+<ol>
+<li>using a packet sniffer to detect cookies being passed over insecure networks</li>
+<li>compromising a database containing remember tokens</li>
+<li>using cross-site scripting (XSS)</li>
+<li>gaining physical access to a machine with a logged-in user. </li>
+</ol>
+<p>Rails preventes the first problem by using Secure Sockets Layer (SSL) site-wide, which protects network data from packet sniffers.<br>It prevents the second problem by storing a hash digest of the remember token instead of the token itself, in much the same way that we stored password digests instead of raw passwords.<br>Rails automatically prevents the third problem by escaping any content inserted into view templates.<br>Finally, although there’s no iron-clad way to stop attackers who have physical access to a logged-in computer, rails will minimize the fourth problem by changing tokens every time a user logs out and by taking care to cryptographically sign any potentially sensitive information we place on the browser.</p>
+<h2 id="Heroku"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku</h2><ul>
+<li>heroku rename rails-tutorial-hello</li>
+</ul>
+<p>Note that the application will briefly be in an invalid state after pushing but before the migration is finished. On a production site with significant traffic, it is a good idea to turn maintenance mode on before making the changes:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>heroku <span class="symbol">maintenance:</span>on</span><br><span class="line"><span class="variable">$ </span>git push heroku</span><br><span class="line"><span class="variable">$ </span>heroku run rake <span class="symbol">db:</span>migrate</span><br><span class="line"><span class="variable">$ </span>heroku <span class="symbol">maintenance:</span>off</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2016/02/23/Ruby_learning_Ruby_on_Rails/" data-id="ckxmtt9by003c5mvm6p5vbaol" data-title="Learning Ruby" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/" rel="tag">ruby</a></li></ul>
+
     </footer>
   </div>
   
@@ -128,23 +973,49 @@
   
 
 
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Captcha/" rel="tag">Captcha</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English-EOE/" rel="tag">English EOE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GRE/" rel="tag">GRE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image-Processing/" rel="tag">Image Processing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interpreter/" rel="tag">Interpreter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JEE/" rel="tag">JEE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LISP/" rel="tag">LISP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MCM/" rel="tag">MCM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/" rel="tag">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OO-Design/" rel="tag">OO-Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Project/" rel="tag">Project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Public-Speaking/" rel="tag">Public Speaking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" rel="tag">Public-Speech 摩英</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reading/" rel="tag">Reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/University/" rel="tag">University</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unix/" rel="tag">Unix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video/" rel="tag">Video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vocabulary/" rel="tag">Vocabulary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/entrepreneurship/" rel="tag">entrepreneurship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/" rel="tag">health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inspiration/" rel="tag">inspiration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insurance/" rel="tag">insurance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/internship/" rel="tag">internship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phonetic/" rel="tag">phonetic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/retrospect/" rel="tag">retrospect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/" rel="tag">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/target/" rel="tag">target</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualenv/" rel="tag">virtualenv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vocabulary/" rel="tag">vocabulary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" rel="tag">性格色彩</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%A9%E8%8B%B1/" rel="tag">摩英</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E5%8F%98/" rel="tag">改变</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" rel="tag">欧洲史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" rel="tag">网页爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" rel="tag">装箱问题</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 11.67px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 15px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li></ul>
     </div>
   </div>
 
@@ -157,7 +1028,23 @@
       <ul>
         
           <li>
-            <a href="/2021/12/25/hello-world/">Hello World</a>
+            <a href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
           </li>
         
       </ul>

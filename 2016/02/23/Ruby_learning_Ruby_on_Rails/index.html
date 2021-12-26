@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Learning Ruby | cfdtlee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Resourse start with ruby on railshttp:&#x2F;&#x2F;railsapps.github.io&#x2F;installrubyonrails-mac.html  change ruby versionhttps:&#x2F;&#x2F;rvm.io&#x2F;rubies&#x2F;default  tutorial: https:&#x2F;&#x2F;www.railstutorial.org&#x2F;   Command Lines rail">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning Ruby">
+<meta property="og:url" content="http://www.cfdtlee.com/2016/02/23/Ruby_learning_Ruby_on_Rails/index.html">
+<meta property="og:site_name" content="cfdtlee">
+<meta property="og:description" content="Resourse start with ruby on railshttp:&#x2F;&#x2F;railsapps.github.io&#x2F;installrubyonrails-mac.html  change ruby versionhttps:&#x2F;&#x2F;rvm.io&#x2F;rubies&#x2F;default  tutorial: https:&#x2F;&#x2F;www.railstutorial.org&#x2F;   Command Lines rail">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2016-02-22T19:56:28.000Z">
+<meta property="article:modified_time" content="2016-03-09T19:24:59.000Z">
+<meta property="article:author" content="Shuang Li">
+<meta property="article:tag" content="ruby">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cfdtlee</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">We do what we have to do, so we can do what we want to do</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.cfdtlee.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Ruby_learning_Ruby_on_Rails" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/02/23/Ruby_learning_Ruby_on_Rails/" class="article-date">
+  <time class="dt-published" datetime="2016-02-22T19:56:28.000Z" itemprop="datePublished">2016-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Learning Ruby
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Resourse"><a href="#Resourse" class="headerlink" title="Resourse"></a>Resourse</h2><ul>
+<li><p>start with ruby on rails<br><a target="_blank" rel="noopener" href="http://railsapps.github.io/installrubyonrails-mac.html">http://railsapps.github.io/installrubyonrails-mac.html</a></p>
+</li>
+<li><p>change ruby version<br><a target="_blank" rel="noopener" href="https://rvm.io/rubies/default">https://rvm.io/rubies/default</a></p>
+</li>
+<li><p>tutorial: <a target="_blank" rel="noopener" href="https://www.railstutorial.org/">https://www.railstutorial.org/</a></p>
+</li>
+</ul>
+<h2 id="Command-Lines"><a href="#Command-Lines" class="headerlink" title="Command Lines"></a>Command Lines</h2><ul>
+<li>rails _4.2.2_ new sample_app</li>
+<li>bundle install</li>
+<li>bundle install –without production</li>
+<li>bundle update</li>
+<li>heroku create</li>
+<li>bundle exec rake db:migrate</li>
+<li>bundle exec rake db:rollback</li>
+<li>heroku run rake db:migrate</li>
+<li>git push heroku master</li>
+<li>rails console</li>
+<li>rails generate scaffold …</li>
+<li>rails generate model User name:string email:string</li>
+<li>rails destroy model User</li>
+<li>rails generate controller StaticPages home help</li>
+<li>rails destroy  controller StaticPages home help</li>
+<li>bundle exec rake test (3)</li>
+<li>bundle exec guard init (3.7.3)</li>
+<li>bundle exec guard</li>
+<li>ps aux | grep spring</li>
+</ul>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p>Add this into </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ENV[<span class="string">&#x27;RAILS_ENV&#x27;</span>] <span class="params">||</span>= <span class="string">&#x27;test&#x27;</span></span><br><span class="line"><span class="keyword">require</span> File.expand_path(<span class="string">&#x27;../../config/environment&#x27;</span>, <span class="keyword">__FILE__</span>)</span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;rails/test_help&#x27;</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&quot;minitest/reporters&quot;</span></span><br><span class="line">Minitest::Reporters.use!</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ActiveSupport::TestCase</span></span></span><br><span class="line">  <span class="comment"># Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical</span></span><br><span class="line">  <span class="comment"># order.</span></span><br><span class="line">  fixtures <span class="symbol">:all</span></span><br><span class="line">  <span class="comment"># Add more helper methods to be used by all tests here...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Git-related"><a href="#Git-related" class="headerlink" title="Git related"></a>Git related</h2><ul>
+<li>git checkout master</li>
+<li>git checkout -b static-pages</li>
+<li>git checkout master</li>
+<li>git merge static-pages</li>
+</ul>
+<h2 id="Shortcut-of-Commands"><a href="#Shortcut-of-Commands" class="headerlink" title="Shortcut of Commands"></a>Shortcut of Commands</h2><table>
+<thead>
+<tr>
+<th>Full command</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$ rails server</td>
+<td>$ rails s</td>
+</tr>
+<tr>
+<td>$ rails console</td>
+<td>$ rails c</td>
+</tr>
+<tr>
+<td>$ rails generate</td>
+<td>$ rails g</td>
+</tr>
+<tr>
+<td>$ bundle install</td>
+<td>$ bundle</td>
+</tr>
+<tr>
+<td>$ rake test</td>
+<td>$ rake</td>
+</tr>
+</tbody></table>
+<p>Because Ruby uses CamelCase for class names (Section 4.4), my preference is to refer to controllers using their CamelCase names, but this is a matter of taste. (Since Ruby filenames typically use snake case, the Rails generator converts CamelCase to snake case using the underscore method.)</p>
+<h2 id="ruby"><a href="#ruby" class="headerlink" title="ruby"></a>ruby</h2><ul>
+<li>Single-quoted strings are often useful because they are truly literal, and contain exactly the characters you type, like ‘\n’.</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> s = <span class="string">&quot;foobar&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> if s.nil?</span><br><span class="line">&gt;&gt;   <span class="string">&quot;The variable is nil&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> elsif s.empty?</span><br><span class="line">&gt;&gt;   <span class="string">&quot;The string is empty&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> elsif s.include?(<span class="string">&quot;foo&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>   <span class="string">&quot;The string includes &#x27;foo&#x27;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> end</span><br><span class="line">=&gt; <span class="string">&quot;The string includes &#x27;foo&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Since everything in Ruby is an object, it follows that nil is an object, so it too can respond to methods. One example is the to_s method that can convert virtually any object to a string:</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; nil.to_s.empty?      # Message chaining</span><br><span class="line">=&gt; <span class="built_in">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Blocks"><a href="#Blocks" class="headerlink" title="Blocks"></a>Blocks</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> (<span class="number">1</span>..<span class="number">5</span>).each do <span class="params">|number|</span></span><br><span class="line"><span class="meta">?&gt;</span>   puts <span class="number">2</span> * number</span><br><span class="line"><span class="meta">&gt;&gt;</span>   puts <span class="string">&#x27;--&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;</span> end</span><br></pre></td></tr></table></figure>
+
+<p>the map method returns the result of applying the given block to each element in the array or range.</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; %w[A B C].map &#123; |<span class="built_in">char</span>| char.downcase &#125;</span><br><span class="line">=&gt; [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]</span><br><span class="line">&gt;&gt; %w[A B C].map(&amp;<span class="symbol">:do</span>wncase)</span><br><span class="line">=&gt; [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>] #shorthand</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a                     # An alphabet array</span><br><span class="line">=&gt; [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;f&quot;</span>, <span class="string">&quot;g&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;j&quot;</span>, <span class="string">&quot;k&quot;</span>, <span class="string">&quot;l&quot;</span>, <span class="string">&quot;m&quot;</span>, <span class="string">&quot;n&quot;</span>, <span class="string">&quot;o&quot;</span>,</span><br><span class="line"><span class="string">&quot;p&quot;</span>, <span class="string">&quot;q&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;s&quot;</span>, <span class="string">&quot;t&quot;</span>, <span class="string">&quot;u&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="string">&quot;x&quot;</span>, <span class="string">&quot;y&quot;</span>, <span class="string">&quot;z&quot;</span>]</span><br><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a.shuffle             # Shuffle it.</span><br><span class="line">=&gt; [<span class="string">&quot;c&quot;</span>, <span class="string">&quot;g&quot;</span>, <span class="string">&quot;l&quot;</span>, <span class="string">&quot;k&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;z&quot;</span>, <span class="string">&quot;s&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;n&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;y&quot;</span>, <span class="string">&quot;u&quot;</span>, <span class="string">&quot;t&quot;</span>, <span class="string">&quot;j&quot;</span>, <span class="string">&quot;q&quot;</span>,</span><br><span class="line"><span class="string">&quot;b&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;o&quot;</span>, <span class="string">&quot;f&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="string">&quot;m&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;x&quot;</span>, <span class="string">&quot;p&quot;</span>]</span><br><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a.shuffle[<span class="number">0</span>..<span class="number">7</span>]       # Pull out the first eight elements.</span><br><span class="line">=&gt; [<span class="string">&quot;f&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;p&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;x&quot;</span>]</span><br><span class="line">&gt;&gt; (&#x27;a&#x27;..&#x27;z&#x27;).to_a.shuffle[<span class="number">0</span>..<span class="number">7</span>].join  # Join them together to make one string.</span><br><span class="line">=&gt; <span class="string">&quot;mznpybuj&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Array-and-Hash"><a href="#Array-and-Hash" class="headerlink" title="Array and Hash"></a>Array and Hash</h3><p>[] for Array, {} for Hash</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> a = [<span class="number">42</span>, <span class="number">8</span>, <span class="number">17</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Instead of defining hashes one item at a time using square brackets, it’s easy to use a literal representation with keys and values separated by =&gt;, called a “hashrocket”:</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; user = &#123; <span class="string">&quot;first_name&quot;</span> =&gt; <span class="string">&quot;Michael&quot;</span>, <span class="string">&quot;last_name&quot;</span> =&gt; <span class="string">&quot;Hartl&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="string">&quot;last_name&quot;</span>=&gt;<span class="string">&quot;Hartl&quot;</span>, <span class="string">&quot;first_name&quot;</span>=&gt;<span class="string">&quot;Michael&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><p>in Rails it is much more common to use symbols instead. Symbols look kind of like strings, but prefixed with a colon instead of surrounded by quotes. For example, :name is a symbol. You can think of symbols as basically strings without all the extra baggage</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; user = &#123; <span class="symbol">:na</span>me =&gt; <span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail =&gt; <span class="string">&quot;michael@example.com&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="symbol">:na</span>me=&gt;<span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail=&gt;<span class="string">&quot;michael@example.com&quot;</span>&#125;</span><br><span class="line">&gt;&gt; user[<span class="symbol">:na</span>me]              # Access the <span class="built_in">value</span> corresponding to <span class="symbol">:na</span>me.</span><br><span class="line">=&gt; <span class="string">&quot;Michael Hartl&quot;</span></span><br><span class="line">&gt;&gt; user[<span class="symbol">:pa</span>ssword]          # Access the <span class="built_in">value</span> of an undefined key.</span><br><span class="line">=&gt; nil</span><br></pre></td></tr></table></figure>
+
+<h4 id="new-syntax-for-defining-hash"><a href="#new-syntax-for-defining-hash" class="headerlink" title="new syntax for defining hash"></a>new syntax for defining hash</h4><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="symbol">h1</span> = &#123; <span class="symbol">:na</span>me =&gt; <span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail =&gt; <span class="string">&quot;michael@example.com&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="symbol">:na</span>me=&gt;<span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail=&gt;<span class="string">&quot;michael@example.com&quot;</span>&#125;</span><br><span class="line">&gt;&gt; <span class="symbol">h2</span> = &#123; <span class="built_in">na</span><span class="symbol">me:</span> <span class="string">&quot;Michael Hartl&quot;</span>, ema<span class="symbol">il:</span> <span class="string">&quot;michael@example.com&quot;</span> &#125;</span><br><span class="line">=&gt; &#123;<span class="symbol">:na</span>me=&gt;<span class="string">&quot;Michael Hartl&quot;</span>, <span class="symbol">:em</span>ail=&gt;<span class="string">&quot;michael@example.com&quot;</span>&#125;</span><br><span class="line">&gt;&gt; <span class="symbol">h1</span> == <span class="symbol">h2</span></span><br><span class="line">=&gt; <span class="built_in">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="inspect"><a href="#inspect" class="headerlink" title="inspect"></a>inspect</h3><p>inspect returns a string with a literal representation of the object it’s called on</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span> puts (<span class="number">1</span>..<span class="number">5</span>).to_a.inspect    <span class="comment"># Put a literal array.</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;</span> puts <span class="symbol">:name</span>, <span class="symbol">:name</span>.inspect</span><br><span class="line">name</span><br><span class="line"><span class="meta">&gt;&gt;</span> p <span class="symbol">:name</span>             <span class="comment"># Same output as &#x27;puts :name.inspect&#x27;</span></span><br><span class="line"><span class="symbol">:name</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; class Word &lt; String             # Word inherits from String.</span><br><span class="line">&gt;&gt;   # Returns <span class="built_in">true</span> <span class="built_in">if</span> the string is its own reverse.</span><br><span class="line">&gt;&gt;   def palindrome?</span><br><span class="line">&gt;&gt;     self == reverse        # self is the string itself. equals to self == self.reverse</span><br><span class="line">&gt;&gt;   end</span><br><span class="line">&gt;&gt; end</span><br><span class="line">=&gt; nil</span><br><span class="line">&gt;&gt; s = Word.new(<span class="string">&quot;level&quot;</span>)    # Make a new Word, initialized with <span class="string">&quot;level&quot;</span>.</span><br><span class="line">=&gt; <span class="string">&quot;level&quot;</span></span><br><span class="line">&gt;&gt; s.palindrome?            # Words have the palindrome? method.</span><br><span class="line">=&gt; <span class="built_in">true</span></span><br><span class="line">&gt;&gt; s.length                 # Words also inherit all the normal string methods.</span><br><span class="line">=&gt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Integration-Test"><a href="#Integration-Test" class="headerlink" title="Integration Test"></a>Integration Test</h2><ul>
+<li>rails generate integration_test site_layout</li>
+<li>bundle exec rake test:integration</li>
+<li>bundle exec rake test TEST=test/integration/users_login_test.rb</li>
+<li>bundle exec rake test TEST=test/integration/users_login_test.rb TESTOPTS=”–name test_login_with_valid_information”</li>
+</ul>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><ul>
+<li>rails generate model User name:string email:string</li>
+<li>rails generate migration add_remember_digest_to_users remember_digest:string</li>
+<li>rails generate migration add_admin_to_users admin:boolean</li>
+<li>bundle exec rake db:migrate</li>
+<li>rails generate migration add_activation_to_users activation_digest:string activated:boolean activated_at:datetime</li>
+<li>bundle exec rake db:rollback</li>
+<li>rails console –sandbox</li>
+<li>bundle exec rake test:models</li>
+<li>rails generate migration add_index_to_users_email<br>This uses a Rails method called add_index to add an index on the email column of the users table. The index by itself doesn’t enforce uniqueness, but the option unique: true does.</li>
+</ul>
+<h2 id="Sessions"><a href="#Sessions" class="headerlink" title="Sessions"></a>Sessions</h2><ul>
+<li>bundle exec rake routes</li>
+</ul>
+<h2 id="Avoid-hijacking-to-Cookie"><a href="#Avoid-hijacking-to-Cookie" class="headerlink" title="Avoid hijacking to Cookie"></a>Avoid hijacking to Cookie</h2><p>There are four main ways to steal cookies: </p>
+<ol>
+<li>using a packet sniffer to detect cookies being passed over insecure networks</li>
+<li>compromising a database containing remember tokens</li>
+<li>using cross-site scripting (XSS)</li>
+<li>gaining physical access to a machine with a logged-in user. </li>
+</ol>
+<p>Rails preventes the first problem by using Secure Sockets Layer (SSL) site-wide, which protects network data from packet sniffers.<br>It prevents the second problem by storing a hash digest of the remember token instead of the token itself, in much the same way that we stored password digests instead of raw passwords.<br>Rails automatically prevents the third problem by escaping any content inserted into view templates.<br>Finally, although there’s no iron-clad way to stop attackers who have physical access to a logged-in computer, rails will minimize the fourth problem by changing tokens every time a user logs out and by taking care to cryptographically sign any potentially sensitive information we place on the browser.</p>
+<h2 id="Heroku"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku</h2><ul>
+<li>heroku rename rails-tutorial-hello</li>
+</ul>
+<p>Note that the application will briefly be in an invalid state after pushing but before the migration is finished. On a production site with significant traffic, it is a good idea to turn maintenance mode on before making the changes:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>heroku <span class="symbol">maintenance:</span>on</span><br><span class="line"><span class="variable">$ </span>git push heroku</span><br><span class="line"><span class="variable">$ </span>heroku run rake <span class="symbol">db:</span>migrate</span><br><span class="line"><span class="variable">$ </span>heroku <span class="symbol">maintenance:</span>off</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.cfdtlee.com/2016/02/23/Ruby_learning_Ruby_on_Rails/" data-id="ckxmtt9by003c5mvm6p5vbaol" data-title="Learning Ruby" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/" rel="tag">ruby</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/03/Python-virtualenv/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Quick note on virtualenv
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/15/iOS-Icon_and_Image_Sizes_guideline/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS-Icon and Image Sizes guideline</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Captcha/" rel="tag">Captcha</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English-EOE/" rel="tag">English EOE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GRE/" rel="tag">GRE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image-Processing/" rel="tag">Image Processing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interpreter/" rel="tag">Interpreter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JEE/" rel="tag">JEE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LISP/" rel="tag">LISP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MCM/" rel="tag">MCM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/" rel="tag">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OO-Design/" rel="tag">OO-Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/" rel="tag">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Project/" rel="tag">Project</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Public-Speaking/" rel="tag">Public Speaking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" rel="tag">Public-Speech 摩英</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reading/" rel="tag">Reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/University/" rel="tag">University</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unix/" rel="tag">Unix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video/" rel="tag">Video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vocabulary/" rel="tag">Vocabulary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/entrepreneurship/" rel="tag">entrepreneurship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/" rel="tag">health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inspiration/" rel="tag">inspiration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insurance/" rel="tag">insurance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/internship/" rel="tag">internship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/job-hunting/" rel="tag">job-hunting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phonetic/" rel="tag">phonetic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/retrospect/" rel="tag">retrospect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/" rel="tag">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/target/" rel="tag">target</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualenv/" rel="tag">virtualenv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vocabulary/" rel="tag">vocabulary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" rel="tag">性格色彩</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%A9%E8%8B%B1/" rel="tag">摩英</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E5%8F%98/" rel="tag">改变</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" rel="tag">欧洲史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" rel="tag">网页爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" rel="tag">装箱问题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 11.67px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 15px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Shuang Li<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
