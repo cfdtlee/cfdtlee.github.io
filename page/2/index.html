@@ -136,12 +136,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="Xcode-error-pathspec-‘…’-did-not-match-any-file-s-known-to-git"><a href="#Xcode-error-pathspec-‘…’-did-not-match-any-file-s-known-to-git" class="headerlink" title="Xcode - error: pathspec ‘…’ did not match any file(s) known to git"></a>Xcode - error: pathspec ‘…’ did not match any file(s) known to git</h2><p>The chosen answer is too specific to his own question and gives zero insight on the actual cause. The problem is indeed, as mentioned before the changing of a filename’s case. For me personally this is because of my Macbook/OSX. Apparently Windows has the same ‘thing’.</p>
-<p>Cause: git isn’t able to recognise a change from ‘filename’ to ‘FileName’.</p>
-<p>Here’s a list of solutions for anyone stumbling upon this. All should be run at the project root:</p>
-<p>The Permanent fix that will work on current and future projects<br>Change the git case setting. The file should be committed afterwards</p>
-<p>git config core.ignorecase false –global<br>The Project only fix<br>git config core.ignorecase false<br>The just give me a line of code so I can move on fix - credit to Bruce<br>git commit -a -m “pathspec did not match any file(s) known to git fix”<br>The I get paid by the hour fix<br>Delete the file. Commit. Push. Add the file again. Commit. Push.</p>
-<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/27325747/xcode-error-pathspec-did-not-match-any-files-known-to-git">stackoverflow</a></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2015/12/10/iOS-bugs/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -196,31 +195,11 @@
 <li><p><code>nonatomic</code> means not thread safe</p>
 </li>
 </ul>
- <!--readmore-->
-
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">getter</span>=isChosen) <span class="built_in">BOOL</span> chosen; </span><br><span class="line"><span class="comment">// rename the getter</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">getter</span>=isMatched) <span class="built_in">BOOL</span> matched; </span><br><span class="line"><span class="comment">// they don&#x27;t need strong, because they are primitive type and don&#x27;t stored in heap, no memory to manage, still have nonatomic, because we want getter and setter to be simple, don&#x27;t have any locking code</span></span><br></pre></td></tr></table></figure>
-
-<p>Why do we need getter and setter? </p>
-<p>Bound checking, side effect say update UI when we set the property, manage memory.</p>
-<h2 id="viewController-m"><a href="#viewController-m" class="headerlink" title="viewController.m"></a>viewController.m</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *scoreLabel;</span><br></pre></td></tr></table></figure>
-
-<p>@property created by this process is weak because the MVC’s View already keeps a strong pointer to the UILabel, so there’s no need for the Controller to do so as well. And if the UILabel ever left the View, the Controller most likely wouldn’t want a pointer to it anyway (but if you did want to keep a pointer to it even if it left the View, you could change this to strong (very rare)).</p>
-<p>IBOutlet is a keyword Xcode puts here (similar to IBAction) to remind Xcode that this is not just a random @property, it’s an outlet</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) IBOutletCollection(<span class="built_in">UIButton</span>) <span class="built_in">NSArray</span> *cardButtons;</span><br></pre></td></tr></table></figure>
-
-<p>Outlet Collection arrays are always strong While the View will point strong, so Xcode has removed that option from the dialog. While the view will point strongly to all of the buttons inside the array, it will not point to the array itself at all(only our Controller will) so our outlet needs to be strongly held in the heap by our Controller. This is now an NSArray which contains all UIButtons you connected in random order. This randomness is okay for our purposes because the order of these cards will mean nothing to our matching game. It is something to consider though if you are developing an app where the order does matter (in that case, an outlet collection may not be what you want).</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">IBAction</span>)touchCardButton:(<span class="built_in">UIButton</span> *)sender &#123;</span><br><span class="line">    <span class="built_in">NSUInteger</span> choseButtonIndex = [<span class="keyword">self</span>.cardButtons indexOfObject: sender];</span><br><span class="line">    [<span class="keyword">self</span>.game chooseCardAtIndex: choseButtonIndex];</span><br><span class="line">    [<span class="keyword">self</span> updateUI];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>This method’s return type is actually, but Xcode uses the typedef IBAction instead just so that Xcode can keep track that this is not just a void random method that returns void, but rather, it’s an action method. Apart from that, IBAction is exactly the same thing as void.</p>
-<h2 id="Deck-m"><a href="#Deck-m" class="headerlink" title="Deck.m"></a>Deck.m</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSMutableArray</span> *cards;</span><br></pre></td></tr></table></figure>
-
-<p>Declaring a @property makes space in the instance for the￼ pointer itself allocate space in the heap for the, but does not ￼￼￼￼object the pointer points</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">-</span>(<span class="type">NSMutableArray</span> <span class="operator">*</span>)cards&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="operator">!</span>_cards) _cards <span class="operator">=</span> [[<span class="type">NSMutableArray</span> alloc] <span class="keyword">init</span>];</span><br><span class="line">    <span class="keyword">return</span> _cards;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>If we send message to nil, nothing will happened, no error will happen, just return 0.<br>Lazy instantiation: initialise until we need to use.</p>
-<h2 id="PlayingCard-m"><a href="#PlayingCard-m" class="headerlink" title="PlayingCard.m"></a>PlayingCard.m</h2><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+(NSArray *)validSuits &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="symbol">@[</span>@<span class="string">&quot;♣&quot;</span>, @<span class="string">&quot;♦&quot;</span>, @<span class="string">&quot;♥&quot;</span>, @<span class="string">&quot;♠&quot;</span>]<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>A plus method is a class method, send message to class, not to instance of an object. Careating things, like string format; utility method like this, return constance(Usually these are either creation methods(like alloc or stringWithFormat: or utility methods.)</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2015/12/09/iOS-Analysis_of_Card_Game_project/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -632,8 +611,6 @@
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

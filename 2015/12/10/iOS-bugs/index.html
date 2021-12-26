@@ -7,7 +7,7 @@
   <title>X-Code bugs | cfdtlee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <meta name="description" content="Xcode - error: pathspec ‘…’ did not match any file(s) known to gitThe chosen answer is too specific to his own question and gives zero insight on the ">
+  <meta name="description" content="Xcode - error: pathspec ‘…’ did not match any file(s) known to gitThe chosen answer is too specific to his own question and gives zero insight on the actual cause. The problem is indeed, as mentioned before the changing of a filename’s case. For me personally this is because of my Macbook/OSX. Apparently Windows has the same ‘thing’.">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -90,6 +90,8 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="Xcode-error-pathspec-‘…’-did-not-match-any-file-s-known-to-git"><a href="#Xcode-error-pathspec-‘…’-did-not-match-any-file-s-known-to-git" class="headerlink" title="Xcode - error: pathspec ‘…’ did not match any file(s) known to git"></a>Xcode - error: pathspec ‘…’ did not match any file(s) known to git</h2><p>The chosen answer is too specific to his own question and gives zero insight on the actual cause. The problem is indeed, as mentioned before the changing of a filename’s case. For me personally this is because of my Macbook/OSX. Apparently Windows has the same ‘thing’.</p>
+<span id="more"></span>
+
 <p>Cause: git isn’t able to recognise a change from ‘filename’ to ‘FileName’.</p>
 <p>Here’s a list of solutions for anyone stumbling upon this. All should be run at the project root:</p>
 <p>The Permanent fix that will work on current and future projects<br>Change the git case setting. The file should be committed afterwards</p>
@@ -144,8 +146,6 @@
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

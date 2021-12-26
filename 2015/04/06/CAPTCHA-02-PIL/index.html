@@ -7,7 +7,8 @@
   <title>验证码识别 (02) ——图像二值化 | cfdtlee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <meta name="description" content="I adapt python and its image library: PIL to hack captcha. Here is the reference of PIL: The PIL Handbook. In this pessage, I will talk about binaryza">
+  <meta name="description" content="I adapt python and its image library: PIL to hack captcha. Here is the reference of PIL: The PIL Handbook. In this pessage, I will talk about binaryzation of Image.
+about RGBWhen the intensities are different, the result is a colorized hue, more or less saturated depending on the difference of the strongest and weakest of the intensities of the primary colors employed.">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -91,6 +92,8 @@
       
         <p>I adapt python and its image library: PIL to hack captcha. Here is the reference of PIL: <a target="_blank" rel="noopener" href="http://effbot.org/imagingbook/">The PIL Handbook</a>. In this pessage, I will talk about binaryzation of Image.</p>
 <h2 id="about-RGB"><a href="#about-RGB" class="headerlink" title="about RGB"></a>about RGB</h2><p>When the intensities are different, the result is a colorized hue, more or less saturated depending on the difference of the strongest and weakest of the intensities of the primary colors employed.</p>
+<span id="more"></span>
+
 <p>The RGB color model itself does not define what is meant by red, green, and blue colorimetrically, and so the results of mixing them are not specified as absolute, but relative to the primary colors. When the exact chromaticities of the red, green, and blue primaries are defined, the color model then becomes an absolute color space, such as sRGB or Adobe RGB.</p>
 <h2 id="binaryzation"><a href="#binaryzation" class="headerlink" title="binaryzation"></a>binaryzation</h2><ol>
 <li><p>convert captcha to grey-scale image</p>
@@ -168,8 +171,6 @@ out = im.rotate(45) # degrees counter-clockwise
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

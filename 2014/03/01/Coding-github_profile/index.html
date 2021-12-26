@@ -97,7 +97,8 @@ push origin master之后repositories里有新的文件上传, 但是主页的pro
 <li>push origin master之后repositories里有新的文件上传, 但是主页的profile里没有显示绿点    </li>
 <li>每次push都要输帐号密码太麻烦    </li>
 </ul>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案<span id="more"></span></h2><p>第一个问题在主页profile(Your contributions)下面的<a target="_blank" rel="noopener" href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile">Learn more</a>里找到了原因和解决方案<br><img src="/2014/03/01/Coding-github_profile/blog_github_profile.png" alt="profile">    </p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><span id="more"></span>
+<p>第一个问题在主页profile(Your contributions)下面的<a target="_blank" rel="noopener" href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile">Learn more</a>里找到了原因和解决方案<br><img src="/2014/03/01/Coding-github_profile/blog_github_profile.png" alt="profile">    </p>
 <p>原因是我没有在Ubuntu的git的config中设置user.email, 查看git设置, 在命令行里输入: </p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br><span class="line"><span class="symbol">wrong@</span>mail.com</span><br></pre></td></tr></table></figure>
 
@@ -116,7 +117,7 @@ push origin master之后repositories里有新的文件上传, 但是主页的pro
 <li><p>如下图点击copy按钮复制SSH clone URL<br><img src="/2014/03/01/Coding-github_profile/blog_github_clone.png" alt="URL"></p>
 </li>
 <li><p>打开终端运行</p>
-<p> git remote set-url origin <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:user/repo.git</p>
+<p> git remote set-url origin <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#109;</a>:user/repo.git</p>
 </li>
 </ol>
 <p>PS: 另附一个网上找到的一个<a target="_blank" rel="noopener" href="http://www.xbc.me/git-commands/">《git命令整理》</a></p>
@@ -169,8 +170,6 @@ push origin master之后repositories里有新的文件上传, 但是主页的pro
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

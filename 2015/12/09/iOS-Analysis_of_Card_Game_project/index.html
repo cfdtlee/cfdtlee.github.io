@@ -9,7 +9,15 @@
   
   <meta name="description" content="Card.h12@property (strong, nonatomic) NSString *contents; //generate getters and setters for the properties
 
-All objects are in heap, objective-c will">
+All objects are in heap, objective-c will manage all storage for you,
+
+strong means keep the memory for this as long as anyone has a strong pointer to it, as soon as no sttong pointer, remove it, it is called “reference counting”;   
+
+weak means no strong pointer to it, set it to nil.  
+
+nonatomic means not thread safe
+
+">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -102,7 +110,7 @@ All objects are in heap, objective-c will">
 <li><p><code>nonatomic</code> means not thread safe</p>
 </li>
 </ul>
- <!--readmore-->
+ <span id="more"></span>
 
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">getter</span>=isChosen) <span class="built_in">BOOL</span> chosen; </span><br><span class="line"><span class="comment">// rename the getter</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">getter</span>=isMatched) <span class="built_in">BOOL</span> matched; </span><br><span class="line"><span class="comment">// they don&#x27;t need strong, because they are primitive type and don&#x27;t stored in heap, no memory to manage, still have nonatomic, because we want getter and setter to be simple, don&#x27;t have any locking code</span></span><br></pre></td></tr></table></figure>
 
@@ -175,8 +183,6 @@ All objects are in heap, objective-c will">
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

@@ -192,41 +192,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>此文记录我在学习<a target="_blank" rel="noopener" href="http://djangobook.py3k.cn/2.0/">Django</a>时遇到的一些问题以及解决方案. </p>
-<!--readmore-->
-<p>1.需要一个方法把它传递到视图函数里去, 这样 我们只用一个视图函数就可以处理所有的时间段了. 我们使用圆括号把参数在URL模式里标识 出来</p>
-<pre><code>urlpatterns = patterns(&#39;&#39;,
-    (r&#39;^time/$&#39;, current_datetime),
-    (r&#39;^time/plus/\d+/$&#39;, hours_ahead),
-)
-</code></pre>
-<blockquote>
-<p>hours_ahead() takes exactly 2 arguments (1 given)</p>
-</blockquote>
-<p>缺少参数, 应该用(\d+), 括号表示参数: </p>
-<pre><code>urlpatterns = patterns(&#39;&#39;,
-    (r&#39;^time/$&#39;, current_datetime),
-    (r&#39;^time/plus/(\d+)/$&#39;, hours_ahead),
-)
-</code></pre>
-<p>2.</p>
-<pre><code>from django.template import Context, Template
-t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
-</code></pre>
-<blockquote>
-<p>Traceback (most recent call last):<br>  File “<stdin>“, line 1, in <module><br>  File “/Library/Python/2.7/site-packages/django/template/base.py”, line 123, in <strong>init</strong><br>    if settings.TEMPLATE_DEBUG and origin is None:<br>  File “/Library/Python/2.7/site-packages/django/conf/<strong>init</strong>.py”, line 54, in <strong>getattr</strong><br>    self._setup(name)<br>  File “/Library/Python/2.7/site-packages/django/conf/<strong>init</strong>.py”, line 47, in _setup<br>    % (desc, ENVIRONMENT_VARIABLE))<br>django.core.exceptions.ImproperlyConfigured: Requested setting TEMPLATE_DEBUG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</p>
-</blockquote>
-<p>设置没有配置, 需要配置环境变量.<br>可以用以下方法来解决: </p>
-<ul>
-<li><p>在import之前加入一下代码导入settings: </p>
-<p>  from django.conf import settings<br>  settings.configure()</p>
-</li>
-<li><p>在启动解释器之前, 它告诉Django使用 哪个设置文件: </p>
-<p>  python manage.py shell</p>
-</li>
-<li><p>在你的配置文 件.bash_profile中手动添加 DJANGO_SETTINGS_MODULE这个环境变量</p>
-</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2014/09/04/Coding-Learning_Django/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -616,8 +586,6 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

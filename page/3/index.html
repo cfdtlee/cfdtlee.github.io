@@ -64,38 +64,26 @@
   
     <article id="post-JEE-say-Hello-world-to-Java-EE" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/09/14/JEE-say-Hello-world-to-Java-EE/" class="article-date">
-  <time class="dt-published" datetime="2015-09-13T22:56:28.000Z" itemprop="datePublished">2015-09-13</time>
+    <a href="/2015/10/03/JEE-say-Hello-world-to-Java-EE/" class="article-date">
+  <time class="dt-published" datetime="2015-10-02T18:13:28.000Z" itemprop="datePublished">2015-10-02</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JEE/">JEE</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/09/14/JEE-say-Hello-world-to-Java-EE/">JEE-say Hello World to Java EE</a>
-    </h1>
-  
-
-      </header>
-    
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
-<li>Create Hello World web application using Java EE </li>
-<li>Deploy and test using Websphere Liberty Profile plug-in for Eclipse</li>
-</ol>
+        <p>title: JEE-say Hello World to Java EE<br>date: 2015-09-13 15:56:28<br>categories: JEE<br>tags: [Web, JEE]</p>
+<hr>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li><p>Create Hello World web application using Java EE </p>
+</li>
+<li><p>Deploy and test using Websphere Liberty Profile plug-in for Eclipse</p>
         
           <p class="article-more-link">
-            <a href="/2015/09/14/JEE-say-Hello-world-to-Java-EE/#more">Read More</a>
+            <a href="/2015/10/03/JEE-say-Hello-world-to-Java-EE/#more">Read More</a>
           </p>
         
       
@@ -104,8 +92,6 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JEE/" rel="tag">JEE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
-
     </footer>
   </div>
   
@@ -382,14 +368,11 @@
       
         <h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><h3 id="去除矩形反色块"><a href="#去除矩形反色块" class="headerlink" title="去除矩形反色块"></a>去除矩形反色块</h3><p>去除验证码中干扰矩形色块</p>
 <p><img src="/2015/04/16/CAPTCHA-03-preprocessing/CAPTCHAbefore-pre.gif" alt="原图"><img src="/2015/04/16/CAPTCHA-03-preprocessing/CAPTCHAafter-pre.gif" alt="去除色块之后"></p>
-<ol>
-<li>扫描最左最右列像素, 若出现相同长度相同位置的黑色像素, 则可确定为矩形边缘, 若没有则执行2</li>
-<li>横着挨个扫描每行的像素, 两行中至少有一个像素是黑色则此处有可能是矩形的边缘, 记录这行像素与下一行连续不同的个数, 上半部分找最长的记为up(upx1, upy1, upx2, upy2), 下半部分找最长的down(downx1, downy1, downx2, downy2), 其中上边界up=upy1, 下边界down=downy1</li>
-<li>若upx2-upx1 == 50 或者 downx2-downx1 == 50 或者upx2-downx1 == 50 或者downx2-upx1 == 50, 则矩形位置确定, 为[up, down, left, right], 其中up, down为upy1, downy1, left, right为上面相差50的组合; 如果上述条件都不满足则按照步骤2中同样的方法扫描, 寻找左右像素颜色连续不同最长的位置记为left和right</li>
-<li>将up, down, left, right确定的矩形中的颜色倒转</li>
-<li>最后准确率达到171/200</li>
-</ol>
-
+        
+          <p class="article-more-link">
+            <a href="/2015/04/16/CAPTCHA-03-preprocessing/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -435,35 +418,11 @@
       
         <p>I adapt python and its image library: PIL to hack captcha. Here is the reference of PIL: <a target="_blank" rel="noopener" href="http://effbot.org/imagingbook/">The PIL Handbook</a>. In this pessage, I will talk about binaryzation of Image.</p>
 <h2 id="about-RGB"><a href="#about-RGB" class="headerlink" title="about RGB"></a>about RGB</h2><p>When the intensities are different, the result is a colorized hue, more or less saturated depending on the difference of the strongest and weakest of the intensities of the primary colors employed.</p>
-<p>The RGB color model itself does not define what is meant by red, green, and blue colorimetrically, and so the results of mixing them are not specified as absolute, but relative to the primary colors. When the exact chromaticities of the red, green, and blue primaries are defined, the color model then becomes an absolute color space, such as sRGB or Adobe RGB.</p>
-<h2 id="binaryzation"><a href="#binaryzation" class="headerlink" title="binaryzation"></a>binaryzation</h2><ol>
-<li><p>convert captcha to grey-scale image</p>
-<pre><code> img.convert(&#39;L&#39;)
-</code></pre>
-</li>
-<li><p>convert grey-scale image to binary image, <code>table</code> is a list with 256 binary elements which indicates the converting map. Take a pixel’s grey value as index of table, its value in list is the value in binary image. </p>
-<pre><code> table = [0 for x in range(230)]+[1 for x in range(26)]
- img.point(table, &#39;1&#39;)
-</code></pre>
-<p> <code>img.point()</code> returns a copy of the image where each pixel has been mapped through the given lookup table. The table should contains 256 values per band in the image. If a function is used instead, it should take a single argument. The function is called once for each possible pixel value, and the resulting table is applied to all bands of the image.</p>
-</li>
-</ol>
-<p><img src="/2015/04/06/CAPTCHA-02-PIL/CAPTCHAcaptcha_origin.bmp" alt="origin captcha"><br><img src="/2015/04/06/CAPTCHA-02-PIL/CAPTCHAcaptcha_grey.bmp" alt="grey scale captcha"><br><img src="/2015/04/06/CAPTCHA-02-PIL/CAPTCHAcaptcha_binary.bmp" alt="binary captcha"></p>
-<!--
-box = (100, 100, 400, 400)左上角为0,0, The region is defined by a 4-tuple, where coordinates are (left, upper, right, lower).Rectangles are represented as 4-tuples, with the upper left corner given first. For example, a rectangle covering all of an 800x600 pixel image is written as (0, 0, 800, 600).
-region = im.crop(box)
-region = region.transpose(Image.ROTATE_180)counter-clockwise
-out = im.transpose(Image.FLIP_LEFT_RIGHT)
-out = im.transpose(Image.FLIP_TOP_BOTTOM)
-out = im.transpose(Image.ROTATE_90)
-out = im.transpose(Image.ROTATE_180)
-out = im.transpose(Image.ROTATE_270)
-im.paste(region, box)
-out = im.resize((128, 128))
-out = im.rotate(45) # degrees counter-clockwise
--->
-
-
+        
+          <p class="article-more-link">
+            <a href="/2015/04/06/CAPTCHA-02-PIL/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -646,8 +605,6 @@ out = im.rotate(45) # degrees counter-clockwise
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>

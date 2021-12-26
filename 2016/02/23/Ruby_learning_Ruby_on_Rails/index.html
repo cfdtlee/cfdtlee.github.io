@@ -12,7 +12,7 @@ start with ruby on railshttp://railsapps.github.io/installrubyonrails-mac.html
 
 change ruby versionhttps://rvm.io/rubies/default
 
-tutorial: h">
+tutorial: https://www.railstutorial.org/">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -100,28 +100,46 @@ tutorial: h">
 <li><p>change ruby version<br><a target="_blank" rel="noopener" href="https://rvm.io/rubies/default">https://rvm.io/rubies/default</a></p>
 </li>
 <li><p>tutorial: <a target="_blank" rel="noopener" href="https://www.railstutorial.org/">https://www.railstutorial.org/</a></p>
+<span id="more"></span>
+<h2 id="Command-Lines"><a href="#Command-Lines" class="headerlink" title="Command Lines"></a>Command Lines</h2></li>
+<li><p>rails _4.2.2_ new sample_app</p>
 </li>
-</ul>
-<h2 id="Command-Lines"><a href="#Command-Lines" class="headerlink" title="Command Lines"></a>Command Lines</h2><ul>
-<li>rails _4.2.2_ new sample_app</li>
-<li>bundle install</li>
-<li>bundle install –without production</li>
-<li>bundle update</li>
-<li>heroku create</li>
-<li>bundle exec rake db:migrate</li>
-<li>bundle exec rake db:rollback</li>
-<li>heroku run rake db:migrate</li>
-<li>git push heroku master</li>
-<li>rails console</li>
-<li>rails generate scaffold …</li>
-<li>rails generate model User name:string email:string</li>
-<li>rails destroy model User</li>
-<li>rails generate controller StaticPages home help</li>
-<li>rails destroy  controller StaticPages home help</li>
-<li>bundle exec rake test (3)</li>
-<li>bundle exec guard init (3.7.3)</li>
-<li>bundle exec guard</li>
-<li>ps aux | grep spring</li>
+<li><p>bundle install</p>
+</li>
+<li><p>bundle install –without production</p>
+</li>
+<li><p>bundle update</p>
+</li>
+<li><p>heroku create</p>
+</li>
+<li><p>bundle exec rake db:migrate</p>
+</li>
+<li><p>bundle exec rake db:rollback</p>
+</li>
+<li><p>heroku run rake db:migrate</p>
+</li>
+<li><p>git push heroku master</p>
+</li>
+<li><p>rails console</p>
+</li>
+<li><p>rails generate scaffold …</p>
+</li>
+<li><p>rails generate model User name:string email:string</p>
+</li>
+<li><p>rails destroy model User</p>
+</li>
+<li><p>rails generate controller StaticPages home help</p>
+</li>
+<li><p>rails destroy  controller StaticPages home help</p>
+</li>
+<li><p>bundle exec rake test (3)</p>
+</li>
+<li><p>bundle exec guard init (3.7.3)</p>
+</li>
+<li><p>bundle exec guard</p>
+</li>
+<li><p>ps aux | grep spring</p>
+</li>
 </ul>
 <h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p>Add this into </p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ENV[<span class="string">&#x27;RAILS_ENV&#x27;</span>] <span class="params">||</span>= <span class="string">&#x27;test&#x27;</span></span><br><span class="line"><span class="keyword">require</span> File.expand_path(<span class="string">&#x27;../../config/environment&#x27;</span>, <span class="keyword">__FILE__</span>)</span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;rails/test_help&#x27;</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&quot;minitest/reporters&quot;</span></span><br><span class="line">Minitest::Reporters.use!</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ActiveSupport::TestCase</span></span></span><br><span class="line">  <span class="comment"># Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical</span></span><br><span class="line">  <span class="comment"># order.</span></span><br><span class="line">  fixtures <span class="symbol">:all</span></span><br><span class="line">  <span class="comment"># Add more helper methods to be used by all tests here...</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
@@ -273,8 +291,6 @@ tutorial: h">
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>
