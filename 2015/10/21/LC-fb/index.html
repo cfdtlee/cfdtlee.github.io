@@ -169,19 +169,19 @@ then deal with  p.charAt(1) == &amp;#39;*&amp;#39; and other
 
 <h2 id="161-One-Edit-Distance"><a href="#161-One-Edit-Distance" class="headerlink" title="161 One Edit Distance"></a>161 One Edit Distance</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> s.substring(i).equals(t.substring(j+<span class="number">1</span>)) || s.substring(i+<span class="number">1</span>).equals(t.substring(j+<span class="number">1</span>));</span><br><span class="line"><span class="keyword">return</span> j == t.length()-<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 
-<h2 id="200-Number-of-Islands"><a href="#200-Number-of-Islands" class="headerlink" title="200 Number of Islands"></a>200 Number of Islands</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一次&#x27;0&#x27;的单引号漏掉了，找了很久才发现！！！</span></span><br><span class="line"><span class="keyword">if</span>(i &lt; <span class="number">0</span> || i == grid.length || j &lt;<span class="number">0</span> || j == grid[i].length || grid[i][j] != <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="200-Number-of-Islands"><a href="#200-Number-of-Islands" class="headerlink" title="200 Number of Islands"></a>200 Number of Islands</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一次&#x27;0&#x27;的单引号漏掉了, 找了很久才发现! ! ! </span></span><br><span class="line"><span class="keyword">if</span>(i &lt; <span class="number">0</span> || i == grid.length || j &lt;<span class="number">0</span> || j == grid[i].length || grid[i][j] != <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="215-Kth-Largest-Element-in-an-Array"><a href="#215-Kth-Largest-Element-in-an-Array" class="headerlink" title="215 Kth Largest Element in an Array"></a>215 Kth Largest Element in an Array</h2><ul>
 <li>D ivide and Conquer</li>
-<li>每次更新begin 和 end之后要拿begin和end来做边界条件，而不是0和 nums.length - 1 来做边界，这一点在其他时候也要注意，边界条件尽量不要用硬编码</li>
-<li>don’t miss the boundary condition，if(left == right) return nums[left];</li>
+<li>每次更新begin 和 end之后要拿begin和end来做边界条件, 而不是0和 nums.length - 1 来做边界, 这一点在其他时候也要注意, 边界条件尽量不要用硬编码</li>
+<li>don’t miss the boundary condition, if(left == right) return nums[left];</li>
 <li>Heap</li>
 <li>PriorityQueue<Integer> pq = new PriorityQueue<Integer>(k+1); // add(), poll();</li>
 </ul>
 <h2 id="221-Maximal-Square"><a href="#221-Maximal-Square" class="headerlink" title="221 Maximal Square"></a>221 Maximal Square</h2><ul>
 <li>DP</li>
-<li>有两个矩阵，一个表示路，一个用来计数，当需要判断有没有路并在计数上叠加时很容易比错矩阵</li>
-<li>优化：开一个大一层的计数矩阵来计数就可以不用初始化计数矩阵的上左两边了</li>
+<li>有两个矩阵, 一个表示路, 一个用来计数, 当需要判断有没有路并在计数上叠加时很容易比错矩阵</li>
+<li>优化: 开一个大一层的计数矩阵来计数就可以不用初始化计数矩阵的上左两边了</li>
 </ul>
 <h2 id="253-Meeting-Rooms-II"><a href="#253-Meeting-Rooms-II" class="headerlink" title="253 Meeting Rooms II"></a>253 Meeting Rooms II</h2><ul>
 <li>Heap</li>

@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   
   
-  <title>验证码识别（03）——预处理 | cfdtlee</title>
+  <title>验证码识别 (03) ——预处理 | cfdtlee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <meta name="description" content="预处理去除矩形反色块去除验证码中干扰矩形色块
 
 
-扫描最左最右列像素，若出现相同长度相同位置的黑色像素，则可确定为矩形边缘，若没有则执行2
-横着挨个扫描每行的像素，两行中至少有一个像素是黑色则此处有可能是矩形的边缘，记录这行像素与下一行连续不同的个数，上半部分找最长的记为up(upx1, upy1,">
+扫描最左最右列像素, 若出现相同长度相同位置的黑色像素, 则可确定为矩形边缘, 若没有则执行2
+横着挨个扫描每行的像素, 两行中至少有一个像素是黑色则此处有可能是矩形的边缘, 记录这行像素与下一行连续不同的个数, 上半部分找最长的记为up(upx1,">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -84,7 +84,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      验证码识别（03）——预处理
+      验证码识别 (03) ——预处理
     </h1>
   
 
@@ -96,9 +96,9 @@
         <h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><h3 id="去除矩形反色块"><a href="#去除矩形反色块" class="headerlink" title="去除矩形反色块"></a>去除矩形反色块</h3><p>去除验证码中干扰矩形色块</p>
 <p><img src="/2015/04/16/CAPTCHA-03-preprocessing/CAPTCHAbefore-pre.gif" alt="原图"><img src="/2015/04/16/CAPTCHA-03-preprocessing/CAPTCHAafter-pre.gif" alt="去除色块之后"></p>
 <ol>
-<li>扫描最左最右列像素，若出现相同长度相同位置的黑色像素，则可确定为矩形边缘，若没有则执行2</li>
-<li>横着挨个扫描每行的像素，两行中至少有一个像素是黑色则此处有可能是矩形的边缘，记录这行像素与下一行连续不同的个数，上半部分找最长的记为up(upx1, upy1, upx2, upy2)，下半部分找最长的down(downx1, downy1, downx2, downy2)，其中上边界up=upy1，下边界down=downy1</li>
-<li>若upx2-upx1 == 50 或者 downx2-downx1 == 50 或者upx2-downx1 == 50 或者downx2-upx1 == 50，则矩形位置确定，为[up, down, left, right]，其中up, down为upy1, downy1，left, right为上面相差50的组合；如果上述条件都不满足则按照步骤2中同样的方法扫描，寻找左右像素颜色连续不同最长的位置记为left和right</li>
+<li>扫描最左最右列像素, 若出现相同长度相同位置的黑色像素, 则可确定为矩形边缘, 若没有则执行2</li>
+<li>横着挨个扫描每行的像素, 两行中至少有一个像素是黑色则此处有可能是矩形的边缘, 记录这行像素与下一行连续不同的个数, 上半部分找最长的记为up(upx1, upy1, upx2, upy2), 下半部分找最长的down(downx1, downy1, downx2, downy2), 其中上边界up=upy1, 下边界down=downy1</li>
+<li>若upx2-upx1 == 50 或者 downx2-downx1 == 50 或者upx2-downx1 == 50 或者downx2-upx1 == 50, 则矩形位置确定, 为[up, down, left, right], 其中up, down为upy1, downy1, left, right为上面相差50的组合; 如果上述条件都不满足则按照步骤2中同样的方法扫描, 寻找左右像素颜色连续不同最长的位置记为left和right</li>
 <li>将up, down, left, right确定的矩形中的颜色倒转</li>
 <li>最后准确率达到171/200</li>
 </ol>
@@ -131,7 +131,7 @@
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">
         
-          验证码识别（02）——图像二值化
+          验证码识别 (02) ——图像二值化
         
       </div>
     </a>

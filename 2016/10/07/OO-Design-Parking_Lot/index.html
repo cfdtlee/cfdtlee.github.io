@@ -7,12 +7,12 @@
   <title>OO Design-Parking Lot | cfdtlee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <meta name="description" content="面向对象设计面向对象设计速成。本文将以Parking Lot为例解释OO design
-object对象名词，每个名词都是一个对象。对于停车场系统来说，涉及到的名词有：
+  <meta name="description" content="面向对象设计面向对象设计速成. 本文将以Parking Lot为例解释OO design
+object对象名词, 每个名词都是一个对象. 对于停车场系统来说, 涉及到的名词有: 
 
-vehicle，包括truck, sedan, couple, etc.
+vehicle, 包括truck, sedan, couple, etc.
 
-123class Vehicle &amp;#123; &amp;#">
+123class Vehicle &amp;#1">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -94,10 +94,10 @@ vehicle，包括truck, sedan, couple, etc.
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="面向对象设计"><a href="#面向对象设计" class="headerlink" title="面向对象设计"></a>面向对象设计</h1><p>面向对象设计速成。本文将以Parking Lot为例解释OO design</p>
-<h2 id="object对象"><a href="#object对象" class="headerlink" title="object对象"></a>object对象</h2><p>名词，每个名词都是一个对象。对于停车场系统来说，涉及到的名词有：</p>
+        <h1 id="面向对象设计"><a href="#面向对象设计" class="headerlink" title="面向对象设计"></a>面向对象设计</h1><p>面向对象设计速成. 本文将以Parking Lot为例解释OO design</p>
+<h2 id="object对象"><a href="#object对象" class="headerlink" title="object对象"></a>object对象</h2><p>名词, 每个名词都是一个对象. 对于停车场系统来说, 涉及到的名词有: </p>
 <ul>
-<li>vehicle，包括truck, sedan, couple, etc.</li>
+<li>vehicle, 包括truck, sedan, couple, etc.</li>
 </ul>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Vehicle</span> &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -107,11 +107,11 @@ vehicle，包括truck, sedan, couple, etc.
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Slot</span> &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>parking lot，整个停车场也是一个类</li>
+<li>parking lot, 整个停车场也是一个类</li>
 </ul>
 <figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">ParkingLot</span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable"></span></span><br><span class="line"><span class="template-variable">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Inheritance-isa"><a href="#Inheritance-isa" class="headerlink" title="Inheritance/isa"></a>Inheritance/isa</h2><p>继承是对象之间的关系，只要能用isa来描述的关系都能用继承来实现</p>
+<h2 id="Inheritance-isa"><a href="#Inheritance-isa" class="headerlink" title="Inheritance/isa"></a>Inheritance/isa</h2><p>继承是对象之间的关系, 只要能用isa来描述的关系都能用继承来实现</p>
 <ul>
 <li>truck is a vehicle, sedan is a vehicle, so they inherit from vehicle</li>
 </ul>
@@ -126,11 +126,11 @@ vehicle，包括truck, sedan, couple, etc.
 
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CompactSlot</span> <span class="keyword">extends</span> <span class="title">Slot</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Attribute-has"><a href="#Attribute-has" class="headerlink" title="Attribute/has"></a>Attribute/has</h2><p>“类成员”，“属性”，“字段”，“特征” 都是一个东西，就是在类中定义的变量<br>能用“is+形容词/名词，或者是has+名词”描述的都可以写在成员里。“is+形容词”表示对象的属性，通常用基本数据类型表示；“has+名词”通常表示该对象拥有的“成员”，因为出现名词，（参照对象的定义）通常用另一个类或者类的数组表示。</p>
+<h2 id="Attribute-has"><a href="#Attribute-has" class="headerlink" title="Attribute/has"></a>Attribute/has</h2><p> “类成员” ,  “属性” ,  “字段” ,  “特征”  都是一个东西, 就是在类中定义的变量<br>能用 “is+形容词/名词, 或者是has+名词” 描述的都可以写在成员里.  “is+形容词” 表示对象的属性, 通常用基本数据类型表示;  “has+名词” 通常表示该对象拥有的 “成员” , 因为出现名词,  (参照对象的定义) 通常用另一个类或者类的数组表示. </p>
 <ul>
 <li>For a vehicle, its size: big, regular or compact? its plate? What is its engine?</li>
 </ul>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">abstract <span class="class"><span class="keyword">class</span> <span class="title">Vehicle</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> size; <span class="comment">// 为什么用private？因为这些变量不能暴露给其他成员修改，但其他地方可能需要读取这些变量，于是我们需要写getter，就是用来读取私有变量的函数。</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">String</span> plate;</span><br><span class="line"><span class="keyword">private</span> EngineClass engine; <span class="comment">// another class</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// getter</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> size;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 同样有getter对应的setter，setter最普遍的用处就是控制输入范围，比如初始化的时候想初始化一个巨大的车，输入一个很大的size，这时候用setter就能把关</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setSize</span><span class="params">(<span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (size &gt; SIZE_MAX) &#123;</span><br><span class="line">size = SIZE_MAX;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">abstract <span class="class"><span class="keyword">class</span> <span class="title">Vehicle</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> size; <span class="comment">// 为什么用private? 因为这些变量不能暴露给其他成员修改, 但其他地方可能需要读取这些变量, 于是我们需要写getter, 就是用来读取私有变量的函数. </span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">String</span> plate;</span><br><span class="line"><span class="keyword">private</span> EngineClass engine; <span class="comment">// another class</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// getter</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> size;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 同样有getter对应的setter, setter最普遍的用处就是控制输入范围, 比如初始化的时候想初始化一个巨大的车, 输入一个很大的size, 这时候用setter就能把关</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setSize</span><span class="params">(<span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (size &gt; SIZE_MAX) &#123;</span><br><span class="line">size = SIZE_MAX;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>For a slot, what is it’s number? is occupied or not?</li>
@@ -142,9 +142,9 @@ vehicle，包括truck, sedan, couple, etc.
 </ul>
 <figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">public</span> <span class="variable">class</span> <span class="variable">ParkingLot</span> <span class="punctuation">&#123;</span></span><br><span class="line"><span class="variable">private</span> <span class="built_in">List</span><span class="operator">&lt;</span><span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">regularSlots</span><span class="operator">;</span></span><br><span class="line"><span class="variable">private</span> <span class="built_in">List</span><span class="operator">&lt;</span><span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">compactSlots</span><span class="operator">;</span></span><br><span class="line"><span class="variable">private</span> <span class="built_in">List</span><span class="operator">&lt;</span><span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">handicappedSlots</span><span class="operator">;</span></span><br><span class="line"><span class="operator">//</span> <span class="variable">use</span> <span class="built_in">Map</span><span class="operator">&lt;</span><span class="variable">car</span><span class="operator">.</span><span class="variable">plate</span><span class="operator">,</span> <span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">to</span> <span class="variable">denote</span> <span class="variable">all</span> <span class="variable">occupied</span> <span class="variable">slots</span></span><br><span class="line"><span class="variable">public</span> <span class="built_in">Map</span><span class="operator">&lt;</span><span class="built_in">String</span><span class="operator">,</span> <span class="built_in">Slot</span><span class="operator">&gt;</span> <span class="variable">occupiedSlot</span><span class="operator">;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Method-cando"><a href="#Method-cando" class="headerlink" title="Method/cando"></a>Method/cando</h2><p>方法就是写在类里面的函数，前面的getter和setter就属于类方法。一般自然语言中的“能做什么”都能写成类方法。</p>
+<h2 id="Method-cando"><a href="#Method-cando" class="headerlink" title="Method/cando"></a>Method/cando</h2><p>方法就是写在类里面的函数, 前面的getter和setter就属于类方法. 一般自然语言中的 “能做什么” 都能写成类方法. </p>
 <ul>
-<li>停车这个函数<br>Pause,先写到这，一会补上</li>
+<li>停车这个函数<br>Pause,先写到这, 一会补上</li>
 </ul>
 <h2 id="Initialisation"><a href="#Initialisation" class="headerlink" title="Initialisation"></a>Initialisation</h2><p>初始化</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://coderanch.com/t/628047/patterns/Parking-Lot-Design">Parking Lot</a></p>

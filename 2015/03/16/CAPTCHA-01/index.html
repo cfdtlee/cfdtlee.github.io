@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   
   
-  <title>验证码识别（01） | cfdtlee</title>
+  <title>验证码识别 (01)  | cfdtlee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <meta name="description" content="大四毕业设计题目是《百度验证码的识别》，本文以百度验证码为例,概述验证码识别的基本步骤。">
+  <meta name="description" content="大四毕业设计题目是《百度验证码的识别》, 本文以百度验证码为例,概述验证码识别的基本步骤. ">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -80,7 +80,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      验证码识别（01）
+      验证码识别 (01) 
     </h1>
   
 
@@ -89,20 +89,20 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>大四毕业设计题目是《百度验证码的识别》，本文以百度验证码为例,概述验证码识别的基本步骤。</p>
+        <p>大四毕业设计题目是《百度验证码的识别》, 本文以百度验证码为例,概述验证码识别的基本步骤. </p>
 <span id="more"></span>
 <h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><ol>
 <li><p>移除背景</p>
-<p> 用图像处理的方法将验证码去噪（去除干扰的图案）。</p>
+<p> 用图像处理的方法将验证码去噪 (去除干扰的图案) . </p>
 </li>
 <li><p>分离字符</p>
-<p> 通过二值化，去噪，垂直投影，颜色填充等步骤将验证码中的字符分离出来。对于实心字符并且原本就是分开的验证码（如图一），通过垂直方向的投影就能分离出来；但是如果是字符有粘连，甚至重合（如图二），那么字符的分离会麻烦很多；如果是空心字符（如图三），可以通过颜色填充来分离字符；但是如果遇上既是重合又是空心的验证码（如图四），那分离难度会很大很大。<img src="/2015/03/16/CAPTCHA-01/CAPTCHA4.jpeg" alt="图一，实心分离"><img src="/2015/03/16/CAPTCHA-01/CAPTCHA11.jpeg" alt="图二，实心重合"><img src="/2015/03/16/CAPTCHA-01/CAPTCHA31.jpeg" alt="图三，空心分离"><img src="/2015/03/16/CAPTCHA-01/CAPTCHA37.jpeg" alt="图四，空心重合"></p>
+<p> 通过二值化, 去噪, 垂直投影, 颜色填充等步骤将验证码中的字符分离出来. 对于实心字符并且原本就是分开的验证码 (如图一) , 通过垂直方向的投影就能分离出来; 但是如果是字符有粘连, 甚至重合 (如图二) , 那么字符的分离会麻烦很多; 如果是空心字符 (如图三) , 可以通过颜色填充来分离字符; 但是如果遇上既是重合又是空心的验证码 (如图四) , 那分离难度会很大很大. <img src="/2015/03/16/CAPTCHA-01/CAPTCHA4.jpeg" alt="图一, 实心分离"><img src="/2015/03/16/CAPTCHA-01/CAPTCHA11.jpeg" alt="图二, 实心重合"><img src="/2015/03/16/CAPTCHA-01/CAPTCHA31.jpeg" alt="图三, 空心分离"><img src="/2015/03/16/CAPTCHA-01/CAPTCHA37.jpeg" alt="图四, 空心重合"></p>
 </li>
 <li><p>识别单独字符</p>
 <ul>
-<li>模板匹配法，利用模板图像与待识别的字符进行点对点比较，取相似度最高的字符。</li>
-<li>特征匹配法，通过分析字符的笔划特征或者字符像素在图像中的分布，设计分类器，识别字符。</li>
-<li>机器学习（神经网络），用大量人工识别的字符训练神经网络，然后用机器识别分离出来的字符。</li>
+<li>模板匹配法, 利用模板图像与待识别的字符进行点对点比较, 取相似度最高的字符. </li>
+<li>特征匹配法, 通过分析字符的笔划特征或者字符像素在图像中的分布, 设计分类器, 识别字符. </li>
+<li>机器学习 (神经网络) , 用大量人工识别的字符训练神经网络, 然后用机器识别分离出来的字符. </li>
 </ul>
 </li>
 </ol>

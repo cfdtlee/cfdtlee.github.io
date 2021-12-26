@@ -7,21 +7,21 @@
   <title>C#实现对writeablebitmap的截图 | cfdtlee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;某天参加微软编程马拉松，我们做的是Jigsaw拼图小游戏，有一个功能是让玩家选择图片，然后应用将其剪裁成3*3的小块进行拼图游戏。剪裁的效果用Image.Clip实现不了，
+  <meta name="description" content="&amp;emsp;&amp;emsp;某天参加微软编程马拉松, 我们做的是Jigsaw拼图小游戏, 有一个功能是让玩家选择图片, 然后应用将其剪裁成3*3的小块进行拼图游戏. 剪裁的效果用Image.Clip实现不了, 
 &amp;lt;Image.Clip &amp;gt; 
     &amp;lt;RectangleGeometry Rect=&amp;quot;x1 y1 width height&amp;quot;/&amp;gt;`
 &amp;lt;/Image.Clip&amp;gt;
 
 Image.Clip中:
-&amp;lt;RectangleGeometry Rect=”x1 y1 width height”/&amp;gt;
+&amp;lt;RectangleGeometry Rect=” x1 y1 width height” /&amp;gt;
 
-参数x1 y1代表以当前控件左上顶点为坐标原点，显示区域左上顶点的坐标，width height则是显示区域的宽和高。所以用:
-&amp;lt;RectangleGeometry Rect=”233 233 233 233″/&amp;gt;
+参数x1 y1代表以当前控件左上顶点为坐标原点, 显示区域左上顶点的坐标, width height则是显示区域的宽和高. 所以用:
+&amp;lt;RectangleGeometry Rect=” 233 233 233 233″/&amp;gt;
 
-从大图中截取中间部分便会出现：
+从大图中截取中间部分便会出现: 
 
 未达到效果
-显然没有达到效果，于是就采用对图片像素点的处理达到截图效果">
+显然没有达到效果, 于是就采用对图片像素点的处理达到截图效果">
   
   
     <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
@@ -103,29 +103,29 @@ Image.Clip中:
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;某天参加微软编程马拉松，我们做的是Jigsaw拼图小游戏，有一个功能是让玩家选择图片，然后应用将其剪裁成3*3的小块进行拼图游戏。剪裁的效果用Image.Clip实现不了，</p>
+        <p>&emsp;&emsp;某天参加微软编程马拉松, 我们做的是Jigsaw拼图小游戏, 有一个功能是让玩家选择图片, 然后应用将其剪裁成3*3的小块进行拼图游戏. 剪裁的效果用Image.Clip实现不了, </p>
 <pre><code>&lt;Image.Clip &gt; 
     &lt;RectangleGeometry Rect=&quot;x1 y1 width height&quot;/&gt;`
 &lt;/Image.Clip&gt;
 </code></pre>
 <p>Image.Clip中:</p>
-<pre><code>&lt;RectangleGeometry Rect=”x1 y1 width height”/&gt;
+<pre><code>&lt;RectangleGeometry Rect=” x1 y1 width height” /&gt;
 </code></pre>
-<p>参数x1 y1代表以当前控件左上顶点为坐标原点，显示区域左上顶点的坐标，width height则是显示区域的宽和高。所以用:</p>
-<pre><code>&lt;RectangleGeometry Rect=”233 233 233 233″/&gt;
+<p>参数x1 y1代表以当前控件左上顶点为坐标原点, 显示区域左上顶点的坐标, width height则是显示区域的宽和高. 所以用:</p>
+<pre><code>&lt;RectangleGeometry Rect=” 233 233 233 233″/&gt;
 </code></pre>
-<p>从大图中截取中间部分便会出现：</p>
+<p>从大图中截取中间部分便会出现: </p>
 <p><img src="/2012/11/19/Coding-cut_writeablebitmap/2222.jpg" alt="初始"></p>
 <p>未达到效果</p>
-<p>显然没有达到效果，于是就采用对图片像素点的处理达到截图效果</p>
+<p>显然没有达到效果, 于是就采用对图片像素点的处理达到截图效果</p>
 <span id="more"></span> 
 
-<p>涉及要点：<br>WriteableBitmap可写的位图<br>StorageFile 文件<br>IRandomAccessStream 可随机访问输入和输出流<br>在WriteableBitmap中图像的每个像素点是采用RGBA色彩模式（不知道是不是这样叫的）储存的，是通过对红(R)、绿(G)、蓝(B)三个颜色分量和Alpha的色彩空间（用来控制透明度）的变化以及它们相互之间的叠加来得到各式各样的颜色的。一个像素点占四个字节，四个字节依次代表蓝、绿、红、透明度。每个分量0~255范围内的强度值，对于透明度0代表全透明，255代表不透明。</p>
-<p>具体操作见代码：</p>
+<p>涉及要点:<br>WriteableBitmap可写的位图<br>StorageFile 文件<br>IRandomAccessStream 可随机访问输入和输出流<br>在WriteableBitmap中图像的每个像素点是采用RGBA色彩模式 (不知道是不是这样叫的) 储存的, 是通过对红(R)、绿(G)、蓝(B)三个颜色分量和Alpha的色彩空间 (用来控制透明度) 的变化以及它们相互之间的叠加来得到各式各样的颜色的. 一个像素点占四个字节, 四个字节依次代表蓝、绿、红、透明度. 每个分量0~255范围内的强度值, 对于透明度0代表全透明, 255代表不透明. </p>
+<p>具体操作见代码: </p>
 <pre><code>const int BigImgWidth = 699, BigImgLenth = 699;
 const int SmallImgWidth = 233, SmallLenth = 233;
 
-//定义可写的位图，参数为宽和长
+//定义可写的位图, 参数为宽和长
 WriteableBitmap bigbitmap = new WriteableBitmap(BigImgWideth, BigImgLenth);
 WriteableBitmap smallbitmap = new WriteableBitmap(SmallImgWidth, SmallImgLenth);
 
@@ -135,17 +135,17 @@ IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccess
 await bigbitmap.SetSourceAsync(fileStream);//给大图赋值
 
 Stream str = bigbitmap.PixelBuffer.AsStream();
-                       //将大图转化为流，这是将大图转化为byte[]数组的中间步骤
+                       //将大图转化为流, 这是将大图转化为byte[]数组的中间步骤
 byte[] bigpixels = new byte[str.Length];  //将stream转成byte[]
 str.Read(bigpixels, 0, bigpixels.Length);
 
-byte[] smallpixels = new byte[4 * smallbitmap.PixelWidth * smallbitmap.PixelHeight];  //定义小图的位数组的大小，4 * 宽 *长，单位是像素（Pixel）
+byte[] smallpixels = new byte[4 * smallbitmap.PixelWidth * smallbitmap.PixelHeight];  //定义小图的位数组的大小, 4 * 宽 *长, 单位是像素 (Pixel) 
 
-const int startx = 233, starty = 233;  //截图区域左上角点的坐标（按理说应该把截图写成函数，把startx，starty，以及小图的长宽以实参的形式传进来的）
+const int startx = 233, starty = 233;  //截图区域左上角点的坐标 (按理说应该把截图写成函数, 把startx, starty, 以及小图的长宽以实参的形式传进来的) 
 for (int y = 0; y &lt; smallbitmap.PixelHeight; y++)
     for (int x = 0; x &lt; smallbitmap.PixelWidth; x++)
     &#123;
-        //核心代码就下面两句，将sindex和index为小图和大图转化成位数组（一维数组）的下标
+        //核心代码就下面两句, 将sindex和index为小图和大图转化成位数组 (一维数组) 的下标
         int sindex = 4 * (y * smallbitmap.PixelWidth + x);
         int index = 4 * ((starty + y) * bigbitmap.PixelWidth + x + startx);
         smallpixels[sindex + 0] = bigpixels[index + 0];
@@ -162,7 +162,7 @@ for (int y = 0; y &lt; smallbitmap.PixelHeight; y++)
         img2.Source = smallbitmap;//将控件img2的源设为smallbitmap
     &#125;
 </code></pre>
-<p>可以看到实现了想截哪块就截哪块的功能了。<br><img src="/2012/11/19/Coding-cut_writeablebitmap/ddddd.jpg" alt="结果"></p>
+<p>可以看到实现了想截哪块就截哪块的功能了.<br><img src="/2012/11/19/Coding-cut_writeablebitmap/ddddd.jpg" alt="结果"></p>
 
       
     </div>

@@ -100,7 +100,7 @@ Deploy and test using Websphere Liberty Profile plug-in for Eclipse
 <h3 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h3><ol>
 <li><p>Open Eclipse IDE</p>
 </li>
-<li><p>Create new “Dynamic Web Project” using new project wizard</p>
+<li><p>Create new  “Dynamic Web Project”  using new project wizard</p>
 <p> a. Choose project name</p>
 <ol start="2">
 <li>Select ‘New Runtime’ to be WebSphere Application Server Liberty Profile<br><img src="http://78rf8f.com1.z0.glb.clouddn.com/JEE-Picture1.png" alt="New Runtime"></li>
@@ -109,8 +109,8 @@ Deploy and test using Websphere Liberty Profile plug-in for Eclipse
 <li>Finish</li>
 <li>Expand Web Module</li>
 <li>Under Servlet, add new Servlet</li>
-<li>Replace request mapping on top of the class to: @WebServlet(“/hello”)<br><img src="http://78rf8f.com1.z0.glb.clouddn.com/JEE-Picture3.png" alt="New Runtime"></li>
-<li>Replace code from doGet(…) method<br>Response.getWriter().println(“Hello World!”);<img src="http://78rf8f.com1.z0.glb.clouddn.com/JEE-Picture4.png" alt="New Runtime"></li>
+<li>Replace request mapping on top of the class to: @WebServlet( “/hello” )<br><img src="http://78rf8f.com1.z0.glb.clouddn.com/JEE-Picture3.png" alt="New Runtime"></li>
+<li>Replace code from doGet(…) method<br>Response.getWriter().println( “Hello World!” );<img src="http://78rf8f.com1.z0.glb.clouddn.com/JEE-Picture4.png" alt="New Runtime"></li>
 </ol>
 </li>
 <li><p>Deploy to Server &amp; test<br> a. Open Server view<br> b. Select Websphere Liberty Profile<br> c. Right click and add HelloWorld application<br> d. Run<br> e. Get the URL from server log<br> f. Open browser within Eclipse<br> g. Type in the URL </p>

@@ -89,7 +89,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>为了辅助英语口语练习，花了一天时间捣鼓了段代码自动生成所给文章的音标和三线。本文简单讲述了实现的过程。用到了网页爬虫，python，JavaScript的知识。为了练习英文写作能力，后续内容用英语书写。</p>
+        <p>为了辅助英语口语练习, 花了一天时间捣鼓了段代码自动生成所给文章的音标和三线. 本文简单讲述了实现的过程. 用到了网页爬虫, python, JavaScript的知识. 为了练习英文写作能力, 后续内容用英语书写. </p>
 <p>In order to make practicing oral English easier, I develope the Phonetic Symbol Genereator. This article discribe the process of how I develop the Phonetic Symbol Generator which you can download <a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1ntE7yqt">HERE</a>.</p>
         
           <p class="article-more-link">
@@ -191,9 +191,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>此文记录我在学习<a target="_blank" rel="noopener" href="http://djangobook.py3k.cn/2.0/">Django</a>时遇到的一些问题以及解决方案。</p>
+        <p>此文记录我在学习<a target="_blank" rel="noopener" href="http://djangobook.py3k.cn/2.0/">Django</a>时遇到的一些问题以及解决方案. </p>
 <!--readmore-->
-<p>1.需要一个方法把它传递到视图函数里去，这样 我们只用一个视图函数就可以处理所有的时间段了。我们使用圆括号把参数在URL模式里标识 出来</p>
+<p>1.需要一个方法把它传递到视图函数里去, 这样 我们只用一个视图函数就可以处理所有的时间段了. 我们使用圆括号把参数在URL模式里标识 出来</p>
 <pre><code>urlpatterns = patterns(&#39;&#39;,
     (r&#39;^time/$&#39;, current_datetime),
     (r&#39;^time/plus/\d+/$&#39;, hours_ahead),
@@ -202,7 +202,7 @@
 <blockquote>
 <p>hours_ahead() takes exactly 2 arguments (1 given)</p>
 </blockquote>
-<p>缺少参数，应该用(\d+)，括号表示参数：</p>
+<p>缺少参数, 应该用(\d+), 括号表示参数: </p>
 <pre><code>urlpatterns = patterns(&#39;&#39;,
     (r&#39;^time/$&#39;, current_datetime),
     (r&#39;^time/plus/(\d+)/$&#39;, hours_ahead),
@@ -215,12 +215,12 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
 <blockquote>
 <p>Traceback (most recent call last):<br>  File “<stdin>“, line 1, in <module><br>  File “/Library/Python/2.7/site-packages/django/template/base.py”, line 123, in <strong>init</strong><br>    if settings.TEMPLATE_DEBUG and origin is None:<br>  File “/Library/Python/2.7/site-packages/django/conf/<strong>init</strong>.py”, line 54, in <strong>getattr</strong><br>    self._setup(name)<br>  File “/Library/Python/2.7/site-packages/django/conf/<strong>init</strong>.py”, line 47, in _setup<br>    % (desc, ENVIRONMENT_VARIABLE))<br>django.core.exceptions.ImproperlyConfigured: Requested setting TEMPLATE_DEBUG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</p>
 </blockquote>
-<p>设置没有配置，需要配置环境变量。<br>可以用以下方法来解决：</p>
+<p>设置没有配置, 需要配置环境变量.<br>可以用以下方法来解决: </p>
 <ul>
-<li><p>在import之前加入一下代码导入settings：</p>
+<li><p>在import之前加入一下代码导入settings: </p>
 <p>  from django.conf import settings<br>  settings.configure()</p>
 </li>
-<li><p>在启动解释器之前，它告诉Django使用 哪个设置文件：</p>
+<li><p>在启动解释器之前, 它告诉Django使用 哪个设置文件: </p>
 <p>  python manage.py shell</p>
 </li>
 <li><p>在你的配置文 件.bash_profile中手动添加 DJANGO_SETTINGS_MODULE这个环境变量</p>
@@ -270,7 +270,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h1><p>&emsp;&emsp;我做每一件事都尽量做到最好，但是国创这各项目上真的力不从心，从一开始的成员变动，到后来每个队员都有更重要的事情去做，包括我自己也一样（因为数模比赛和出国的准备耽搁了好多），以至于到中期答辩我们还几乎没有进度。国创一年的时间很快就过去了，虽然断断续续地去完成国创项目，但是我最终还是学到了一些新的知识。</p>
+        <h1 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h1><p>&emsp;&emsp;我做每一件事都尽量做到最好, 但是国创这各项目上真的力不从心, 从一开始的成员变动, 到后来每个队员都有更重要的事情去做, 包括我自己也一样 (因为数模比赛和出国的准备耽搁了好多) , 以至于到中期答辩我们还几乎没有进度. 国创一年的时间很快就过去了, 虽然断断续续地去完成国创项目, 但是我最终还是学到了一些新的知识. </p>
         
           <p class="article-more-link">
             <a href="/2014/06/21/summary-of-project/#more">Read More</a>
@@ -323,7 +323,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
 <p>##题型</p>
 <ol>
 <li>Analytical Writing <ul>
-<li>issue149道题，逻辑分析</li>
+<li>issue149道题, 逻辑分析</li>
 <li>argument</li>
 </ul>
 </li>
@@ -382,7 +382,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>本文记录了在新东方上GRE阅读课的笔记，以及自己的一些学习的心得。GRE阅读是一个非常有意思的<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/victorhwn">胡文宁</a>老师给我们教的。</p>
+        <p>本文记录了在新东方上GRE阅读课的笔记, 以及自己的一些学习的心得. GRE阅读是一个非常有意思的<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/victorhwn">胡文宁</a>老师给我们教的. </p>
         
           <p class="article-more-link">
             <a href="/2014/06/07/GRE-note-of-gre-reading-class/#more">Read More</a>
@@ -431,7 +431,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>本文记录了在西安新东方学习GRE写作的笔记，GRE写作由西安新东方王宇飞老师任教。在GRE写作中logic and reasoning is important, 写作重推导，弱观点。  </p>
+        <p>本文记录了在西安新东方学习GRE写作的笔记, GRE写作由西安新东方王宇飞老师任教. 在GRE写作中logic and reasoning is important, 写作重推导, 弱观点.   </p>
         
           <p class="article-more-link">
             <a href="/2014/05/13/GRE-Analytical-Writing/#more">Read More</a>
@@ -480,7 +480,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>update on May 9th<br>This notes in level 2.5 of EOE class.<br>5.9的课上复习了“WET PAINTED”的简单句描述，然后讲了并列句和复杂句的描述，最后用一个Jimmy的故事以“WET PAINTED”为背景串了一遍三种描述方法的使用。</p>
+        <p>update on May 9th<br>This notes in level 2.5 of EOE class.<br>5.9的课上复习了 “WET PAINTED” 的简单句描述, 然后讲了并列句和复杂句的描述, 最后用一个Jimmy的故事以 “WET PAINTED” 为背景串了一遍三种描述方法的使用. </p>
         
           <p class="article-more-link">
             <a href="/2014/05/10/EOE-notes-in-eoe-class/#more">Read More</a>
@@ -529,7 +529,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;这篇文章介绍了怎么结合Biscuit和Evernote，分享Biscuit中存的List并实现高效地记单词，除此之外还提供了一些已经收录好的List of GRE vocabulary。</p>
+        <p>&emsp;&emsp;这篇文章介绍了怎么结合Biscuit和Evernote, 分享Biscuit中存的List并实现高效地记单词, 除此之外还提供了一些已经收录好的List of GRE vocabulary. </p>
         
           <p class="article-more-link">
             <a href="/2014/04/29/share-your-biscuit/#more">Read More</a>
@@ -578,7 +578,7 @@ t = Template(&#39;My name is &#123;&#123; name &#125;&#125;.&#39;)
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>此文总结了本人参加数学建模（国赛、美赛）的经历、经验，并提供了准备数学建模的一些建议。</p>
+        <p>此文总结了本人参加数学建模 (国赛、美赛) 的经历、经验, 并提供了准备数学建模的一些建议. </p>
         
           <p class="article-more-link">
             <a href="/2014/04/13/MCM-mathematics_modeling/#more">Read More</a>
