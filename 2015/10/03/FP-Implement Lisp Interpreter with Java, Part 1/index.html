@@ -94,12 +94,12 @@ Project 1For the first project, I build a lexical analyzer, a parser, and a prin
 <h2 id="Project-1"><a href="#Project-1" class="headerlink" title="Project 1"></a>Project 1</h2><p>For the first project, I build a lexical analyzer, a parser, and a printer. The input language for my parser is defined by the following grammar. </p>
 <span id="more"></span>
 
-<h2 id="S-expression"><a href="#S-expression" class="headerlink" title="S-expression"></a>S-expression</h2><p>Here <S-exp> represents an S-expression ( “symbolic expression” ), a key concept in LISP.</p>
+<h2 id="S-expression"><a href="#S-expression" class="headerlink" title="S-expression"></a>S-expression</h2><p>Here <S-exp> represents an S-expression (“symbolic expression”), a key concept in LISP.</p>
 <pre><code>&lt;Start&gt; ::= &lt;S-exp&gt; &lt;Start&gt; | &lt;S-exp&gt; eof 
 &lt;S-exp&gt; ::= atom | ( &lt;S-exp&gt; . &lt;S-exp&gt; )
 </code></pre>
 <p>Here <Start> and <S-exp> are non-terminals. There are five terminals: atom ( . ) eof</p>
-<p>An atom, represented by the atom terminal, is either a literal atom or a numeric atom. A literal atom is a non-empty sequence of digits and upper-case letters, starting with a letter. A numeric atom is a non-empty sequence of digits. Terminal eof is an artificial terminal representing the  “end-of-input-file”  event.</p>
+<p>An atom, represented by the atom terminal, is either a literal atom or a numeric atom. A literal atom is a non-empty sequence of digits and upper-case letters, starting with a letter. A numeric atom is a non-empty sequence of digits. Terminal eof is an artificial terminal representing the “end-of-input-file” event.</p>
 <p>We define a class Sexp to denote S-expression tree.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sexp</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> Boolean isList;</span><br><span class="line">	<span class="comment">// public Atom atom;</span></span><br><span class="line">	<span class="keyword">public</span> String kind;</span><br><span class="line">	<span class="keyword">public</span> String val;</span><br><span class="line">	<span class="keyword">public</span> Sexp left;</span><br><span class="line">	<span class="keyword">public</span> Sexp right;</span><br><span class="line">	Sexp() &#123;</span><br><span class="line">		<span class="keyword">this</span>.isList = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">this</span>.kind = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">this</span>.val = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">this</span>.left = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">this</span>.right = <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title">isListTree</span><span class="params">(Sexp sexp)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(sexp == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(sexp.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(sexp.right.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(sexp.right.val.equals(<span class="string">&quot;NIL&quot;</span>)) &#123;</span><br><span class="line">				<span class="comment">// System.out.println(&quot;True with&quot; + sexp.right.val);</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// System.out.println(&quot;false!&quot;);</span></span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> isListTree(sexp.left) &amp;&amp; isListTree(sexp.right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -120,7 +120,7 @@ Project 1For the first project, I build a lexical analyzer, a parser, and a prin
 <li>if the current character is a white space, reads it and any white spaces that follow it 2. if the current character is ‘(‘ returns token OpenParenthesis</li>
 <li>if the current character is ‘)’ returns token ClosingParenthesis</li>
 <li>if the current character is ‘.’ returns token Dot</li>
-<li>if the current character is letter/digit, reads it and all letter/digit characters that follow it. The re- sulting string is either a literal atom (e.g.,  “XY3Z” ), a numeric atom (e.g.,  “3415” ), or an error (e.g.,  “34XY” ). In the first two cases, an Atom is returned back to the parser, together with all rel- evant information about the atom.</li>
+<li>if the current character is letter/digit, reads it and all letter/digit characters that follow it. The re- sulting string is either a literal atom (e.g., “XY3Z”), a numeric atom (e.g., “3415”), or an error (e.g., “34XY”). In the first two cases, an Atom is returned back to the parser, together with all rel- evant information about the atom.</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lexical</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> File file;</span><br><span class="line">	<span class="keyword">public</span> String line;</span><br><span class="line">	<span class="keyword">public</span> InputStream reader = System.in;</span><br><span class="line">	<span class="function">String <span class="title">getNextToken</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">int</span> tempchar;</span><br><span class="line">			tempchar = reader.read();</span><br><span class="line">			<span class="keyword">if</span>(tempchar == -<span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="string">&quot;EOF&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(tempchar == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="string">&quot;EOL&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>((<span class="keyword">char</span>)tempchar == <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="string">&quot;(&quot;</span>; <span class="comment">//OpenParenthesis&quot;;</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>((<span class="keyword">char</span>)tempchar == <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="string">&quot;)&quot;</span>; <span class="comment">//ClosingParenthesis&quot;;</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>((<span class="keyword">char</span>)tempchar == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="string">&quot;.&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(tempchar &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; tempchar &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">				String literalVal = <span class="keyword">new</span> String();</span><br><span class="line">				<span class="keyword">while</span>((tempchar &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; tempchar &lt;= <span class="string">&#x27;Z&#x27;</span>) || (tempchar &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; tempchar &lt;=<span class="string">&#x27;9&#x27;</span>)) &#123;</span><br><span class="line">					reader.mark(<span class="number">32</span>);</span><br><span class="line">					literalVal += String.valueOf((<span class="keyword">char</span>) tempchar);</span><br><span class="line">					tempchar = reader.read();</span><br><span class="line">				&#125;</span><br><span class="line">				System.in.reset();</span><br><span class="line">				<span class="keyword">return</span> literalVal;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(tempchar &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; tempchar &lt;= <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">				String numericVal = <span class="keyword">new</span> String();</span><br><span class="line">				<span class="keyword">while</span>(tempchar &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; tempchar &lt;=<span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">					reader.mark(<span class="number">32</span>);</span><br><span class="line">					numericVal += String.valueOf((<span class="keyword">char</span>) tempchar);</span><br><span class="line">					tempchar = reader.read();</span><br><span class="line">					<span class="keyword">if</span>(tempchar &lt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; tempchar &gt;= <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">						System.out.println(<span class="string">&quot;Invalid Input: &quot;</span> + numericVal + String.valueOf((<span class="keyword">char</span>) tempchar) + <span class="string">&quot;...&quot;</span>);</span><br><span class="line">						System.exit(<span class="number">1</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				reader.reset();</span><br><span class="line">				<span class="keyword">return</span> numericVal;</span><br><span class="line">			&#125; </span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(tempchar == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">				<span class="keyword">while</span>(tempchar == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">					reader.mark(<span class="number">32</span>);</span><br><span class="line">					tempchar = reader.read();</span><br><span class="line">				&#125;			</span><br><span class="line">				reader.reset();</span><br><span class="line">				<span class="keyword">return</span> getNextToken();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;Invalid Input: &quot;</span> + String.valueOf((<span class="keyword">char</span>) tempchar) + <span class="string">&quot;...&quot;</span>);</span><br><span class="line">				System.exit(<span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;ERR&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -259,6 +259,60 @@ Project 1For the first project, I build a lexical analyzer, a parser, and a prin
 
 </section>
         
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 10px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 13.33px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
       </div>
       <footer id="footer">
   
@@ -266,6 +320,8 @@ Project 1For the first project, I build a lexical analyzer, a parser, and a prin
     <div id="footer-info" class="inner">
       
       &copy; 2021 Shuang Li<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
+      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
   </div>
 </footer>
@@ -299,19 +355,24 @@ Project 1For the first project, I build a lexical analyzer, a parser, and a prin
 
 
 
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false},
+        {left: '\\[', right: '\\]', display: true}
+      ],
+      throwOnError : false
+    });
+  });
 </script>
 
   </div>
