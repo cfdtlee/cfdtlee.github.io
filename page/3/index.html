@@ -62,28 +62,59 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-JEE-say-Hello-world-to-Java-EE" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-iOS-Design_Note_1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/10/03/JEE-say-Hello-world-to-Java-EE/" class="article-date">
-  <time class="dt-published" datetime="2015-10-02T18:13:28.000Z" itemprop="datePublished">2015-10-02</time>
+    <a href="/2015/11/12/iOS-Design_Note_1/" class="article-date">
+  <time class="dt-published" datetime="2015-11-12T19:56:28.000Z" itemprop="datePublished">2015-11-12</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2015/11/12/iOS-Design_Note_1/">Design Note for iOS</a>
+    </h1>
+  
+
+      </header>
+    
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>title: JEE-say Hello World to Java EE<br>date: 2015-09-13 15:56:28<br>categories: JEE<br>tags: [Web, JEE]</p>
-<hr>
-<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
-<li><p>Create Hello World web application using Java EE </p>
+        <h1 id="IOS-design"><a href="#IOS-design" class="headerlink" title="IOS design"></a>IOS design</h1><h2 id="Core-Philosophies"><a href="#Core-Philosophies" class="headerlink" title="Core Philosophies"></a>Core Philosophies</h2><ul>
+<li>deference</li>
+<li>clarity</li>
+<li>depth</li>
+</ul>
+<p>Your content should be the hero, everything else is secondary</p>
+<ul>
+<li><p>Simplify</p>
+<ul>
+<li>focus on functional colors, harmonious gradients, and beautiful typography</li>
+</ul>
 </li>
-<li><p>Deploy and test using Websphere Liberty Profile plug-in for Eclipse</p>
+<li><p>Maximize content</p>
+<ul>
+<li>The content should take the whole screen, giving maximum space to its inner elements.</li>
+</ul>
+</li>
+<li><p>Color</p>
+<ul>
+<li>Use a prominent color to show that an element is tappable or that it’s highlighted.</li>
+</ul>
+</li>
+</ul>
         
           <p class="article-more-link">
-            <a href="/2015/10/03/JEE-say-Hello-world-to-Java-EE/#more">Read More</a>
+            <a href="/2015/11/12/iOS-Design_Note_1/#more">Read More</a>
           </p>
         
       
@@ -92,6 +123,114 @@
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-LC-fb" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2015/10/20/LC-fb/" class="article-date">
+  <time class="dt-published" datetime="2015-10-20T22:56:28.000Z" itemprop="datePublished">2015-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2015/10/20/LC-fb/">部分题思路</a>
+    </h1>
+  
+
+      </header>
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="10-Regular-Expression-Match"><a href="#10-Regular-Expression-Match" class="headerlink" title="10 Regular Expression Match"></a>10 Regular Expression Match</h2><ul>
+<li>Back Tracking<ul>
+<li>boundary condition: sLen &#x3D;&#x3D; 0 || pLen &#x3D;&#x3D; 0</li>
+<li>then deal with <code> p.charAt(1) == &#39;*&#39;</code> and <code>other</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(pLen<span class="operator"> == </span><span class="number">0</span>) return sLen<span class="operator"> == </span><span class="number">0</span>; <span class="comment">// pLen = a*? ;</span></span><br><span class="line"><span class="keyword">if</span>(sLen<span class="operator"> == </span><span class="number">0</span>) return pLen<span class="operator"> == </span><span class="number">0</span><span class="operator"> || </span>pLen &gt; <span class="number">1</span><span class="operator"> &amp;&amp; </span>p.<span class="built_in">char</span><span class="constructor">At(1)</span><span class="operator"> == </span><span class="character">&#x27;*&#x27;</span><span class="operator"> &amp;&amp; </span>is<span class="constructor">Match(<span class="params">s</span>, <span class="params">p</span>.<span class="params">substring</span>(2)</span>);</span><br><span class="line"><span class="keyword">if</span>(pLen &gt; <span class="number">1</span><span class="operator"> &amp;&amp; </span>p.<span class="built_in">char</span><span class="constructor">At(1)</span><span class="operator"> == </span><span class="character">&#x27;*&#x27;</span>) &#123;</span><br><span class="line">	return (is<span class="constructor">Match(<span class="params">s</span>, <span class="params">p</span>.<span class="params">substring</span>(2)</span>)<span class="operator"> || </span>((sLen &gt; <span class="number">0</span><span class="operator"> &amp;&amp; </span>(s.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span>)<span class="operator"> || </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span><span class="character">&#x27;.&#x27;</span>)<span class="operator"> &amp;&amp; </span>is<span class="constructor">Match(<span class="params">s</span>.<span class="params">substring</span>(1)</span>, p))); <span class="comment">// when try to get s.charAt(0) make sure s is not empty</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">	return (sLen &gt; <span class="number">0</span><span class="operator"> &amp;&amp; </span>(s.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> || </span>p.<span class="built_in">char</span><span class="constructor">At(0)</span><span class="operator"> == </span><span class="character">&#x27;.&#x27;</span>)<span class="operator"> &amp;&amp; </span>is<span class="constructor">Match(<span class="params">s</span>.<span class="params">substring</span>(1)</span>, p.substring(<span class="number">1</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/20/LC-fb/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-FP-Implement Lisp Interpreter with Java, Part 1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2015/10/02/FP-Implement%20Lisp%20Interpreter%20with%20Java,%20Part%201/" class="article-date">
+  <time class="dt-published" datetime="2015-10-02T18:56:28.000Z" itemprop="datePublished">2015-10-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Functional-Programming/">Functional Programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2015/10/02/FP-Implement%20Lisp%20Interpreter%20with%20Java,%20Part%201/">CSE 6341 Implement Lisp Interpreter with Java, Part 1</a>
+    </h1>
+  
+
+      </header>
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>￼￼The overall goal of this sequence of projects is to build an interpreter for the version of LISP presented in class. </p>
+<h2 id="Project-1"><a href="#Project-1" class="headerlink" title="Project 1"></a>Project 1</h2><p>For the first project, I build a lexical analyzer, a parser, and a printer. The input language for my parser is defined by the following grammar. </p>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/02/FP-Implement%20Lisp%20Interpreter%20with%20Java,%20Part%201/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interpreter/" rel="tag">Interpreter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LISP/" rel="tag">LISP</a></li></ul>
+
     </footer>
   </div>
   
@@ -102,7 +241,7 @@
   
     <article id="post-JEE-Setup-Java-EE-Environment" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/09/11/JEE-Setup-Java-EE-Environment/" class="article-date">
+    <a href="/2015/09/10/JEE-Setup-Java-EE-Environment/" class="article-date">
   <time class="dt-published" datetime="2015-09-10T22:56:28.000Z" itemprop="datePublished">2015-09-10</time>
 </a>
     
@@ -118,7 +257,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/09/11/JEE-Setup-Java-EE-Environment/">JEE-Setup Java EE Environment</a>
+      <a class="p-name article-title" href="/2015/09/10/JEE-Setup-Java-EE-Environment/">JEE-Setup Java EE Environment</a>
     </h1>
   
 
@@ -128,18 +267,18 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h3 id="Software-List"><a href="#Software-List" class="headerlink" title="Software List"></a>Software List</h3><ol>
-<li><p>   Java Development Kit (JDK) 7u80 </p>
+<li><p>Java Development Kit (JDK) 7u80 </p>
 </li>
-<li><p>   Eclipse for Java EE Developers (Mars Release)</p>
+<li><p>Eclipse for Java EE Developers (Mars Release)</p>
 </li>
-<li><p>   IBM Liberty Profile for Eclipse</p>
+<li><p>IBM Liberty Profile for Eclipse</p>
 </li>
-<li><p>   IBM Liberty Profile Runtime</p>
+<li><p>IBM Liberty Profile Runtime</p>
 </li>
-<li><p>   Spring Framework distribution 4.2.0 &amp; supporting libraries<br>Note: The software described above have been downloaded and stored on the shared drive.</p>
+<li><p>Spring Framework distribution 4.2.0 &amp; supporting libraries<br>Note: The software described above have been downloaded and stored on the shared drive.</p>
         
           <p class="article-more-link">
-            <a href="/2015/09/11/JEE-Setup-Java-EE-Environment/#more">Read More</a>
+            <a href="/2015/09/10/JEE-Setup-Java-EE-Environment/#more">Read More</a>
           </p>
         
       
@@ -160,7 +299,7 @@
   
     <article id="post-ME-master-vocabulary" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/05/08/ME-master-vocabulary/" class="article-date">
+    <a href="/2015/05/07/ME-master-vocabulary/" class="article-date">
   <time class="dt-published" datetime="2015-05-07T22:56:28.000Z" itemprop="datePublished">2015-05-07</time>
 </a>
     
@@ -176,7 +315,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/05/08/ME-master-vocabulary/">如何高效地记忆单词</a>
+      <a class="p-name article-title" href="/2015/05/07/ME-master-vocabulary/">如何高效地记忆单词</a>
     </h1>
   
 
@@ -197,7 +336,7 @@
 <p>原则：将单词转化成一幅动画，去记动画，而不是记单词。<br>原理：右脑记忆是左脑的100万倍，右脑是影像储存信息的,左脑是数字逻辑储存信息，将单词转化为画面，储存在右脑，使用时再将画面翻译成单词。</p>
         
           <p class="article-more-link">
-            <a href="/2015/05/08/ME-master-vocabulary/#more">Read More</a>
+            <a href="/2015/05/07/ME-master-vocabulary/#more">Read More</a>
           </p>
         
       
@@ -218,7 +357,7 @@
   
     <article id="post-ME-魔方教学三阶段" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/04/30/ME-%E9%AD%94%E6%96%B9%E6%95%99%E5%AD%A6%E4%B8%89%E9%98%B6%E6%AE%B5/" class="article-date">
+    <a href="/2015/04/29/ME-%E9%AD%94%E6%96%B9%E6%95%99%E5%AD%A6%E4%B8%89%E9%98%B6%E6%AE%B5/" class="article-date">
   <time class="dt-published" datetime="2015-04-29T22:56:28.000Z" itemprop="datePublished">2015-04-29</time>
 </a>
     
@@ -234,7 +373,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/04/30/ME-%E9%AD%94%E6%96%B9%E6%95%99%E5%AD%A6%E4%B8%89%E9%98%B6%E6%AE%B5/">魔方教程</a>
+      <a class="p-name article-title" href="/2015/04/29/ME-%E9%AD%94%E6%96%B9%E6%95%99%E5%AD%A6%E4%B8%89%E9%98%B6%E6%AE%B5/">魔方教程</a>
     </h1>
   
 
@@ -292,7 +431,7 @@
   
     <article id="post-Reading-欧洲极简史" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/04/17/Reading-%E6%AC%A7%E6%B4%B2%E6%9E%81%E7%AE%80%E5%8F%B2/" class="article-date">
+    <a href="/2015/04/16/Reading-%E6%AC%A7%E6%B4%B2%E6%9E%81%E7%AE%80%E5%8F%B2/" class="article-date">
   <time class="dt-published" datetime="2015-04-16T22:56:28.000Z" itemprop="datePublished">2015-04-16</time>
 </a>
     
@@ -308,7 +447,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/04/17/Reading-%E6%AC%A7%E6%B4%B2%E6%9E%81%E7%AE%80%E5%8F%B2/">【阅读系列】欧洲极简史</a>
+      <a class="p-name article-title" href="/2015/04/16/Reading-%E6%AC%A7%E6%B4%B2%E6%9E%81%E7%AE%80%E5%8F%B2/">【阅读系列】欧洲极简史</a>
     </h1>
   
 
@@ -320,7 +459,7 @@
         <p>本文对《极简欧洲史》进行了摘录。</p>
         
           <p class="article-more-link">
-            <a href="/2015/04/17/Reading-%E6%AC%A7%E6%B4%B2%E6%9E%81%E7%AE%80%E5%8F%B2/#more">Read More</a>
+            <a href="/2015/04/16/Reading-%E6%AC%A7%E6%B4%B2%E6%9E%81%E7%AE%80%E5%8F%B2/#more">Read More</a>
           </p>
         
       
@@ -341,7 +480,7 @@
   
     <article id="post-CAPTCHA-03-preprocessing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/04/16/CAPTCHA-03-preprocessing/" class="article-date">
+    <a href="/2015/04/15/CAPTCHA-03-preprocessing/" class="article-date">
   <time class="dt-published" datetime="2015-04-15T22:56:28.000Z" itemprop="datePublished">2015-04-15</time>
 </a>
     
@@ -357,7 +496,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/04/16/CAPTCHA-03-preprocessing/">验证码识别（03）——预处理</a>
+      <a class="p-name article-title" href="/2015/04/15/CAPTCHA-03-preprocessing/">验证码识别（03）——预处理</a>
     </h1>
   
 
@@ -367,10 +506,10 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><h3 id="去除矩形反色块"><a href="#去除矩形反色块" class="headerlink" title="去除矩形反色块"></a>去除矩形反色块</h3><p>去除验证码中干扰矩形色块</p>
-<p><img src="/2015/04/16/CAPTCHA-03-preprocessing/CAPTCHAbefore-pre.gif" alt="原图"><img src="/2015/04/16/CAPTCHA-03-preprocessing/CAPTCHAafter-pre.gif" alt="去除色块之后"></p>
+<p><img src="/2015/04/15/CAPTCHA-03-preprocessing/CAPTCHAbefore-pre.gif" alt="原图"><img src="/2015/04/15/CAPTCHA-03-preprocessing/CAPTCHAafter-pre.gif" alt="去除色块之后"></p>
         
           <p class="article-more-link">
-            <a href="/2015/04/16/CAPTCHA-03-preprocessing/#more">Read More</a>
+            <a href="/2015/04/15/CAPTCHA-03-preprocessing/#more">Read More</a>
           </p>
         
       
@@ -391,7 +530,7 @@
   
     <article id="post-CAPTCHA-02-PIL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/04/06/CAPTCHA-02-PIL/" class="article-date">
+    <a href="/2015/04/05/CAPTCHA-02-PIL/" class="article-date">
   <time class="dt-published" datetime="2015-04-05T22:56:28.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
     
@@ -407,7 +546,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/04/06/CAPTCHA-02-PIL/">验证码识别（02）——图像二值化</a>
+      <a class="p-name article-title" href="/2015/04/05/CAPTCHA-02-PIL/">验证码识别（02）——图像二值化</a>
     </h1>
   
 
@@ -420,7 +559,7 @@
 <h2 id="about-RGB"><a href="#about-RGB" class="headerlink" title="about RGB"></a>about RGB</h2><p>When the intensities are different, the result is a colorized hue, more or less saturated depending on the difference of the strongest and weakest of the intensities of the primary colors employed.</p>
         
           <p class="article-more-link">
-            <a href="/2015/04/06/CAPTCHA-02-PIL/#more">Read More</a>
+            <a href="/2015/04/05/CAPTCHA-02-PIL/#more">Read More</a>
           </p>
         
       
@@ -441,7 +580,7 @@
   
     <article id="post-ME-travel-xi&#39;an" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2015/03/26/ME-travel-xi'an/" class="article-date">
+    <a href="/2015/03/25/ME-travel-xi'an/" class="article-date">
   <time class="dt-published" datetime="2015-03-26T04:56:28.000Z" itemprop="datePublished">2015-03-25</time>
 </a>
     
@@ -457,7 +596,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/03/26/ME-travel-xi'an/">摩英·西安</a>
+      <a class="p-name article-title" href="/2015/03/25/ME-travel-xi'an/">摩英·西安</a>
     </h1>
   
 
@@ -469,10 +608,10 @@
         <blockquote>
 <p>怎么那么喜欢你</p>
 </blockquote>
-<p>&emsp;&emsp;因为我没有全程陪伴大家玩耍，大活动狼人也一盘也没有参与，所以本文以一个旅行策划者的视角，写一下我的感受。</p>
+<p>&amp;emsp;&amp;emsp;因为我没有全程陪伴大家玩耍，大活动狼人也一盘也没有参与，所以本文以一个旅行策划者的视角，写一下我的感受。</p>
         
           <p class="article-more-link">
-            <a href="/2015/03/26/ME-travel-xi'an/#more">Read More</a>
+            <a href="/2015/03/25/ME-travel-xi'an/#more">Read More</a>
           </p>
         
       
@@ -482,104 +621,6 @@
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%91%A9%E8%8B%B1/" rel="tag">摩英</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Reading-性格色彩" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2015/03/17/Reading-%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" class="article-date">
-  <time class="dt-published" datetime="2015-03-16T22:56:28.000Z" itemprop="datePublished">2015-03-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Reading-Summary/">Reading Summary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/03/17/Reading-%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/">【阅读系列】跟乐嘉学习性格色彩</a>
-    </h1>
-  
-
-      </header>
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>本文对《跟乐嘉学习性格色彩》做了摘记，并结合生活进行了分析。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/03/17/Reading-%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" rel="tag">性格色彩</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CAPTCHA-01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2015/03/16/CAPTCHA-01/" class="article-date">
-  <time class="dt-published" datetime="2015-03-15T22:56:28.000Z" itemprop="datePublished">2015-03-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2015/03/16/CAPTCHA-01/">验证码识别（01）</a>
-    </h1>
-  
-
-      </header>
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>大四毕业设计题目是《百度验证码的识别》，本文以百度验证码为例,概述验证码识别的基本步骤。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/03/16/CAPTCHA-01/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Captcha/" rel="tag">Captcha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li></ul>
 
     </footer>
   </div>
@@ -607,23 +648,23 @@
       <ul>
         
           <li>
+            <a href="/2022/03/18/crypto-trend-3-18-2022/">Crypto Trend 3/18/2022</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/27/blog-domain-shuang-li/">我的新家-2</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/16/GYM-equipment_and_suppliment/">健身装备、补剂</a>
+          </li>
+        
+          <li>
             <a href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
           </li>
         
           <li>
             <a href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
           </li>
         
       </ul>
@@ -635,7 +676,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 10px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 13.33px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Crypto/" style="font-size: 10px;">Crypto</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 10px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 13.33px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/gym/" style="font-size: 10px;">gym</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/workout/" style="font-size: 10px;">workout</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
     </div>
   </div>
 
@@ -644,7 +685,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Crypto/">Crypto</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Workout/">Workout</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
     </div>
   </div>
 
@@ -658,7 +699,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2021 Shuang Li<br>
+      &copy; 2022 Shuang Li<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
       <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
     </div>
