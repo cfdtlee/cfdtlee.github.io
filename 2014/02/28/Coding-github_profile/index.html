@@ -100,10 +100,10 @@ push origin master之后repositories里有新的文件上传，但是主页的pr
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><span id="more"></span>
 <p>第一个问题在主页profile(Your contributions)下面的<a target="_blank" rel="noopener" href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile">Learn more</a>里找到了原因和解决方案<br><img src="/2014/02/28/Coding-github_profile/blog_github_profile.png" alt="profile">    </p>
 <p>原因是我没有在Ubuntu的git的config中设置user.email，查看git设置，在命令行里输入：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> config user.email</span><br><span class="line">wrong<span class="variable">@mail</span>.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br><span class="line"><span class="symbol">wrong@</span>mail.com</span><br></pre></td></tr></table></figure>
 
 <p>如果不显示email或者与<a target="_blank" rel="noopener" href="https://github.com/settings/emails">Github中设置的邮箱</a>match不上，输入：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> &quot;<span class="attribute">right</span><span class="keyword">@mail</span>.com&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;right@mail.com&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>或者在<a target="_blank" rel="noopener" href="https://github.com/settings/emails">Github中设置的邮箱</a>中加入新的邮箱。    </p>
 <p>第二个问题也在github的help下一篇<a target="_blank" rel="noopener" href="https://help.github.com/articles/why-is-git-always-asking-for-my-password">《为什么git老是让我输密码》</a>中找到解决方法<br>Github采用多种<a target="_blank" rel="noopener" href="https://help.github.com/articles/which-remote-url-should-i-use">remote URL</a>其中以HTTPS和SSH为主    </p>
@@ -117,7 +117,7 @@ push origin master之后repositories里有新的文件上传，但是主页的pr
 <li><p>如下图点击copy按钮复制SSH clone URL<br><img src="/2014/02/28/Coding-github_profile/blog_github_clone.png" alt="URL"></p>
 </li>
 <li><p>打开终端运行</p>
-<p> git remote set-url origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:user&#x2F;repo.git</p>
+<p> git remote set-url origin <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:user&#x2F;repo.git</p>
 </li>
 </ol>
 <p>PS：另附一个网上找到的一个<a target="_blank" rel="noopener" href="http://www.xbc.me/git-commands/">《git命令整理》</a></p>

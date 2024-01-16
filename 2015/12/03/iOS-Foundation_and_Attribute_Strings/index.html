@@ -1,342 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>iOS-Foundation and Attribute Strings | cfdtlee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <meta name="description" content="Extension of iOS-Objective-C and Java. Dive into iOS Foundation and Attribute Strings.
-Creating Objects
-create objects with alloc and init
-  1NSMutableArray *cards = [[NSMutableArray alloc] init];CardMatchingGame *game = [[CardMatchingGame alloc] initWithCardCount:12 usingDeck:d];
-">
-  
-  
-    <link rel="alternate" href="/atom.xml" title="cfdtlee" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-<meta name="generator" content="Hexo 6.0.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">cfdtlee</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">We do what we have to do, so we can do what we want to do</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-      </nav>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-iOS-Foundation_and_Attribute_Strings" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2015/12/03/iOS-Foundation_and_Attribute_Strings/" class="article-date">
-  <time class="dt-published" datetime="2015-12-02T19:56:28.000Z" itemprop="datePublished">2015-12-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      iOS-Foundation and Attribute Strings
-    </h1>
-  
-
-      </header>
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Extension of <a target="_blank" rel="noopener" href="http://www.cfdtlee.com/2015/11/20/iOS-Objective-C_and_Java/">iOS-Objective-C and Java</a>. Dive into iOS Foundation and Attribute Strings.</p>
-<h2 id="Creating-Objects"><a href="#Creating-Objects" class="headerlink" title="Creating Objects"></a>Creating Objects</h2><ul>
-<li><p>create objects with alloc and init</p>
-  <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *cards = <span class="comment">[<span class="comment">[NSMutableArray alloc]</span> init]</span>;CardMatchingGame *game = <span class="comment">[<span class="comment">[CardMatchingGame alloc]</span> initWithCardCount:12 usingDeck:d]</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p>create with class methods</p>
-  <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span>’s + (<span class="keyword">id</span>)stringWithFormat:(<span class="built_in">NSString</span> *)format, ... <span class="built_in">NSString</span> *moltuae = [<span class="built_in">NSString</span> stringWithFormat:@“%d”, <span class="number">42</span>];</span><br></pre></td></tr></table></figure></li>
-<li><p>Sometimes both a class creator method and init method exist</p>
-  <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[NSString stringWithFormat:...]</span> same as <span class="comment">[<span class="comment">[NSString alloc]</span> initWithFormat:...]</span></span><br></pre></td></tr></table></figure>
-<p>  iOS seems to be moving more toward the alloc/init versions with new API, but is mostly neutral.</p>
-</li>
-<li><p>ask other objects to create new objects</p>
-  <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span>’s - (<span class="built_in">NSString</span> *)stringByAppendingString:(<span class="built_in">NSString</span> *)otherString;</span><br><span class="line"><span class="built_in">NSArray</span>’s - (<span class="built_in">NSString</span> *)componentsJoinedByString:(<span class="built_in">NSString</span> *)separator;</span><br><span class="line"><span class="built_in">NSString</span>’s &amp; <span class="built_in">NSArray</span>’s - (<span class="keyword">id</span>)mutableCopy;</span><br></pre></td></tr></table></figure>
-<p>  But not all objects given out by other objects are newly created, <code>NSArray’s - (id)lastObject; NSArray’s - (id)objectAtIndex:(int)index;</code>unless the method has the word “copy” in it, if the object already exists, you get a pointer to it. If the object does not already exist (like the first 2 examples at the top), then you’re creating.</p>
-</li>
-</ul>
-<h2 id="Dynamic-Binding"><a href="#Dynamic-Binding" class="headerlink" title="Dynamic Binding"></a>Dynamic Binding</h2><h3 id="Objective-C-has-an-important-type-called-id"><a href="#Objective-C-has-an-important-type-called-id" class="headerlink" title="Objective-C has an important type called id."></a>Objective-C has an important type called id.</h3><p>It means “pointer to an object of unknown/unspecified” type. <code>id myObject;</code> Really all object pointers (e.g. NSString *) are treated like id at runtime. But at compile time, if you type something NSString * instead of id, the compiler can help you. It can find bugs and suggest what methods would be appropriate to send to it, etc.<br>If you type something using id, the compiler can’t help very much because it doesn’t know much. Figuring out the code to execute when a message is sent at runtime is called “dynamic binding.”</p>
-<h3 id="static-typing"><a href="#static-typing" class="headerlink" title="static typing"></a>static typing</h3><pre><code><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *s = @“x”; <span class="comment">// &quot;statically&quot; typed</span><span class="keyword">id</span> obj = s; <span class="comment">// legal, Never use “id *” by the way</span><span class="built_in">NSArray</span> *a = obj; <span class="comment">// also legal but dangerous</span></span><br></pre></td></tr></table></figure>
-</code></pre>
-<h3 id="When-to-use-intentionally"><a href="#When-to-use-intentionally" class="headerlink" title="When to use intentionally"></a>When to use intentionally</h3><ul>
-<li>When we want to mix objects of different classes in a collection (e.g. in an NSArray). </li>
-<li>When we want to support the “blind, structured” communication in MVC (i.e. delegation). And there are other generic or blind communication needs.</li>
-<li>But to make these things safer, we’re going to use two things: Introspection and Protocols.</li>
-</ul>
-<h3 id="Introspection"><a href="#Introspection" class="headerlink" title="Introspection"></a>Introspection</h3><p>Asking at runtime what class an object is or what messages can be sent to it.<br>All objects that inherit from NSObject know these methods:</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isKindOfClass: returns whether an object <span class="keyword">is</span> that kind of <span class="keyword">class</span> (<span class="symbol">inheritance</span> <span class="symbol">included</span>) </span><br><span class="line"><span class="symbol">isMemberOfClass: <span class="symbol">returns</span></span> <span class="symbol">whether</span> <span class="symbol">an</span> <span class="symbol">object</span> <span class="symbol">is</span> <span class="symbol">that</span> <span class="symbol">kind</span> <span class="symbol">of</span> <span class="symbol">class</span> (<span class="symbol">no</span> <span class="symbol">inheritance</span>) </span><br><span class="line"><span class="symbol">respondsToSelector: <span class="symbol">returns</span></span> <span class="symbol">whether</span> <span class="symbol">an</span> <span class="symbol">object</span> <span class="symbol">responds</span> <span class="symbol">to</span> <span class="symbol">a</span> <span class="symbol">given</span> <span class="symbol">method</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Protocol"><a href="#Protocol" class="headerlink" title="Protocol"></a>Protocol</h3><p>A syntax that is “in between” id and static typing.<br>Does not specify the class of an object pointed to, but does specify what methods it implements. Example …</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">id</span> &lt;<span class="built_in">UIScrollViewDelegate</span>&gt; scrollViewDelegate;</span><br></pre></td></tr></table></figure>
-
-<p>A little bit like template in C++ and Java.</p>
-<h3 id="Arguments-to-these-methods"><a href="#Arguments-to-these-methods" class="headerlink" title="Arguments to these methods"></a>Arguments to these methods</h3><ul>
-<li>Class testing methods take a Class</li>
-</ul>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ([obj isKindOfClass:[<span class="built_in">NSString</span> <span class="keyword">class</span>]]) &#123;   	<span class="built_in">NSString</span> *s = [(<span class="built_in">NSString</span> *)objstringByAppendingString:@”xyzzy”];&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Method-testing-methods-take-a-selector-SEL"><a href="#Method-testing-methods-take-a-selector-SEL" class="headerlink" title="Method testing methods take a selector (SEL)"></a>Method testing methods take a selector (SEL)</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Special @selector() directive turns the name of a method into a selector</span></span><br><span class="line"><span class="selector-tag">if</span> ([obj <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(shoot)]) &#123;   	<span class="selector-attr">[obj shoot]</span>;&#125; <span class="selector-tag">else</span> <span class="selector-tag">if</span> ([obj <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">shootAt</span>:)]) &#123;   	<span class="selector-attr">[obj shootAt:target]</span>;&#125; <span class="comment">//otherwise, nothing happens</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="ask-an-object-to-perform-SEL"><a href="#ask-an-object-to-perform-SEL" class="headerlink" title="ask an object to perform SEL"></a>ask an object to perform SEL</h3><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Using the performSelector: or performSelector:withObject: methods in NSObject</span></span><br><span class="line"><span class="string">[obj performSelector:shootSelector]</span>;<span class="string">[obj performSelector:shootAtSelector withObject:coordinate]</span>;<span class="comment">// Using makeObjectsPerformSelector: methods in NSArray</span></span><br><span class="line"><span class="string">[array makeObjectsPerformSelector:shootSelector]</span>; <span class="comment">// </span><span class="string">[array makeObjectsPerformSelector:shootAtSelector withObject:target]</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="NSObject"><a href="#NSObject" class="headerlink" title="NSObject"></a>NSObject</h2><p>Base class for pretty much every object in the iOS SDK.</p>
-<p><code>- (NSString *)description</code> is a useful method to override (it’s %@ in NSLog()). Example … NSLog(@“array contents are %@”, myArray);<br>The <code>%@</code> is replaced with the results of invoking [myArray description].</p>
-<p>Copying objects. This is an important concept to understand (why mutable vs. immutable?). </p>
-<pre><code>- (id)copy; // not all objects implement mechanism (raises exception if not)
-- (id)mutableCopy; // not all objects implement mechanism (raises exception if not)
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">## NSArray</span></span><br><span class="line"></span><br><span class="line">Ordered collection of objects.Immutable. That’s right, once you create the array, you cannot<span class="built_in"> add </span>or remove objects.</span><br><span class="line">All objects in the<span class="built_in"> array </span>are held onto strongly. Usually created by manipulating other arrays<span class="built_in"> or </span>with `@[]`.</span><br><span class="line">```</span><br><span class="line">- (NSUInteger)count;- (id)objectAtIndex:(NSUInteger)index; // crashes<span class="built_in"> if </span>index is out of bounds; returns id!</span><br><span class="line">- (id)lastObject; // returns nil (doesn’t crash)<span class="built_in"> if </span>there are no objects in the<span class="built_in"> array</span>- (id)firstObject; // returns nil (doesn’t crash)<span class="built_in"> if </span>there are no objects in the<span class="built_in"> array</span>- (NSArray *)sortedArrayUsingSelector:(SE<span class="class">L)aSelector;</span>- (void)makeObjectsPerformSelector:(SEL)aSelector withObject: (id)selectorArgument;- (NSString *)componentsJoinedByString:(NSString *)separator;```</span><br><span class="line"></span><br><span class="line"><span class="comment">## NSMutableArray</span></span><br><span class="line"></span><br><span class="line">Mutable version of NSArray.Create with alloc/init<span class="built_in"> or </span>...</span><br><span class="line">```+ (id)arrayWithCapacity:(NSUInteger)numItems; // numItems is a performance hint only + (id)array; // [NSMutableArray array] is just like [[NSMutableArray alloc] init]</span><br></pre></td></tr></table></figure>
-
-NSMutableArray inherits all of NSArray’s methods.
-Not just count, objectAtIndex:, etc., but also the more interesting ones mentioned above.
-
-Other key methods:
-
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="type">void</span>)addObject:(id)<span class="keyword">object</span>; // <span class="keyword">to</span> the <span class="keyword">end</span> <span class="keyword">of</span> the <span class="keyword">array</span> (note id <span class="keyword">is</span> the <span class="keyword">type</span>!) - (<span class="type">void</span>)insertObject:(id)<span class="keyword">object</span> atIndex:(NSUInteger)<span class="keyword">index</span>;- (<span class="type">void</span>)removeObjectAtIndex:(NSUInteger)<span class="keyword">index</span>;</span><br></pre></td></tr></table></figure>
-
-## Enumeration
-
-- Looping through members of an array in an efficient manner
-
-    <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Example: <span class="built_in">NSArray</span> of <span class="keyword">id</span> <span class="built_in">NSArray</span> *myArray = ...; <span class="keyword">for</span> (<span class="keyword">id</span> obj <span class="keyword">in</span> myArray) &#123;<span class="comment">// do something with obj, but make sure you don’t send it a message it does not respond to if ([obj isKindOfClass:[NSString class]]) &#123;</span> <span class="comment">// send NSString messages to obj with no worries &#125;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-## Foundation Framework
-
-### NSNumber
-
-Object wrapper around primitive types like int, float, double, BOOL, enums, etc.
-
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSNumber</span> *n = [<span class="built_in">NSNumber</span> numberWithInt:<span class="number">36</span>];<span class="keyword">float</span> f = [n floatValue]; <span class="comment">// would return 36.0 as a float (i.e. will convert types)</span><span class="comment">// Useful when you want to put these primitive types in a collection (e.g. NSArray or NSDictionary).</span></span><br></pre></td></tr></table></figure>
-</code></pre>
-<p>NSNumber *three = @3;<br>NSNumber *underline = @(NSUnderlineStyleSingle); // enum<br>NSNumber *match = @([card match:@[otherCard]]); // expression that returns a primitive type</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### NSValue</span><br><span class="line"></span><br><span class="line">Generic <span class="keyword">object</span> <span class="keyword">wrapper</span> <span class="keyword">for</span> <span class="keyword">some</span> non-<span class="keyword">object</span>, non-primitive data <span class="keyword">types</span> (i.e. C structs).</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>NSValue *edgeInsetsObject = [NSValue valueWithUIEdgeInsets:UIEdgeInsetsMake(1,1,1,1)]</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">## Property List</span></span><br><span class="line"></span><br><span class="line">The term “Property List” just means <span class="keyword">a</span> collection <span class="keyword">of</span> collections It’s just <span class="keyword">a</span> phrase (<span class="keyword">not</span> <span class="keyword">a</span> language thing). It means <span class="keyword">any</span> graph <span class="keyword">of</span> objects containing only:- `NSArray`, `NSDictionary`, `NSNumber`, `NSString`, `NSDate`, `NSData` (<span class="keyword">or</span> mutable subclasses thereof) </span><br><span class="line">An NSArray is <span class="keyword">a</span> Property List <span class="keyword">if</span> all its members are too- So <span class="keyword">an</span> `NSArray` <span class="keyword">of</span> `NSString` is <span class="keyword">a</span> Property List.- So is <span class="keyword">an</span> `NSArray` <span class="keyword">of</span> `NSArray` <span class="keyword">as</span> <span class="keyword">long</span> <span class="keyword">as</span> those NSArray’s members are *Property Lists*.An `NSDictionary` is <span class="literal">one</span> only <span class="keyword">if</span> all <span class="built_in">keys</span> <span class="keyword">and</span> values are too An `NSArray` <span class="keyword">of</span> `NSDictionarys` whose <span class="built_in">keys</span> are NSStrings <span class="keyword">and</span> values are NSNumbers is <span class="literal">one</span>.</span><br><span class="line"><span class="comment">### Why define this type?</span></span><br><span class="line">Because <span class="keyword">the</span> SDK has <span class="keyword">a</span> <span class="built_in">number</span> <span class="keyword">of</span> methods which operate <span class="keyword">on</span> <span class="title">Property</span> <span class="title">Lists</span>.  Usually <span class="built_in">to</span> <span class="built_in">read</span> them <span class="built_in">from</span> somewhere <span class="keyword">or</span> <span class="built_in">write</span> them out <span class="built_in">to</span> somewhere.</span><br><span class="line"></span><br><span class="line"><span class="comment">## Attribute Strings</span></span><br><span class="line"></span><br><span class="line">Attribute Strings decide How <span class="keyword">text</span> looks <span class="keyword">on</span> <span class="title">screen</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">### Getting Attribute</span></span><br><span class="line"></span><br><span class="line">You can ask <span class="keyword">an</span> NSAttributedString all about <span class="keyword">the</span> attributes <span class="keyword">at</span> <span class="keyword">a</span> given location <span class="keyword">in</span> <span class="keyword">the</span> <span class="keyword">string</span>. </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ul>
-<li>(NSDictionary *)attributesAtIndex:(NSUInteger)index<pre><code>               effectiveRange:(NSRangePointer)range;
-</code></pre>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">### NSMutableAttributedString</span></span><br><span class="line"></span><br><span class="line">- <span class="built_in">add</span> <span class="keyword">an</span> attribute <span class="built_in">to</span> <span class="keyword">a</span> range <span class="keyword">of</span> <span class="keyword">characters</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>(void)addAttributes:(NSDictionary *)attributes range:(NSRange)range;<br>// which will change the values of attributes in attributes and not touch other attributes. Or you can set the attributes in a range</li>
-<li>(void)setAttributes:(NSDictionary *)attributes range:(NSRange)range;<br>// which will remove all other attributes in that range in favor of the passed attributes. You can also remove a specific attribute from a range</li>
-<li>(void)removeAttribute:(NSString *)attributeName range:(NSRange)range;<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- Modifying <span class="keyword">the</span> contents <span class="keyword">of</span> <span class="keyword">the</span> <span class="keyword">string</span> (changing <span class="keyword">the</span> <span class="keyword">characters</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">do</span> that <span class="keyword">with</span> methods <span class="built_in">to</span> append, insert, <span class="built_in">delete</span> <span class="keyword">or</span> <span class="built_in">replace</span> <span class="keyword">characters</span>. Or call <span class="keyword">the</span> `NSMutableAttributedString` method `- (NSMutableString *)` mutableString <span class="keyword">and</span> modify <span class="keyword">the</span> returned NSMutableString (attributes will, **incredibly, be preserved**!)</span><br><span class="line"></span><br><span class="line"><span class="comment">### a set of attributes</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-@{ NSFontAttributeName :<br>   [UIFont preferredFontWithTextStyle:UIFontTextStyleHeadline]<br>NSForegroundColorAttributeName : [UIColor greenColor],<br>NSStrokeWidthAttributeName : @-5,<br>NSStrokeColorAttributeName : [UIColor redColor] }<br>```</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>Online Course: Developing iOS7 Apps for iPhone and iPad, Stanford</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/12/09/iOS-View_Controller_Lifecycle/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          iOS-View Controller Lifecycle
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/12/01/iOS-gymnote/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">
-        
-          gymnote
-        
-      </div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/04/28/job-hunting-how-to-do-project/">【找工求职】5/n 北美cs找工作怎么充实项目经历</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/08/job-hunting-crush-coding-interview/">【找工求职】4/n 面试时如何表现 Crush Coding Interview</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/01/job-hunting-how-to-write-resume/">【找工求职】3/n 如何提升简历的逼格</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/25/job-hunting-how-to-act-like-a-cser/">【找工求职】2/n 如何正确地装逼（如何提升CS素养）</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/12/job-hunting-how-to-do-leetcode/">【找工求职】1/n 如何开始刷题</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Captcha/" style="font-size: 13.33px;">Captcha</a> <a href="/tags/Coursera/" style="font-size: 11.67px;">Coursera</a> <a href="/tags/Design/" style="font-size: 11.67px;">Design</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/English-EOE/" style="font-size: 10px;">English EOE</a> <a href="/tags/GRE/" style="font-size: 13.33px;">GRE</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Image-Processing/" style="font-size: 10px;">Image Processing</a> <a href="/tags/Interpreter/" style="font-size: 10px;">Interpreter</a> <a href="/tags/JEE/" style="font-size: 10px;">JEE</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LISP/" style="font-size: 11.67px;">LISP</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/MCM/" style="font-size: 20px;">MCM</a> <a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/OO-Design/" style="font-size: 10px;">OO-Design</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/tags/Project/" style="font-size: 10px;">Project</a> <a href="/tags/Public-Speaking/" style="font-size: 10px;">Public Speaking</a> <a href="/tags/Public-Speech-%E6%91%A9%E8%8B%B1/" style="font-size: 10px;">Public-Speech 摩英</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Reading/" style="font-size: 10px;">Reading</a> <a href="/tags/University/" style="font-size: 10px;">University</a> <a href="/tags/Unix/" style="font-size: 10px;">Unix</a> <a href="/tags/Video/" style="font-size: 10px;">Video</a> <a href="/tags/Vocabulary/" style="font-size: 10px;">Vocabulary</a> <a href="/tags/Web/" style="font-size: 13.33px;">Web</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/entrepreneurship/" style="font-size: 10px;">entrepreneurship</a> <a href="/tags/ffmpeg/" style="font-size: 10px;">ffmpeg</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/inspiration/" style="font-size: 10px;">inspiration</a> <a href="/tags/insurance/" style="font-size: 10px;">insurance</a> <a href="/tags/internship/" style="font-size: 10px;">internship</a> <a href="/tags/job-hunting/" style="font-size: 18.33px;">job-hunting</a> <a href="/tags/life/" style="font-size: 11.67px;">life</a> <a href="/tags/phonetic/" style="font-size: 10px;">phonetic</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/retrospect/" style="font-size: 10px;">retrospect</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/target/" style="font-size: 10px;">target</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/vocabulary/" style="font-size: 10px;">vocabulary</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 11.67px;">励志</a> <a href="/tags/%E6%80%A7%E6%A0%BC%E8%89%B2%E5%BD%A9/" style="font-size: 10px;">性格色彩</a> <a href="/tags/%E6%91%A9%E8%8B%B1/" style="font-size: 15px;">摩英</a> <a href="/tags/%E6%94%B9%E5%8F%98/" style="font-size: 10px;">改变</a> <a href="/tags/%E6%AC%A7%E6%B4%B2%E5%8F%B2/" style="font-size: 10px;">欧洲史</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/" style="font-size: 10px;">网页爬虫</a> <a href="/tags/%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98/" style="font-size: 10px;">装箱问题</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Career/">Career</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Vision/">Computer Vision</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Coursera/">Coursera</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entrepreneurship/">Entrepreneurship</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hack/">Hack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JEE/">JEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OO-Desing/">OO-Desing</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Summary/">Reading Summary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby-on-Rails/">Ruby-on-Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/University/">University</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unix/">Unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Dev/">Web_Dev</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/job-hunting/">job-hunting</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%A9%E8%8B%B1%E6%95%99%E8%82%B2/">摩英教育</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%99%BA%E5%8A%9B/">智力</a></li></ul>
-    </div>
-  </div>
-
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 Shuang Li<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
-      <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备2021014297号</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-1.4.3.min.js"></script>
-
-
-  
-<script src="/fancybox/jquery.fancybox-1.3.4.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
-      ],
-      throwOnError : false
-    });
-  });
-</script>
-
-  </div>
-</body>
-</html>

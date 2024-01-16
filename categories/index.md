@@ -1,2 +1,0 @@
-type: "categories"
-layout: "categories"
